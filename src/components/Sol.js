@@ -1,6 +1,7 @@
 import React from "react"
 import { UserCard } from "./user/UserCard"
 import { PartyCard } from "./party/PartyCard"
+import { ReviewCard } from "./review/ReviewCard"
 import "./Sol.css"
 
 export const Sol = () => (
@@ -20,6 +21,13 @@ export const Sol = () => (
             <PartyCard />
             <PartyCard />
             <PartyCard />
+        </article>
+
+        <h2>Movie Reviews</h2>
+        <article className="reviews">
+            <ReviewCard />
+            <ReviewCard />
+            <ReviewCard />
         </article>
     </>
 )
