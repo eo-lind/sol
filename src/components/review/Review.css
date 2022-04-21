@@ -1,0 +1,24 @@
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+}
+
+.review__movie {
+
+}
+
+.review__body {
+
+}
+
+.review__author {
+
+}

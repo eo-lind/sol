@@ -1,0 +1,38 @@
+
+.parties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.party {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+}
+
+.party__image-container {
+    /* TODO change this later */
+    width: 150px
+}
+
+.party__image {
+    width: 100%
+}
+
+.party__movie {
+
+}
+
+.party__date {
+
+}
+
+.party__guests {
+
+}
+
+.party__host {
+    
+}

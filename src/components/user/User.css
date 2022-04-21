@@ -1,0 +1,38 @@
+
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+}
+
+.user__image-container {
+    /* TODO update this later */
+    width: 150px
+}
+
+.user__photo {
+    width: 100%
+}
+
+.user__name {
+
+}
+
+.user__about {
+
+}
+
+.user__likes {
+
+}
+
+.user__dislikes {
+    
+}
