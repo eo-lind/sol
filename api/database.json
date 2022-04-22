@@ -1,4 +1,24 @@
 {
+    "reviews": [
+        {
+            "id": 1,
+            "movieId": 9,
+            "userId": 15,
+            "review": "Knifehead was the real star of this one. Also, I wish the aliens had eaten those kids."
+        },
+        {
+            "id": 2,
+            "movieId": 204,
+            "userId": 13,
+            "review": "BUT NO ONE'S EVER SEEN THE BEAST!"
+        },
+        {
+            "id": 183,
+            "movieId": 9,
+            "userId": 12,
+            "review": "Knifehead was the real star of this one. Also, I wish the aliens had eaten those kids."
+        }
+    ],
     "parties": [
         {
             "id": 1,
