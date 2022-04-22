@@ -6,13 +6,21 @@ import "./Party.css"
 export const PartyCard = ({ party }) => {
     return (
         <section className="party">
-        <h3 className="party__movie">{party.movieId.title}</h3>
-        <div className="party__host">Hosted by {party.userId.name}</div>
-        <div className="party__date">When: {party.date}</div>
-        <div className="party__guests">Guests: {party.UserIdGuest} (update later)</div>
-        <div className="party__image-container">
-            <img className="party__image" alt="image of movie name" src="#" />
-        </div>
-    </section>
+            <h3 className="party__movie">{party.movie.title}</h3>
+            <div className="party__host">Hosted by {party.user.name}</div>
+            <div className="party__date">
+                <strong>When:</strong> {party.date}
+            </div>
+            <div className="party__guests">
+                <strong>Guests:</strong> {party.UserGuest} (update later)
+            </div>
+            <div className="party__image-container">
+                <img
+                    className="party__image"
+                    alt="image of the film"
+                    src={party.movie.image}
+                />
+            </div>
+        </section>
     )
 }
