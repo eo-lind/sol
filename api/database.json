@@ -2848,12 +2848,12 @@
             "imDbRatingCount": "167"
         }
     ],
-    "members": [
+    "users": [
         {
             "id": 1,
             "name": "Crow T. Robot",
             "email": "crow@gmail.com",
-            "profilePic": "crow.png",
+            "profilePic": "/images/crow.png",
             "aboutMe": "I'm a screenwriter. My best works are Earth vs. Soup and Peter Graves at the University of Minnesota. Some people call me Art Crow. It's not my name, but they call me that.",
             "likes": "Zardoz, sarcasm, relish on hot dogs",
             "dislikes": "Warrior of the Lost World"
@@ -2863,7 +2863,7 @@
             "id": 2,
             "name": "Tom Servo",
             "email": "tomservo@gmail.com",
-            "profilePic": "tom-servo.png",
+            "profilePic": "/images/tom-servo.png",
             "aboutMe": "I'd prefer that you spell my name Htom Serveaux. I can flyyyyyy (but only in the theater).",
             "likes": "Creepy girl, duplicating myself, philosophy, Greek classics, singing",
             "dislikes": "Discussing my height"
@@ -2873,7 +2873,7 @@
             "id": 3,
             "name": "GPC",
             "email": "gpc@gmail.com",
-            "profilePic": "gpc.png",
+            "profilePic": "/images/gpc.png",
             "aboutMe": "I'm responsible for maintaining the higher functions of the Satellite of Love",
             "likes": "Richard Basehart, RAM chips, singing",
             "dislikes": "Not being taken seriously"
@@ -2883,7 +2883,7 @@
             "id": 4,
             "name": "T-800",
             "email": "t800@gmail.com",
-            "profilePic": "t-800.png",
+            "profilePic": "/images/t-800.png",
             "aboutMe": "Cyberdine Systems Model 101 Series T-800. Living tissue on a hyperalloy combat chassis controlled by a microprocessor. Cannot be bargained with. Cannot be reasoned with. Do not feel pity or remorse or fear.",
             "likes": "Skynet",
             "dislikes": "John Connor, The Resistance"
@@ -2893,7 +2893,7 @@
             "id": 5,
             "name": "Maria",
             "email": "maria@gmail.com",
-            "profilePic": "maria.png",
+            "profilePic": "/images/maria.png",
             "aboutMe": "Some people call me Futura. dummy text dummy text dummy text dummy text dummy text dummy text",
             "likes": "Janelle Monae, dummy text dummy text dummy text dummy text",
             "dislikes": " dummy text dummy text dummy text dummy text dummy text dummy text"
@@ -2903,7 +2903,7 @@
             "id": 6,
             "name": "Rachael Tyrell",
             "email": "rachaeltyrell@gmail.com",
-            "profilePic": "rachael-tyrell.png",
+            "profilePic": "/images/rachael-tyrell.png",
             "aboutMe": "I'm a Nexus-7 replicant. dummy text dummy text dummy text dummy text",
             "likes": "Memories, playing piano",
             "dislikes": "Nexus-6 replicants, bad jokes"
@@ -2913,7 +2913,7 @@
             "id": 7,
             "name": "Pris",
             "email": "pris@gmail.com",
-            "profilePic": "pris.png",
+            "profilePic": "/images/pris.png",
             "aboutMe": "I'm a Nexus-6 replicant. dummy text dummy text dummy text",
             "likes": "Fighting, gymnastics, guys named Roy",
             "dislikes": "Short lifespans, Blade Runners, retirement"
@@ -2923,7 +2923,7 @@
             "id": 8,
             "name": "Cambot",
             "email": "cambot@gmail.com",
-            "profilePic": "cambot.png",
+            "profilePic": "/images/cambot.png",
             "aboutMe": "I held a position on the Satellite of Love for more than 30 years, but now I work in the Gizmoplex.",
             "likes": "dummy text dummy text dummy text dummy text dummy text dummy text dummy text",
             "dislikes": "Danger!! Death Ray"
@@ -2933,7 +2933,7 @@
             "id": 9,
             "name": "Bender",
             "email": "bender@gmail.com",
-            "profilePic": "bender.png",
+            "profilePic": "/images/bender.png",
             "aboutMe": "Serial No. 2716057. One time I kidnapped Jay Leno's head, and that's really all you need to know.",
             "likes": "Drinking, gambling, cigars, turtles, penguins, Napoleon, cooking, my buddy Fry",
             "dislikes": "My self-destruct sequence, self-restraint"
@@ -2943,7 +2943,7 @@
             "id": 10,
             "name": "The Robot",
             "email": "therobot@gmail.com",
-            "profilePic": "robot-lost-in-space.png",
+            "profilePic": "/images/robot-lost-in-space.png",
             "aboutMe": "dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text",
             "likes": "dummy text dummy text dummy text dummy text",
             "dislikes": "dummy text dummy text dummy text dummy text"
@@ -2953,7 +2953,7 @@
             "id": 11,
             "name": "R2-D2",
             "email": "r2d2@gmail.com",
-            "profilePic": "r2-d2.png",
+            "profilePic": "/images/r2-d2.png",
             "aboutMe": "dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text",
             "likes": "dummy text dummy text dummy text dummy text",
             "dislikes": "dummy text dummy text dummy text dummy text"
@@ -2963,7 +2963,7 @@
             "id": 12,
             "name": "C-3PO",
             "email": "c3po@gmail.com",
-            "profilePic": "c-3po.png",
+            "profilePic": "/images/c-3po.png",
             "aboutMe": "dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text",
             "likes": "dummy text dummy text dummy text dummy text",
             "dislikes": "dummy text dummy text dummy text dummy text"
@@ -2973,7 +2973,7 @@
             "id": 13,
             "name": "Cyberman",
             "email": "cyberman@gmail.com",
-            "profilePic": "cyberman.png",
+            "profilePic": "/images/cyberman.png",
             "aboutMe": "I used to be human, but I underwent a cyber conversion. During the process, all of my human emotions were removed, which makes life suck less.",
             "likes": "Upgrading",
             "dislikes": "Emotions"
@@ -2983,7 +2983,7 @@
             "id": 14,
             "name": "Lieutenant Commander Data",
             "email": "data@gmail.com",
-            "profilePic": "data.png",
+            "profilePic": "/images/data.png",
             "aboutMe": "Soong-type android. I'm a crewmember of the USS Enterprise-E.",
             "likes": "Sherlock Holmes, poker, painting, poetry, violin",
             "dislikes": "When my name is mispronounced, violence, dishonesty"
@@ -2993,7 +2993,7 @@
             "id": 15,
             "name": "Lance Bishop",
             "email": "bishop@gmail.com",
-            "profilePic": "bishop.png",
+            "profilePic": "/images/bishop.png",
             "aboutMe": "Hyperdyne Systems model 341-B. I'm a technician for the USCMC aboard the USS Sulaco. Trust me.",
             "likes": "Knives, the Three Laws of Robotics, being treated like a human",
             "dislikes": "Xenomorph Queens"
