@@ -1,5 +1,28 @@
 {
-    "episodes": [
+    "parties": [
+        {
+            "id": 1,
+            "movieId": 108,
+            "date": "05/06/2022 19:31",
+            "userIdGuest": 7,
+            "userId": 12
+        },
+        {
+            "id": 2,
+            "movieId": 217,
+            "date": "05/09/2032 19:31",
+            "userIdGuest": 4,
+            "userId": 8
+        },
+        {
+            "id": 3,
+            "movieId": 103,
+            "date": "05/25/2022 19:31",
+            "userIdGuest": 14,
+            "userId": 9
+        }
+    ],
+    "movies": [
         {
             "id": 1,
             "seriesTitle": "Mystery Science Theater 3000 (TV Series 1988-1999)",
