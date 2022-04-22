@@ -4,38 +4,38 @@
 }
 
 
-.users {
+.movies {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.user {
+.movie {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
     border: 1px solid black;
 }
 
-.user__image-container {
+.movie__image-container {
     /* TODO update this later */
     width: 150px
 }
 
-.user__photo {
+.movie__photo {
     width: 100%
 }
 
-.user__name {
+.movie__title {
 
 }
 
-.user__about, .user__likes {
+.movie__plot, .movie__rating {
 padding-bottom: 1em;
 }
 
-.user__dislikes {
-    
+.movie__mst3k {
+    font-size: x-small;
 }
 
 .card {
