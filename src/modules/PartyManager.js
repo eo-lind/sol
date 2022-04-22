@@ -1,4 +1,4 @@
-// TODO will need later (will need to add):
+// TODO will need later (will need to add expansions):
 // export const getPartyById = (partyId) => {
 //     return fetch(
 //         `http://localhost:8088/parties/${partyId}`

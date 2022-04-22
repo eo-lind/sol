@@ -4,6 +4,7 @@ import { Home } from "../Home"
 import { UserList } from "./user/UserList"
 import { MovieList } from "./movie/MovieList"
 import { PartyList } from "./party/PartyList"
+import { ReviewList } from "./review/ReviewList"
 
 export const ApplicationViews = () => {
     return (
@@ -11,8 +12,9 @@ export const ApplicationViews = () => {
             {/* ! the lines below are temporary - routes don't seem to be working right now*/}
 
             <UserList />
-            <MovieList />
+            <ReviewList />
             <PartyList />
+            <MovieList />
 
             <Routes>
                 <Route path="/" element={<Home />} />

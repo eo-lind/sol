@@ -1,3 +1,8 @@
+.container-cards {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .reviews {
   display: flex;
   flex-wrap: wrap;
@@ -11,14 +16,19 @@
     border: 1px solid black;
 }
 
-.review__movie {
-
+.review__image-container {
+    /* TODO update this later */
+    width: 150px
 }
 
-.review__body {
-
+.review__image {
+    width: 100%
 }
 
-.review__author {
+.review__title, .review__author, .review__body, .review__rating {
+padding-bottom: 1em;
+}
 
+.review__mst3k {
+  font-size: x-small;
 }
