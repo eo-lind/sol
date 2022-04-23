@@ -16,10 +16,13 @@ export const ReviewList = () => {
     }, [])
 
     return (
-        <div className="container-cards">
-            {reviews.map((review) => (
-                <ReviewCard key={review.id} review={review} />
-            ))}
-        </div>
+        <>
+            <h2>Movie Reviews</h2>
+            <div className="container-cards">
+                {reviews.map((review) => (
+                    <ReviewCard key={review.id} review={review} />
+                ))}
+            </div>
+        </>
     )
 }
