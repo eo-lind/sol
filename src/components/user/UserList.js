@@ -16,10 +16,13 @@ export const UserList = () => {
    }, [])
 
    return (
+       <>
+       <h2>Browse Members</h2>
        <div className="container-cards">
            {users.map((user) => (
                <UserCard key={user.id} user={user} />
            ))}
        </div>
+       </>
    )
 }

@@ -16,10 +16,13 @@ export const MovieList = () => {
    }, [])
 
    return (
+       <>
+       <h2>Browse Movies</h2>
        <div className="container-cards">
            {movies.map((movie) => (
                <MovieCard key={movie.id} movie={movie} />
            ))}
        </div>
+       </>
    )
 }
