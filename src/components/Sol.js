@@ -3,8 +3,6 @@ import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
 import "./Sol.css"
 
-// ! NavBar is causing an error
-
 export const Sol = () => (
     <>
         <NavBar />

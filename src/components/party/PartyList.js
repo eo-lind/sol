@@ -16,10 +16,13 @@ export const PartyList = () => {
     }, [])
 
     return (
+        <>
+       <h2>Watch Parties</h2>
         <div className="container-cards">
             {parties.map((party) => (
                 <PartyCard key={party.id} party={party} />
             ))}
         </div>
+        </>
     )
 }
