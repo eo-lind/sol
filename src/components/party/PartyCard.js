@@ -12,7 +12,7 @@ export const PartyCard = ({ party }) => {
                 <strong>When:</strong> {party.date}
             </div>
             <div className="party__guests">
-                <strong>Guests:</strong> {party.UserGuest} (update later)
+                <strong>Guests:</strong> {party.userIdGuest} (update later)
             </div>
             <div className="party__image-container">
                 <img
