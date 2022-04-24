@@ -76,8 +76,7 @@ export const ReviewForm = () => {
                         ))}
                     </select>
                 </div>
-            </fieldset>
-            <fieldset>
+
                 <div className="form-group">
                     <label htmlFor="review">Your review:</label><br />
                     <textarea
@@ -92,7 +91,6 @@ export const ReviewForm = () => {
                     >
                     </textarea>
                 </div>
-            </fieldset>
             <button
                 type="button"
                 className="btn btn-primary"
@@ -100,6 +98,7 @@ export const ReviewForm = () => {
             >
                 Save Review
             </button>
+            </fieldset>
         </form>
     )
 }

@@ -90,9 +90,7 @@ export const PartyForm = () => {
                         ))}
                     </select>
                 </div>
-            </fieldset>
 
-            <fieldset>
                 <div className="form-group">
                     <label htmlFor="guest">Select a guest:</label>
                     <br />
@@ -111,10 +109,9 @@ export const PartyForm = () => {
                         ))}
                     </select>
                 </div>
-            </fieldset>
-            <fieldset>
                 <div className="form-group">
                     <label htmlFor="date">When:</label>
+                    <br />
                     <input
                         type="datetime-local"
                         id="date"
@@ -125,14 +122,14 @@ export const PartyForm = () => {
                         value={party.date}
                     />
                 </div>
+                    <button
+                        type="button"
+                        className="btn btn-primary"
+                        onClick={handleClickSaveParty}
+                    >
+                        Save Party
+                    </button>
             </fieldset>
-            <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleClickSaveParty}
-            >
-                Save Party
-            </button>
         </form>
     )
 }
