@@ -47,6 +47,12 @@
       "userId": 3,
       "review": "Holy crappy movie, Batman!",
       "id": 188
+    },
+    {
+      "movieId": 1,
+      "userId": 3,
+      "review": "Rupert",
+      "id": 189
     }
   ],
   "parties": [
@@ -70,6 +76,13 @@
       "date": "05/25/2022 19:31",
       "userIdGuest": 14,
       "userId": 9
+    },
+    {
+      "userId": 2,
+      "movieId": 19,
+      "date": "2022-03-28T19:57",
+      "userIdGuest": 14,
+      "id": 4
     }
   ],
   "movies": [
