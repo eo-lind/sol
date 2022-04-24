@@ -5,7 +5,7 @@ import { getAllMovies } from "../../modules/MovieManager"
 import { getAllUsers } from "../../modules/UserManager"
 import "./PartyForm.css"
 
-// TODO change the initial default state of the userID (ln --) back to 0 when login is working
+// TODO change the initial default state of the userID (ln 14) back to 0 when login is working
 
 // TODO eventualy the guest selector will need to just load users friends and not all users
 
@@ -18,7 +18,10 @@ export const PartyForm = () => {
     })
 
     const [isLoading, setIsLoading] = useState(false)
-    const currentDateTime = Date.now()
+
+    // sets a variable for the current date to use as a minimum in the form's date/time picker so user can't choose a previous date
+    const dateInputMin = new Date().toISOString().split(".")[0]
+
 
     // gets all of the movies and friends to populate their respective input fields
     const [users, setUsers] = useState([])
@@ -115,14 +118,14 @@ export const PartyForm = () => {
                     <input
                         type="datetime-local"
                         id="date"
-                        min={currentDateTime}
+                        min={dateInputMin}
                         onChange={handleControlledInputChange}
                         required
                         className="form-control"
                         value={party.date}
                     />
                 </div>
-                </fieldset>
+            </fieldset>
             <button
                 type="button"
                 className="btn btn-primary"
