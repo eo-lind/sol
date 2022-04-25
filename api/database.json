@@ -3070,5 +3070,27 @@
       "likes": "Knives, the Three Laws of Robotics, being treated like a human",
       "dislikes": "Xenomorph Queens"
     }
+  ],
+  "friends": [
+    {
+      "userId": 1,
+      "currentUserId": 2,
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "currentUserId": 2,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "currentUserId": 3,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "currentUserId": 3,
+      "id": 4
+    }
   ]
 }
