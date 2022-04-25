@@ -98,8 +98,6 @@ export const Register = ({setAuthUser}) => {
                         placeholder="URL of your profile photo"
                         required
                     />
-                </fieldset>
-                <fieldset>
                     <label htmlFor="aboutMe">About Me</label>
                     <br />
                     <textarea
@@ -112,9 +110,6 @@ export const Register = ({setAuthUser}) => {
                         className="form-control"
                         ref={aboutMe}
                     ></textarea>
-                </fieldset>
-¯ß
-                <fieldset>
                     <label htmlFor="likes">Likes</label>
                     <input
                         ref={likes}
