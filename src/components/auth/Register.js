@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Register = ({setAuthUser}) => {
-    const firstName = useRef()
-    const lastName = useRef()
+    const name = useRef()
     const email = useRef()
+    const profilePic = useRef()
+    const aboutMe = useRef()
+    const likes = useRef()
+    const dislikes = useRef()
     const conflictDialog = useRef()
     const navigate = useNavigate()
 
@@ -30,7 +33,11 @@ export const Register = ({setAuthUser}) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
-                            name: `${firstName.current.value} ${lastName.current.value}`
+                            name: name.current.value,
+                            profilePic: profilePic.current.value,
+                            aboutMe: aboutMe.current.value,
+                            likes: likes.current.value,
+                            dislikes: dislikes.current.value
                         })
                     })
                         .then(res => res.json())
@@ -50,27 +57,84 @@ export const Register = ({setAuthUser}) => {
 
     return (
         <main style={{ textAlign: "center" }}>
-
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
-                <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
+                <button
+                    className="button--close"
+                    onClick={(e) => conflictDialog.current.close()}
+                >
+                    Close
+                </button>
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Register for SOL</h1>
                 <fieldset>
-                    <label htmlFor="firstName">First Name</label>
-                    <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="lastName">Last Name</label>
-                    <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
-                </fieldset>
-                <fieldset>
+                    <label htmlFor="name">Name</label>
+                    <input
+                        ref={name}
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        placeholder="Your name"
+                        required
+                        autoFocus
+                    />
                     <label htmlFor="inputEmail">Email address</label>
-                    <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
+                    <input
+                        ref={email}
+                        type="email"
+                        name="email"
+                        className="form-control"
+                        placeholder="Email address"
+                        required
+                    />
+                    <label htmlFor="inputProfilePic">Profile photo</label>
+                    <input
+                        ref={profilePic}
+                        type="text"
+                        name="profilePic"
+                        className="form-control"
+                        placeholder="URL of your profile photo"
+                        required
+                    />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="aboutMe">About Me</label>
+                    <br />
+                    <textarea
+                        id="aboutMe"
+                        name="aboutMe"
+                        rows="4"
+                        cols="50"
+                        required
+                        autoFocus
+                        className="form-control"
+                        ref={aboutMe}
+                    ></textarea>
+                </fieldset>
+¯ß
+                <fieldset>
+                    <label htmlFor="likes">Likes</label>
+                    <input
+                        ref={likes}
+                        type="text"
+                        name="likes"
+                        className="form-control"
+                        placeholder="Things I like"
+                        required
+                        autoFocus
+                    />
+                    <label htmlFor="dislikes">Dislikes</label>
+                    <input
+                        ref={dislikes}
+                        type="text"
+                        name="dislikes"
+                        className="form-control"
+                        placeholder="Things I dislike"
+                        required
+                        autoFocus
+                    />
                     <button type="submit">Sign in</button>
                 </fieldset>
             </form>
