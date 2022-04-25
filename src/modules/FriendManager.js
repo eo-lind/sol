@@ -2,14 +2,14 @@
 export const getFriendsByCurrentUserId = (currentUserId) => {
     return fetch(
         `http://localhost:8088/friends?currentUserId=${currentUserId}&_expand=user`
-    ).then((res) => res.json())
+    ).then((response) => response.json())
 }
 
 // unfriends another user
 export const deleteFriend = (friendId) => {
     return fetch(`http://localhost:8088/friends/${friendId}`, {
         method: "DELETE",
-    }).then((result) => result.json())
+    }).then((response) => response.json())
 }
 
 // adds a new friend (userId) to logged in user's (currentUserId) friend list

@@ -1,5 +1,4 @@
 export const FriendCard = ({ friend, handleDeleteFriend }) => {
-    console.log(friend);
     return (
         <>
             <section className="user">

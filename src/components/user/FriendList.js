@@ -19,19 +19,18 @@ export const FriendList = () => {
             setFriends(friendsFromApi)
         })
     }
-
-    const handleDeleteFriend = (id) => {
-        deleteFriend(id).then(() =>
-            getFriendsByCurrentUserId(
-                JSON.parse(sessionStorage.getItem("sol_user")).id
-            ).then((friendList) => setFriends(friendList))
-        )
-    }
-
     useEffect(() => {
         getFriends()
     }, [])
+    
+    // deletes a friend from logged in user's friend list and re-renders list without that friend
+    const handleDeleteFriend = (id) => {
+        deleteFriend(id).then(() =>
+            getFriends(() => { setFriends()}
+                ))
+            }
 
+            
     return (
         <>
             <section className="section-content">
