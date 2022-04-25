@@ -4,7 +4,7 @@ import "./Party.css"
 
 // this is a child of Sol component
 
-export const PartyCard = ({ party }) => {
+export const PartyCard = ({ party, handleDeleteParty }) => {
     return (
         <section className="party">
             <h3 className="party__movie">{party.movie.title}</h3>
@@ -25,6 +25,9 @@ export const PartyCard = ({ party }) => {
             <Link to={`/parties/${party.id}/edit`}>
                 <button>Edit</button>
             </Link>
+            <button type="button" onClick={() => handleDeleteParty(party.id)}>
+                Cancel Party
+            </button>
         </section>
     )
 }

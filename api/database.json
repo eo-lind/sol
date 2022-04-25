@@ -19,18 +19,6 @@
       "review": "It could be worse - it could be Old Yeller! RIP Tommy Kirk"
     },
     {
-      "movieId": 12,
-      "userId": 1,
-      "review": "Oh no! The movie box is blank!",
-      "id": 184
-    },
-    {
-      "movieId": 15,
-      "userId": 3,
-      "review": "Yoooooo",
-      "id": 185
-    },
-    {
       "movieId": 22,
       "userId": 14,
       "review": "Hated it.",
@@ -47,12 +35,6 @@
       "userId": 3,
       "review": "Holy crappy movie, Batman!",
       "id": 188
-    },
-    {
-      "movieId": 1,
-      "userId": 3,
-      "review": "Rupert",
-      "id": 189
     },
     {
       "movieId": 51,
@@ -101,13 +83,6 @@
       "date": "2022-04-30T10:28:18",
       "userIdGuest": 14,
       "id": 4
-    },
-    {
-      "userId": 2,
-      "movieId": 2,
-      "date": "2022-04-30T10:28:18",
-      "userIdGuest": 1,
-      "id": 5
     }
   ],
   "movies": [

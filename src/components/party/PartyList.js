@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { getAllParties } from "../../modules/PartyManager"
+import { getAllParties, deleteParty } from "../../modules/PartyManager"
 import { PartyCard } from "./PartyCard"
 
 export const PartyList = () => {
@@ -18,6 +18,10 @@ export const PartyList = () => {
         getParties()
     }, [])
 
+    const handleDeleteParty = (id) => {
+        deleteParty(id).then(() => getAllParties().then(setParties))
+    }
+
     return (
         <>
             <section className="section-content">
@@ -34,7 +38,11 @@ export const PartyList = () => {
             <h2>Watch Parties</h2>
             <div className="container-cards">
                 {parties.map((party) => (
-                    <PartyCard key={party.id} party={party} />
+                    <PartyCard
+                        key={party.id}
+                        party={party}
+                        handleDeleteParty={handleDeleteParty}
+                    />
                 ))}
             </div>
         </>
