@@ -13,7 +13,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
                 <strong>When:</strong> {party.date}
             </div>
             <div className="party__guests">
-                <strong>Guests:</strong> {party.userIdGuest} (update later)
+                <strong>Guests:</strong> {party.user?.name}
             </div>
             <div className="party__image-container">
                 <img
