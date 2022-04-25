@@ -1,10 +1,3 @@
-// TODO will need later (will need to add expansions):
-// export const getPartyById = (partyId) => {
-//     return fetch(
-//         `http://localhost:8088/parties/${partyId}`
-//     ).then((res) => res.json())
-// }
-
 // TODO still have to figure out how to access guests (both fetch calls below) - change later
 
 export const getAllParties = () => {
@@ -21,4 +14,25 @@ export const addParty = (newParty) => {
         },
         body: JSON.stringify(newParty),
     }).then((response) => response.json())
+}
+
+// TODO will need to add expansions later:
+export const getPartyById = (partyId) => {
+    return fetch(
+        `http://localhost:8088/parties/${partyId}?_expand=movie`
+    ).then((res) => res.json())
+}
+
+// TODO will need to add expansions later:
+export const updateParty = (editedParty) => {
+    return fetch(
+        `http://localhost:8088/parties/${editedParty.id}?_expand=movie`,
+        {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(editedParty),
+        }
+    ).then((data) => data.json())
 }
