@@ -32,3 +32,9 @@ export const updateReview = (editedReview) => {
         }
     ).then((data) => data.json())
 }
+
+export const deleteReview = (id) => {
+    return fetch(`http://localhost:8088/reviews/${id}`, {
+        method: "DELETE",
+    }).then((result) => result.json())
+}

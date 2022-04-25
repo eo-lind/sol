@@ -36,3 +36,9 @@ export const updateParty = (editedParty) => {
         }
     ).then((data) => data.json())
 }
+
+export const deleteParty = (id) => {
+    return fetch(`http://localhost:8088/parties/${id}`, {
+        method: "DELETE",
+    }).then((result) => result.json())
+}

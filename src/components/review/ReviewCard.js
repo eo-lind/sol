@@ -4,7 +4,7 @@ import "./Review.css"
 
 // this is a child of Sol component
 
-export const ReviewCard = ({ review }) => {
+export const ReviewCard = ({ review, handleDeleteReview }) => {
     return (
         <section className="review">
             <div className="review__image-container">
@@ -29,6 +29,9 @@ export const ReviewCard = ({ review }) => {
             <Link to={`/reviews/${review.id}/edit`}>
                 <button>Edit</button>
             </Link>
+            <button type="button" onClick={() => handleDeleteReview(review.id)}>
+                Delete
+            </button>
         </section>
     )
 }

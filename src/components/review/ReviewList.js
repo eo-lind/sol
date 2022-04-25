@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { getAllReviews } from "../../modules/ReviewManager"
+import { getAllReviews, deleteReview } from "../../modules/ReviewManager"
 import { ReviewCard } from "./ReviewCard"
 
 export const ReviewList = () => {
@@ -18,6 +18,10 @@ export const ReviewList = () => {
         getReviews()
     }, [])
 
+    const handleDeleteReview = (id) => {
+        deleteReview(id).then(() => getAllReviews().then(setReviews))
+    }
+
     return (
         <>
             <section className="section-content">
@@ -34,7 +38,11 @@ export const ReviewList = () => {
             <h2>Movie Reviews</h2>
             <div className="container-cards">
                 {reviews.map((review) => (
-                    <ReviewCard key={review.id} review={review} />
+                    <ReviewCard
+                        key={review.id}
+                        review={review}
+                        handleDeleteReview={handleDeleteReview}
+                    />
                 ))}
             </div>
         </>
