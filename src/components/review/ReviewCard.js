@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Review.css"
 
 // this is a child of Sol component
@@ -25,6 +26,9 @@ export const ReviewCard = ({ review }) => {
                 {review.movie.episodeNumber} of season{" "}
                 {review.movie.seasonNumber}.
             </div>
+            <Link to={`/reviews/${review.id}/edit`}>
+                <button>Edit</button>
+            </Link>
         </section>
     )
 }

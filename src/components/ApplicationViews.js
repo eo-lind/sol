@@ -6,6 +6,7 @@ import { MovieList } from "./movie/MovieList"
 import { PartyList } from "./party/PartyList"
 import { ReviewList } from "./review/ReviewList"
 import { ReviewForm } from "./review/ReviewForm"
+import { ReviewEditForm } from "./review/ReviewEditForm"
 import { PartyForm } from "./party/PartyForm"
 
 export const ApplicationViews = () => {
@@ -19,6 +20,10 @@ export const ApplicationViews = () => {
                 <Route path="/parties/create" element={<PartyForm />} />
                 <Route path="/reviews" element={<ReviewList />} />
                 <Route path="/reviews/create" element={<ReviewForm />} />
+                <Route
+                    path="/reviews/:reviewId/edit"
+                    element={<ReviewEditForm />}
+                />
                 <Route path="/movies" element={<MovieList />} />
             </Routes>
         </>
