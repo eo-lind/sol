@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Party.css"
 
 // this is a child of Sol component
@@ -21,6 +22,9 @@ export const PartyCard = ({ party }) => {
                     src={party.movie.image}
                 />
             </div>
+            <Link to={`/parties/${party.id}/edit`}>
+                <button>Edit</button>
+            </Link>
         </section>
     )
 }

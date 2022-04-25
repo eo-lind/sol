@@ -8,6 +8,7 @@ import { ReviewList } from "./review/ReviewList"
 import { ReviewForm } from "./review/ReviewForm"
 import { ReviewEditForm } from "./review/ReviewEditForm"
 import { PartyForm } from "./party/PartyForm"
+import { PartyEditForm } from "./party/PartyEditForm"
 
 export const ApplicationViews = () => {
     return (
@@ -18,6 +19,12 @@ export const ApplicationViews = () => {
                 <Route path="/users" element={<UserList />} />
                 <Route path="/parties" element={<PartyList />} />
                 <Route path="/parties/create" element={<PartyForm />} />
+                <Route
+                    path="/parties/:partyId/edit"
+                    element={
+                            <PartyEditForm />
+                    }
+                />
                 <Route path="/reviews" element={<ReviewList />} />
                 <Route path="/reviews/create" element={<ReviewForm />} />
                 <Route

@@ -77,30 +77,37 @@
     {
       "id": 1,
       "movieId": 108,
-      "date": "05/06/2022 19:31",
+      "date": "2022-04-30T10:28:18",
       "userIdGuest": 7,
       "userId": 12
     },
     {
       "id": 2,
       "movieId": 217,
-      "date": "05/09/2022 19:31",
+      "date": "2022-04-30T10:28:18",
       "userIdGuest": 4,
       "userId": 8
     },
     {
       "id": 3,
       "movieId": 103,
-      "date": "05/25/2022 19:31",
+      "date": "2022-04-30T10:28:18",
       "userIdGuest": 14,
       "userId": 9
     },
     {
       "userId": 2,
       "movieId": 19,
-      "date": "2022-03-28T19:57",
+      "date": "2022-04-30T10:28:18",
       "userIdGuest": 14,
       "id": 4
+    },
+    {
+      "userId": 2,
+      "movieId": 2,
+      "date": "2022-04-30T10:28:18",
+      "userIdGuest": 1,
+      "id": 5
     }
   ],
   "movies": [
