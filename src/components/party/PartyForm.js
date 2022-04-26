@@ -5,13 +5,15 @@ import { getAllMovies } from "../../modules/MovieManager"
 import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 import "./PartyForm.css"
 
-// TODO change the initial default state of the userID (ln 14) back to 0 when login is working
 
 // TODO eventualy the guest selector will need to just load users friends and not all users
 
 export const PartyForm = () => {
+
+    const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
+
     const [party, setParty] = useState({
-        userId: 2,
+        userId: currentUser,
         movieId: 0,
         date: "",
         friendId: 0,

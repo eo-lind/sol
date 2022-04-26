@@ -25,7 +25,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
      return (
         <section className="party">
             <h3 className="party__movie">{party.movie.title}</h3>
-            <div className="party__host"><strong>Host:</strong> {party.user.name}</div>
+            <div className="party__host"><strong>Host:</strong> {party.user?.name}</div>
             <div className="party__date">
                 <strong>When:</strong> {party.date}
             </div>
