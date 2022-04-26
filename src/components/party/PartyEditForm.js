@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { updateParty, getPartyById } from "../../modules/PartyManager"
 import { getAllMovies } from "../../modules/MovieManager"
-import { getAllUsers } from "../../modules/UserManager"
+import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 import "./PartyForm.css"
 
 export const PartyEditForm = () => {
@@ -10,7 +10,7 @@ export const PartyEditForm = () => {
         movieId: 0,
         date: "",
         userId: 0,
-        userIdGuest: 0,
+        friendId: 0,
     })
     const [isLoading, setIsLoading] = useState(false)
 
@@ -18,7 +18,7 @@ export const PartyEditForm = () => {
     const dateInputMin = new Date().toISOString().split(".")[0]
 
     // gets all of the movies and friends to populate their respective input fields
-    const [users, setUsers] = useState([])
+    const [friends, setFriends] = useState([])
     const [movies, setMovies] = useState([])
 
     const { partyId } = useParams()
@@ -39,7 +39,7 @@ export const PartyEditForm = () => {
             movieId: party.movieId,
             date: party.date,
             userId: party.userId,
-            userIdGuest: party.userIdGuest,
+            friendId: party.friendId,
         }
 
         updateParty(editedParty).then(() => navigate("/parties"))
@@ -61,8 +61,10 @@ export const PartyEditForm = () => {
 
     // loads friend data and updates state
     useEffect(() => {
-        getAllUsers().then((users) => {
-            setUsers(users)
+        getFriendsByCurrentUserId(
+            JSON.parse(sessionStorage.getItem("sol_user")).id
+        ).then((users) => {
+            setFriends(users)
         })
     }, [])
 
@@ -93,16 +95,16 @@ export const PartyEditForm = () => {
                         <label htmlFor="guest">Select a guest:</label>
                         <br />
                         <select
-                            value={party.userIdGuest}
-                            name="userIdGuest"
-                            id="userIdGuest"
+                            value={party.friendId}
+                            name="friendId"
+                            id="friendId"
                             onChange={handleFieldChange}
                             className="form-control"
                         >
                             <option value="0">Select a guest</option>
-                            {users.map((person) => (
-                                <option key={person.id} value={person.id}>
-                                    {person.name}
+                            {friends.map((friend) => (
+                                <option key={friend.id} value={friend.id}>
+                                    {friend.user.name}
                                 </option>
                             ))}
                         </select>

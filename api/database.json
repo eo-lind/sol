@@ -60,7 +60,7 @@
       "id": 1,
       "movieId": 108,
       "date": "2022-04-30T10:28:18",
-      "friendId": 7,
+      "friendId": "1",
       "userId": 12
     },
     {
