@@ -1,4 +1,4 @@
-// TODO still have to figure out how to access guests (both fetch calls below) - change later
+// TODO still have to figure out how to access guests ) - change later
 
 export const getAllParties = () => {
     return fetch(
