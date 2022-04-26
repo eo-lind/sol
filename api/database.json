@@ -53,6 +53,18 @@
       "userId": 3,
       "review": "The theme song is groovy.",
       "id": 192
+    },
+    {
+      "movieId": 3,
+      "userId": 3,
+      "review": "I would have liked it more if ? and the Mysterions had done the soundtrack.",
+      "id": 193
+    },
+    {
+      "movieId": 5,
+      "userId": 7,
+      "review": "Gamera is a friend to all children!",
+      "id": 194
     }
   ],
   "parties": [
