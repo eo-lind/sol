@@ -59,7 +59,7 @@
     {
       "id": 1,
       "movieId": 108,
-      "date": "2022-04-30T10:28:18",
+      "date": "2022-04-28T10:28:18",
       "friendId": "1",
       "userId": 12
     },
@@ -67,7 +67,7 @@
       "userId": 2,
       "movieId": 9,
       "date": "2022-05-07T17:58:38",
-      "friendId": 1,
+      "friendId": "3",
       "id": 5
     },
     {
@@ -78,18 +78,18 @@
       "id": 6
     },
     {
-      "userId": 3,
-      "movieId": 107,
-      "date": "2022-12-26T14:37:44",
-      "friendId": 7,
-      "id": 7
-    },
-    {
       "userId": 2,
       "movieId": 82,
       "date": "2022-05-05T14:51:53",
       "friendId": 4,
       "id": 8
+    },
+    {
+      "userId": 7,
+      "movieId": 10,
+      "date": "2022-04-28T15:07:42",
+      "friendId": "13",
+      "id": 9
     }
   ],
   "movies": [
@@ -3093,6 +3093,76 @@
       "userId": 7,
       "currentUserId": 2,
       "id": 4
+    },
+    {
+      "userId": 1,
+      "currentUserId": 7,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "currentUserId": 7,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "currentUserId": 7,
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "currentUserId": 7,
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "currentUserId": 7,
+      "id": 9
+    },
+    {
+      "userId": 6,
+      "currentUserId": 7,
+      "id": 10
+    },
+    {
+      "userId": 8,
+      "currentUserId": 7,
+      "id": 11
+    },
+    {
+      "userId": 9,
+      "currentUserId": 7,
+      "id": 12
+    },
+    {
+      "userId": 10,
+      "currentUserId": 7,
+      "id": 13
+    },
+    {
+      "userId": 11,
+      "currentUserId": 7,
+      "id": 14
+    },
+    {
+      "userId": 12,
+      "currentUserId": 7,
+      "id": 15
+    },
+    {
+      "userId": 13,
+      "currentUserId": 7,
+      "id": 16
+    },
+    {
+      "userId": 14,
+      "currentUserId": 7,
+      "id": 17
+    },
+    {
+      "userId": 15,
+      "currentUserId": 7,
+      "id": 18
     }
   ]
 }

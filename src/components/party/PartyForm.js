@@ -107,7 +107,7 @@ export const PartyForm = () => {
                     >
                         <option value="0">Select a guest</option>
                         {friends.map((friend) => (
-                            <option key={friend.id} value={friend.id}>
+                            <option key={friend.id} value={friend.user.id}>
                                 {friend.user.name}
                             </option>
                         ))}
