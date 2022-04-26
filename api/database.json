@@ -64,27 +64,6 @@
       "userId": 12
     },
     {
-      "id": 2,
-      "movieId": 217,
-      "date": "2022-04-30T10:28:18",
-      "friendId": 4,
-      "userId": 8
-    },
-    {
-      "id": 3,
-      "movieId": 103,
-      "date": "2022-04-30T10:28:18",
-      "friendId": 14,
-      "userId": 9
-    },
-    {
-      "userId": 2,
-      "movieId": 19,
-      "date": "2022-04-30T10:28:18",
-      "friendId": 14,
-      "id": 4
-    },
-    {
       "userId": 2,
       "movieId": 9,
       "date": "2022-05-07T17:58:38",
@@ -97,13 +76,6 @@
       "date": "2022-04-30T09:46:30",
       "friendId": 1,
       "id": 6
-    },
-    {
-      "userId": 2,
-      "movieId": 67,
-      "date": "2022-06-09T11:24:28",
-      "friendId": 2,
-      "id": 7
     }
   ],
   "movies": [
@@ -3099,19 +3071,9 @@
       "id": 1
     },
     {
-      "userId": 3,
+      "userId": 5,
       "currentUserId": 2,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "currentUserId": 3,
       "id": 3
-    },
-    {
-      "userId": 2,
-      "currentUserId": 3,
-      "id": 4
     }
   ]
 }
