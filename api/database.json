@@ -3113,11 +3113,6 @@
       "id": 4
     },
     {
-      "userId": 1,
-      "currentUserId": 7,
-      "id": 5
-    },
-    {
       "userId": 2,
       "currentUserId": 7,
       "id": 6
@@ -3181,6 +3176,11 @@
       "userId": 15,
       "currentUserId": 7,
       "id": 18
+    },
+    {
+      "userId": 1,
+      "currentUserId": 7,
+      "id": 19
     }
   ]
 }

@@ -15,10 +15,17 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
                 />
             </div>
             <h3 className="review__title">{review.movie.title}</h3>
-            <div className="review__author">Reviewed by {review.user.name}</div>
-            <div className="review__body">{review.review}</div>
+            <div className="review__author">
+                <strong>Reviewed by:</strong> {review.user.name}
+            </div>
+            <div className="review__body">
+                <strong>Review:</strong> {review.review}
+            </div>
             <div className="review__rating">
                 <strong>imDb rating:</strong> {review.movie.imDbRating}
+            </div>
+            <div className="review__mst3k">
+                <strong>Summary:</strong> {review.movie.plot}
             </div>
             <div className="review__mst3k">
                 This version of {review.movie.title} aired on{" "}
