@@ -38,7 +38,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
            
                 <Route path="friends/add" element={<PrivateRoute><FriendForm /></PrivateRoute>} />
 
-                {/* TODO Renders the user list - change to friends later */}
+                {/* TODO Renders the user list - will probably not need this */}
                 <Route
                     path="/users"
                     element={
