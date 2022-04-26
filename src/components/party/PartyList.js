@@ -18,9 +18,12 @@ export const PartyList = () => {
         getParties()
     }, [])
 
+    
     const handleDeleteParty = (id) => {
         deleteParty(id).then(() => getAllParties().then(setParties))
     }
+
+
 
     return (
         <>
@@ -42,7 +45,7 @@ export const PartyList = () => {
                         key={party.id}
                         party={party}
                         handleDeleteParty={handleDeleteParty}
-                    />
+                                            />
                 ))}
             </div>
         </>

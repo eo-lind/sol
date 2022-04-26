@@ -31,12 +31,11 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                     </Link>
                 </li>
             )}
-            {/* TODO later: */}
-            {/* {isAuthenticated && <li className="navbar__item">
+            {isAuthenticated && <li className="navbar__item">
                 <Link className="navbar__link" to="/friends">
                     Friends
                 </Link>
-            </li>} */}
+            </li>}
             {isAuthenticated && (
                 <li className="navbar__item">
                     <Link className="navbar__link" to="/users">

@@ -4,6 +4,7 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Home } from "../Home"
 import { UserList } from "./user/UserList"
+import { FriendList } from "./user/FriendList"
 import { MovieList } from "./movie/MovieList"
 import { PartyList } from "./party/PartyList"
 import { ReviewList } from "./review/ReviewList"
@@ -11,6 +12,7 @@ import { ReviewForm } from "./review/ReviewForm"
 import { ReviewEditForm } from "./review/ReviewEditForm"
 import { PartyForm } from "./party/PartyForm"
 import { PartyEditForm } from "./party/PartyEditForm"
+// import { FriendForm } from "./users/FriendForm"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
 
@@ -33,6 +35,9 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                 />
                 <Route exact path="/register" element={<Register />} />
                 <Route path="/" element={<Home />} />
+                <Route path="friends" element={<PrivateRoute><FriendList /></PrivateRoute>} />
+                {/* <Route path="friends/add" element={<PrivateRoute><FriendForm /></PrivateRoute>} /> */}
+
                 {/* TODO Renders the user list - change to friends later */}
                 <Route
                     path="/users"

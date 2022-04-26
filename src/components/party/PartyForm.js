@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { addParty } from "../../modules/PartyManager"
 import { getAllMovies } from "../../modules/MovieManager"
-import { getAllUsers } from "../../modules/UserManager"
+import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 import "./PartyForm.css"
 
 // TODO change the initial default state of the userID (ln 14) back to 0 when login is working
@@ -24,7 +24,7 @@ export const PartyForm = () => {
 
 
     // gets all of the movies and friends to populate their respective input fields
-    const [users, setUsers] = useState([])
+    const [friends, setFriends] = useState([])
     const [movies, setMovies] = useState([])
 
     const navigate = useNavigate()
@@ -48,8 +48,10 @@ export const PartyForm = () => {
 
     // loads friend data and updates state
     useEffect(() => {
-        getAllUsers().then((users) => {
-            setUsers(users)
+        getFriendsByCurrentUserId(
+            JSON.parse(sessionStorage.getItem("sol_user")).id
+        ).then((users) => {
+            setFriends(users)
         })
     }, [])
 
@@ -102,9 +104,9 @@ export const PartyForm = () => {
                         className="form-control"
                     >
                         <option value="0">Select a guest</option>
-                        {users.map((person) => (
-                            <option key={person.id} value={person.id}>
-                                {person.name}
+                        {friends.map((friend) => (
+                            <option key={friend.id} value={friend.id}>
+                                {friend.user.name}
                             </option>
                         ))}
                     </select>
