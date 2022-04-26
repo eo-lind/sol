@@ -4,7 +4,13 @@ import "./Review.css"
 
 // this is a child of Sol component
 
+// ternary statement insures that edit/delete buttons will only display if logged in user is author of the review
+
 export const ReviewCard = ({ review, handleDeleteReview }) => {
+    const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
+    const reviewAuthor = review.userId
+
+
     return (
         <section className="review">
             <div className="review__image-container">
@@ -33,12 +39,24 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
                 {review.movie.episodeNumber} of season{" "}
                 {review.movie.seasonNumber}.
             </div>
-            <Link to={`/reviews/${review.id}/edit`}>
-                <button>Edit</button>
-            </Link>
-            <button type="button" onClick={() => handleDeleteReview(review.id)}>
-                Delete
-            </button>
+
+            <div className="review__button-container">
+                {currentUser === reviewAuthor ? (
+                    <>
+                        <Link to={`/reviews/${review.id}/edit`}>
+                            <button>Edit</button>
+                        </Link>
+                        <button
+                            type="button"
+                            onClick={() => handleDeleteReview(review.id)}
+                        >
+                            Delete
+                        </button>
+                    </>
+                ) : (
+                    ""
+                )}
+            </div>
         </section>
     )
 }
