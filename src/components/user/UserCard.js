@@ -3,7 +3,7 @@ import "./User.css"
 
 // this is a child of Sol component
 
-export const UserCard = ({ user }) => {
+export const UserCard = ({ user, handleClickSaveFriend }) => {
     return (
         <section className="user">
             <div className="user__image-container">

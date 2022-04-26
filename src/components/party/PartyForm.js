@@ -14,7 +14,7 @@ export const PartyForm = () => {
         userId: 2,
         movieId: 0,
         date: "",
-        userIdGuest: 0,
+        friendId: 0,
     })
 
     const [isLoading, setIsLoading] = useState(false)
@@ -59,9 +59,9 @@ export const PartyForm = () => {
         event.preventDefault() //Prevents the browser from submitting the form
 
         const movieId = party.movieId
-        const userIdGuest = party.userIdGuest
+        const friendId = party.friendId
 
-        if (movieId === 0 || userIdGuest === 0) {
+        if (movieId === 0 || friendId === 0) {
             window.alert("Please select a movie and a customer")
         } else {
             //invoke addParty passing party as an argument.
@@ -97,9 +97,9 @@ export const PartyForm = () => {
                     <label htmlFor="guest">Select a guest:</label>
                     <br />
                     <select
-                        value={party.userIdGuest}
-                        name="userIdGuest"
-                        id="userIdGuest"
+                        value={party.friendId}
+                        name="friendId"
+                        id="friendId"
                         onChange={handleControlledInputChange}
                         className="form-control"
                     >

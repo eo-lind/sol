@@ -12,7 +12,7 @@ import { ReviewForm } from "./review/ReviewForm"
 import { ReviewEditForm } from "./review/ReviewEditForm"
 import { PartyForm } from "./party/PartyForm"
 import { PartyEditForm } from "./party/PartyEditForm"
-// import { FriendForm } from "./users/FriendForm"
+import { FriendForm } from "./user/AddFriend"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
 
@@ -35,8 +35,8 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                 />
                 <Route exact path="/register" element={<Register />} />
                 <Route path="/" element={<Home />} />
-                <Route path="friends" element={<PrivateRoute><FriendList /></PrivateRoute>} />
-                {/* <Route path="friends/add" element={<PrivateRoute><FriendForm /></PrivateRoute>} /> */}
+           
+                <Route path="friends/add" element={<PrivateRoute><FriendForm /></PrivateRoute>} />
 
                 {/* TODO Renders the user list - change to friends later */}
                 <Route
@@ -44,6 +44,14 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     element={
                         <PrivateRoute>
                             <UserList />
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/friends"
+                    element={
+                        <PrivateRoute>
+                            <FriendList />
                         </PrivateRoute>
                     }
                 />

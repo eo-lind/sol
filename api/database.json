@@ -97,6 +97,13 @@
       "date": "2022-04-30T09:46:30",
       "friendId": 1,
       "id": 6
+    },
+    {
+      "userId": 2,
+      "movieId": 67,
+      "date": "2022-06-09T11:24:28",
+      "friendId": 2,
+      "id": 7
     }
   ],
   "movies": [
