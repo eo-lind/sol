@@ -1,0 +1,11 @@
+/* main is parent of the columns */
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column {
+    width: 30%;
+    display: flex;
+    flex-flow: row wrap;
+}

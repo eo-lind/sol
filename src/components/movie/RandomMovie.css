@@ -1,0 +1,15 @@
+.random-movie {
+  max-width: 400px;
+  display: flex;
+  border: 1px dashed gray;
+  padding: 10px;
+}
+
+.random-movie img {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.random-movie p {
+  color: black;
+}

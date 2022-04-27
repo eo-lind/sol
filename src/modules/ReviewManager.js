@@ -38,3 +38,9 @@ export const deleteReview = (id) => {
         method: "DELETE",
     }).then((result) => result.json())
 }
+
+export const getReviewsForHome = () => {
+    return fetch(
+        `http://localhost:8088/reviews?_sort=id&_order=desc&_expand=user&_expand=movie&_limit=3`
+    ).then((res) => res.json())
+}

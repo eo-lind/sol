@@ -23,3 +23,10 @@ export const updateProfile = (editedUser) => {
         }
     ).then((data) => data.json())
 }
+
+export const getLoggedInUserById = () => {
+    const currentUserId = JSON.parse(sessionStorage.getItem("sol_user")).id
+    return fetch(`http://localhost:8088/users/${currentUserId}`).then((res) =>
+        res.json()
+    )
+}
