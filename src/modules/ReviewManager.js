@@ -1,6 +1,6 @@
 export const getAllReviews = () => {
     return fetch(
-        `http://localhost:8088/reviews?_expand=user&_expand=movie`
+        `http://localhost:8088/reviews?_sort=id&_order=desc&_expand=user&_expand=movie`
     ).then((res) => res.json())
 }
 

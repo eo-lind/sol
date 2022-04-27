@@ -4,10 +4,12 @@ import { updateReview, getReviewById } from "../../modules/ReviewManager"
 import "./ReviewForm.css"
 
 export const ReviewEditForm = () => {
+    const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
+
     const [review, setReview] = useState({
         movieId: 0,
         review: "",
-        userId: 0
+        userId: currentUser
     })
     const [isLoading, setIsLoading] = useState(false)
 

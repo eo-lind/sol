@@ -13,7 +13,7 @@
       "review": "BUT NO ONE'S EVER SEEN THE BEAST!"
     },
     {
-      "id": 183,
+      "id": 3,
       "movieId": 39,
       "userId": 12,
       "review": "It could be worse - it could be Old Yeller! RIP Tommy Kirk"
@@ -22,73 +22,76 @@
       "movieId": 22,
       "userId": 14,
       "review": "Hated it.",
-      "id": 186
+      "id": 4
     },
     {
       "movieId": 63,
       "userId": 6,
       "review": "Love seeing Bronson Canyon, but damn, this movie sucked.",
-      "id": 187
+      "id": 5
     },
     {
       "movieId": 124,
       "userId": 3,
       "review": "Holy crappy movie, Batman!",
-      "id": 188
+      "id": 6
     },
     {
       "movieId": 51,
       "userId": 3,
       "review": "Trumpy, you can do stupid things!",
-      "id": 190
+      "id": 7
     },
     {
       "movieId": 163,
       "userId": 3,
       "review": "THE NAME IS TOO LOOOOOOOOOOOONG!",
-      "id": 191
+      "id": 8
     },
     {
       "movieId": 33,
       "userId": 3,
       "review": "The theme song is groovy.",
-      "id": 192
+      "id": 9
+    },
+    {
+      "movieId": 3,
+      "userId": 3,
+      "review": "I would have liked it more if ? and the Mysterions had done the soundtrack.",
+      "id": 10
+    },
+    {
+      "movieId": 5,
+      "userId": 7,
+      "review": "Gamera is a friend to all children!",
+      "id": 11
+    },
+    {
+      "movieId": 12,
+      "userId": 7,
+      "review": "I really relate to this character.",
+      "id": 12
+    },
+    {
+      "movieId": 116,
+      "userId": 7,
+      "review": "BOW DOWN TO RADAR!",
+      "id": 13
     }
   ],
   "parties": [
     {
       "id": 1,
       "movieId": 108,
-      "date": "2022-04-30T10:28:18",
+      "date": "2022-04-28T10:28:18",
       "friendId": "1",
       "userId": 12
-    },
-    {
-      "id": 2,
-      "movieId": 217,
-      "date": "2022-04-30T10:28:18",
-      "friendId": 4,
-      "userId": 8
-    },
-    {
-      "id": 3,
-      "movieId": 103,
-      "date": "2022-04-30T10:28:18",
-      "friendId": 14,
-      "userId": 9
-    },
-    {
-      "userId": 2,
-      "movieId": 19,
-      "date": "2022-04-30T10:28:18",
-      "friendId": 14,
-      "id": 4
     },
     {
       "userId": 2,
       "movieId": 9,
       "date": "2022-05-07T17:58:38",
-      "friendId": 1,
+      "friendId": "3",
       "id": 5
     },
     {
@@ -97,6 +100,20 @@
       "date": "2022-04-30T09:46:30",
       "friendId": 1,
       "id": 6
+    },
+    {
+      "userId": 2,
+      "movieId": 82,
+      "date": "2022-05-05T14:51:53",
+      "friendId": 4,
+      "id": 8
+    },
+    {
+      "userId": 7,
+      "movieId": 96,
+      "date": "2022-06-30T20:08:51",
+      "friendId": 12,
+      "id": 11
     }
   ],
   "movies": [
@@ -3092,19 +3109,29 @@
       "id": 1
     },
     {
-      "userId": 3,
+      "userId": 5,
       "currentUserId": 2,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "currentUserId": 3,
       "id": 3
     },
     {
-      "userId": 2,
-      "currentUserId": 3,
+      "userId": 7,
+      "currentUserId": 2,
       "id": 4
+    },
+    {
+      "userId": 9,
+      "currentUserId": 7,
+      "id": 12
+    },
+    {
+      "userId": 13,
+      "currentUserId": 7,
+      "id": 16
+    },
+    {
+      "userId": 4,
+      "currentUserId": 7,
+      "id": 18
     }
   ]
 }

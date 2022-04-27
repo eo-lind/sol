@@ -10,3 +10,16 @@ export const getAllUsers = () => {
         res.json()
     )
 }
+
+export const updateProfile = (editedProfile) => {
+    return fetch(
+        `http://localhost:8088/users/${editedProfile.id}`,
+        {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(editedProfile),
+        }
+    ).then((data) => data.json())
+}

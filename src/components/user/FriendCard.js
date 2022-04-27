@@ -21,7 +21,7 @@ export const FriendCard = ({ friend, handleDeleteFriend }) => {
                 </div>
                 <button
                     type="button"
-                    onClick={() => handleDeleteFriend(friend.user.id)}
+                    onClick={() => handleDeleteFriend(friend.id)}
                 >
                     Unfriend
                 </button>

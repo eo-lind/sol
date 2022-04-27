@@ -7,10 +7,11 @@ import "./ReviewForm.css"
 // TODO change the initial default state of the userID (ln 13) back to 0 when login is working
 
 export const ReviewForm = () => {
+    const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
 
     const [review, setReview] = useState({
         movieId: 0,
-        userId: 3,
+        userId: currentUser,
         review: "",
     })
 

@@ -6,6 +6,7 @@ import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 import "./PartyForm.css"
 
 export const PartyEditForm = () => {
+
     const [party, setParty] = useState({
         movieId: 0,
         date: "",
@@ -103,7 +104,7 @@ export const PartyEditForm = () => {
                         >
                             <option value="0">Select a guest</option>
                             {friends.map((friend) => (
-                                <option key={friend.id} value={friend.id}>
+                                <option key={friend.id} value={friend.user.id}>
                                     {friend.user.name}
                                 </option>
                             ))}

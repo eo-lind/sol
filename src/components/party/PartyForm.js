@@ -5,16 +5,18 @@ import { getAllMovies } from "../../modules/MovieManager"
 import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 import "./PartyForm.css"
 
-// TODO change the initial default state of the userID (ln 14) back to 0 when login is working
 
 // TODO eventualy the guest selector will need to just load users friends and not all users
 
 export const PartyForm = () => {
+
+    const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
+
     const [party, setParty] = useState({
-        userId: 2,
+        userId: currentUser,
         movieId: 0,
         date: "",
-        userIdGuest: 0,
+        friendId: 0,
     })
 
     const [isLoading, setIsLoading] = useState(false)
@@ -59,9 +61,9 @@ export const PartyForm = () => {
         event.preventDefault() //Prevents the browser from submitting the form
 
         const movieId = party.movieId
-        const userIdGuest = party.userIdGuest
+        const friendId = party.friendId
 
-        if (movieId === 0 || userIdGuest === 0) {
+        if (movieId === 0 || friendId === 0) {
             window.alert("Please select a movie and a customer")
         } else {
             //invoke addParty passing party as an argument.
@@ -97,15 +99,15 @@ export const PartyForm = () => {
                     <label htmlFor="guest">Select a guest:</label>
                     <br />
                     <select
-                        value={party.userIdGuest}
-                        name="userIdGuest"
-                        id="userIdGuest"
+                        value={party.friendId}
+                        name="friendId"
+                        id="friendId"
                         onChange={handleControlledInputChange}
                         className="form-control"
                     >
                         <option value="0">Select a guest</option>
                         {friends.map((friend) => (
-                            <option key={friend.id} value={friend.id}>
+                            <option key={friend.id} value={friend.user.id}>
                                 {friend.user.name}
                             </option>
                         ))}
