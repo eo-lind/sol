@@ -71,6 +71,12 @@
       "userId": 7,
       "review": "I really relate to this character.",
       "id": 12
+    },
+    {
+      "movieId": 116,
+      "userId": 7,
+      "review": "BOW DOWN TO RADAR!",
+      "id": 13
     }
   ],
   "parties": [
@@ -104,10 +110,10 @@
     },
     {
       "userId": 7,
-      "movieId": 10,
-      "date": "2022-04-28T15:07:42",
-      "friendId": "13",
-      "id": 9
+      "movieId": 96,
+      "date": "2022-06-30T20:08:51",
+      "friendId": 12,
+      "id": 11
     }
   ],
   "movies": [
@@ -3113,54 +3119,9 @@
       "id": 4
     },
     {
-      "userId": 2,
-      "currentUserId": 7,
-      "id": 6
-    },
-    {
-      "userId": 3,
-      "currentUserId": 7,
-      "id": 7
-    },
-    {
-      "userId": 4,
-      "currentUserId": 7,
-      "id": 8
-    },
-    {
-      "userId": 5,
-      "currentUserId": 7,
-      "id": 9
-    },
-    {
-      "userId": 6,
-      "currentUserId": 7,
-      "id": 10
-    },
-    {
-      "userId": 8,
-      "currentUserId": 7,
-      "id": 11
-    },
-    {
       "userId": 9,
       "currentUserId": 7,
       "id": 12
-    },
-    {
-      "userId": 10,
-      "currentUserId": 7,
-      "id": 13
-    },
-    {
-      "userId": 11,
-      "currentUserId": 7,
-      "id": 14
-    },
-    {
-      "userId": 12,
-      "currentUserId": 7,
-      "id": 15
     },
     {
       "userId": 13,
@@ -3168,19 +3129,9 @@
       "id": 16
     },
     {
-      "userId": 14,
-      "currentUserId": 7,
-      "id": 17
-    },
-    {
-      "userId": 15,
+      "userId": 4,
       "currentUserId": 7,
       "id": 18
-    },
-    {
-      "userId": 1,
-      "currentUserId": 7,
-      "id": 19
     }
   ]
 }

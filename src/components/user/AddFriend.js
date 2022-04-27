@@ -10,6 +10,7 @@ export const FriendForm = () => {
 
     const navigate = useNavigate()
 
+    // fetches logged in users friends and sets them as alreadyFriends
     const getFriendList = () => {
         getFriendsByCurrentUserId(
             JSON.parse(sessionStorage.getItem("sol_user")).id
@@ -18,12 +19,16 @@ export const FriendForm = () => {
         })
     }
 
+    useEffect(() => {
+        getFriendList()
+    }, [])
+
+    // fetches all users, filters out logged in user by id, then filters out alreadyFriends, and sets users as all users who aren't logged in user or already on logged in user's friends list
     const getUsers = () => {
         getAllUsers().then((usersFromApi) => {
             const applicableUsers = usersFromApi.filter((i) => {
                 return (
-                    i.id !==
-                    JSON.parse(sessionStorage.getItem("sol_user")).id
+                    i.id !== JSON.parse(sessionStorage.getItem("sol_user")).id
                 )
             })
 
@@ -35,7 +40,7 @@ export const FriendForm = () => {
             setUsers(fullFilterList)
         })
     }
-
+    
     const handleClickSaveFriend = (friendId) => {
         const friendObj = {
             userId: friendId,
@@ -45,9 +50,7 @@ export const FriendForm = () => {
         addFriend(friendObj).then(getUsers())
     }
 
-    useEffect(() => {
-        getFriendList()
-    }, [])
+    
 
     useEffect(() => {
         getUsers()
@@ -63,7 +66,7 @@ export const FriendForm = () => {
                         navigate("/friends")
                     }}
                 >
-                    Go to friend list
+                    My Friends
                 </button>
             </section>
             <section className="searchInput">

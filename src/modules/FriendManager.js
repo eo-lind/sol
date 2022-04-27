@@ -23,3 +23,4 @@ export const addFriend = (newFriend) => {
         body: JSON.stringify(newFriend),
     }).then((response) => response.json())
 }
+

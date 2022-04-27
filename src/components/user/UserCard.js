@@ -1,9 +1,15 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./User.css"
 
 // this is a child of Sol component
 
 export const UserCard = ({ user, handleClickSaveFriend }) => {
+    const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
+    const profileSubject = user.id
+
+      
+
     return (
         <section className="user">
             <div className="user__image-container">
@@ -23,6 +29,24 @@ export const UserCard = ({ user, handleClickSaveFriend }) => {
             <div className="user__dislikes">
                 <strong>Dislikes:</strong> {user.dislikes}
             </div>
+            {currentUser === profileSubject ? (
+                <>
+                    <Link to={`/users/${user.id}/edit`}>
+                        <button>Edit</button>
+                    </Link>
+                </>
+            ) : (
+                ""
+            )}
+            <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => {
+                    handleClickSaveFriend(user.id)
+                }}
+            >
+                Save to friend list
+            </button>
         </section>
     )
 }
