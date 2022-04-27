@@ -47,7 +47,7 @@ export const FriendForm = () => {
             currentUserId: JSON.parse(sessionStorage.getItem("sol_user"))
                 .id,
         }
-        addFriend(friendObj).then(getUsers())
+        addFriend(friendObj).then(() => navigate("/users"))
     }
 
     
