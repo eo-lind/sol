@@ -26,9 +26,9 @@ export const FriendForm = () => {
     // fetches all users, filters out logged in user by id, then filters out alreadyFriends, and sets users as all users who aren't logged in user or already on logged in user's friends list
     const getUsers = () => {
         getAllUsers().then((usersFromApi) => {
-            const applicableUsers = usersFromApi.filter((i) => {
+            const applicableUsers = usersFromApi.filter((anyUser) => {
                 return (
-                    i.id !== JSON.parse(sessionStorage.getItem("sol_user")).id
+                    anyUser.id !== JSON.parse(sessionStorage.getItem("sol_user")).id
                 )
             })
 

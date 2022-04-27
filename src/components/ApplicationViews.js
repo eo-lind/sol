@@ -13,7 +13,7 @@ import { ReviewEditForm } from "./review/ReviewEditForm"
 import { PartyForm } from "./party/PartyForm"
 import { PartyEditForm } from "./party/PartyEditForm"
 import { FriendForm } from "./user/AddFriend"
-import { ProfileEditForm } from "./user/UserEditForm"
+import { UserEditForm } from "./user/UserEditForm"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
 
@@ -48,7 +48,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     path="/users/:userId/edit"
                     element={
                         <PrivateRoute>
-                            <ProfileEditForm />
+                            <UserEditForm />
                         </PrivateRoute>
                     }
                 />
@@ -61,6 +61,9 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                         </PrivateRoute>
                     }
                 />
+
+                {/* TODO create a route that just goes to logged in user profile (will need to be added to user edit form) */}
+               
                 <Route
                     path="/friends"
                     element={
