@@ -13,7 +13,7 @@ export const UserEditForm = () => {
         aboutMe: "",
         likes: "",
         dislikes: "",
-        userId: currentUser,
+        id: currentUser,
     })
     const [isLoading, setIsLoading] = useState(false)
 
@@ -37,7 +37,7 @@ export const UserEditForm = () => {
             aboutMe: user.aboutMe,
             likes: user.likes,
             dislikes: user.dislikes,
-            userId: user.id,
+            id: user.id,
         }
 
         updateProfile(editedUser).then(() => navigate("/users"))
@@ -54,20 +54,86 @@ export const UserEditForm = () => {
         <>
             <form>
                 <fieldset>
-                    <div className="formgrid">
+                    <div className="form-section">
                         <label htmlFor="review">About me</label>
                         <br />
-
-                        <textarea
-                            id="aboutMe"
-                            name="aboutMe"
-                            rows="4"
-                            cols="50"
-                            onChange={handleFieldChange}
-                            required
+                        <div className="form-section">
+                            <label htmlFor="name">Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                className="form-control"
+                                defaultValue={user.name}
+                                required
+                                autoFocus
+                                onChange={handleFieldChange}
+                                id="name"
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="inputEmail">Email address</label>
+                            <input
+                                type="email"
+                                name="email"
+                                className="form-control"
+                                defaultValue={user.email}
+                                required
+                                onChange={handleFieldChange}
+                                id="email"
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="inputProfilePic">
+                                Profile photo
+                            </label>
+                            <input
+                                type="text"
+                                name="profilePic"
+                                className="form-control"
+                                defaultValue={user.profilePic}
+                                required
+                                onChange={handleFieldChange}
+                                id="profilePic"
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="inputAboutMe">About Me</label>
+                            <textarea
+                                id="aboutMe"
+                                name="aboutMe"
+                                rows="4"
+                                cols="50"
+                                onChange={handleFieldChange}
+                                required
+                                className="form-control"
+                                value={user.aboutMe}
+                            ></textarea>
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="likes">Likes</label>
+                            <input
+                                type="text"
+                                name="likes"
+                                className="form-control"
+                                defaultValue={user.likes}
+                                required
+                                autoFocus
+                                onChange={handleFieldChange}
+                                id="likes"
+                            />
+                        </div>
+                        <div className="form-section"></div>
+                        <label htmlFor="dislikes">Dislikes</label>
+                        <input
+                            type="text"
+                            name="dislikes"
                             className="form-control"
-                            value={user.aboutMe}
-                        ></textarea>
+                            defaultValue={user.dislikes}
+                            required
+                            autoFocus
+                            onChange={handleFieldChange}
+                            id="dislikes"
+                        />
                     </div>
                     <div className="alignRight">
                         <button
