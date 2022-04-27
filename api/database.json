@@ -114,6 +114,13 @@
       "date": "2022-06-30T20:08:51",
       "friendId": 12,
       "id": 11
+    },
+    {
+      "userId": 7,
+      "movieId": 70,
+      "date": "2022-06-30T16:51:03",
+      "friendId": 9,
+      "id": 12
     }
   ],
   "movies": [
@@ -3124,14 +3131,9 @@
       "id": 12
     },
     {
-      "userId": 13,
+      "userId": 1,
       "currentUserId": 7,
-      "id": 16
-    },
-    {
-      "userId": 4,
-      "currentUserId": 7,
-      "id": 18
+      "id": 13
     }
   ]
 }
