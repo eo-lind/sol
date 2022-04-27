@@ -1,15 +1,81 @@
-.random-movie {
-  max-width: 400px;
+.container-cards {
   display: flex;
-  border: 1px dashed gray;
-  padding: 10px;
+  flex-flow: row wrap;
 }
 
-.random-movie img {
-  width: 200px;
-  margin-right: 20px;
+/* TODO can probably delete the one below */
+
+/* .movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.movie {
+  background: rgba(56, 72, 114, 0.9);
+  flex-basis: 28%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #6fa9bd;
+  border-radius: 4px;
+  font-size: small;
+  color: #ffffff;
 }
 
-.random-movie p {
-  color: black;
+.movie__image-container {
+  width: 100%;
+}
+
+.movie__photo {
+  width: 100%;
+  border-radius: 4px;
+}
+
+h3 {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+.movie__plot, .movie__rating {
+padding-bottom: 1em;
+}
+
+.movie__mst3k {
+  font-size: x-small;
+}
+
+.party__button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+button {
+  align-items: center;
+  background-color: #6fa9bd;
+  border: 2px solid #0e0e25;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 3px 3px;
+  color: #0e0e25;
+  cursor: pointer;
+  display: flex;
+  min-height: 2em;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 1em;
+}
+
+button:active {
+  background-color: #7e6c8a;
+  outline: 0;
+  text-decoration: none;
 }

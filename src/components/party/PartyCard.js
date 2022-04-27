@@ -27,6 +27,13 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
 
      return (
          <section className="party">
+             <div className="party__image-container">
+                 <img
+                     className="party__image"
+                     alt="image of the film"
+                     src={party.movie.image}
+                 />
+             </div>
              <h3 className="party__movie">{party.movie.title}</h3>
              <div className="party__host">
                  <strong>Host:</strong> {party.user?.name}
@@ -36,13 +43,6 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
              </div>
              <div className="party__guests">
                  <strong>Guests:</strong> {guest.name}
-             </div>
-             <div className="party__image-container">
-                 <img
-                     className="party__image"
-                     alt="image of the film"
-                     src={party.movie.image}
-                 />
              </div>
 
              <div className="party__button-container">
@@ -55,7 +55,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
                              type="button"
                              onClick={() => handleDeleteParty(party.id)}
                          >
-                             Cancel Party
+                             Delete
                          </button>
                      </>
                  ) : (
