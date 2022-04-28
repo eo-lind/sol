@@ -1,161 +1,145 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { updateProfile, getUserById } from "../../modules/UserManager"
-import "./User.css"
+import "./UserForms.css"
 
-export const ProfileEditForm = () => {
+export const UserEditForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
 
-    const [profile, setProfile] = useState({
+    const [user, setUser] = useState({
         name: "",
         email: "",
         profilePic: "",
         aboutMe: "",
         likes: "",
         dislikes: "",
-        userId: currentUser,
+        id: currentUser,
     })
     const [isLoading, setIsLoading] = useState(false)
 
-    const { profileId } = useParams()
+    const { userId } = useParams()
     const navigate = useNavigate()
 
     const handleFieldChange = (evt) => {
-        const stateToChange = { ...profile }
+        const stateToChange = { ...user }
         stateToChange[evt.target.id] = evt.target.value
-        setProfile(stateToChange)
+        setUser(stateToChange)
     }
 
-    const updateExistingProfile = (evt) => {
+    const updateExistingUser = (evt) => {
         evt.preventDefault()
         setIsLoading(true)
 
-        const editedProfile = {
-            id: profile.id,
-            name: profile.name,
-            email: profile.email,
-            profilePic: profile.profilePic,
-            aboutMe: profile.aboutMe,
-            likes: profile.likes,
-            dislikes: profile.dislikes,
-            userId: profile.userId,
+        const editedUser = {
+            name: user.name,
+            email: user.email,
+            profilePic: user.profilePic,
+            aboutMe: user.aboutMe,
+            likes: user.likes,
+            dislikes: user.dislikes,
+            id: user.id,
         }
 
-        updateProfile(editedProfile).then(() => navigate("/profiles"))
+        updateProfile(editedUser).then(() => navigate("/users"))
     }
 
     useEffect(() => {
-        getUserById(profileId).then((profile) => {
-            setProfile(profile)
+        getUserById(userId).then((user) => {
+            setUser(user)
             setIsLoading(false)
         })
     }, [])
-console.log(profile.name)
+
     return (
         <>
             <form>
                 <fieldset>
-                    <div className="formgrid">
-                        <label htmlFor="name">Name</label>
+                    <div className="form-section">
+                        <label htmlFor="review">About me</label>
                         <br />
+                        <div className="form-section">
+                            <label htmlFor="name">Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                className="form-control"
+                                defaultValue={user.name}
+                                required
+                                autoFocus
+                                onChange={handleFieldChange}
+                                id="name"
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="inputEmail">Email address</label>
+                            <input
+                                type="email"
+                                name="email"
+                                className="form-control"
+                                defaultValue={user.email}
+                                required
+                                onChange={handleFieldChange}
+                                id="email"
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="inputProfilePic">
+                                Profile photo
+                            </label>
+                            <input
+                                type="text"
+                                name="profilePic"
+                                className="form-control"
+                                defaultValue={user.profilePic}
+                                required
+                                onChange={handleFieldChange}
+                                id="profilePic"
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="inputAboutMe">About Me</label>
+                            <textarea
+                                id="aboutMe"
+                                name="aboutMe"
+                                rows="4"
+                                cols="50"
+                                onChange={handleFieldChange}
+                                required
+                                className="form-control"
+                                value={user.aboutMe}
+                            ></textarea>
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="likes">Likes</label>
+                            <input
+                                type="text"
+                                name="likes"
+                                className="form-control"
+                                defaultValue={user.likes}
+                                required
+                                autoFocus
+                                onChange={handleFieldChange}
+                                id="likes"
+                            />
+                        </div>
+                        <div className="form-section"></div>
+                        <label htmlFor="dislikes">Dislikes</label>
                         <input
                             type="text"
-                            id="name"
-                            name="name"
-                            rows="4"
-                            cols="50"
-                            onChange={handleFieldChange}
-                            required
-                            className="form-control"
-                            placeholder={profile.name}
-                            value={profile.name}
-                        />
-                    </div>
-
-                    <div className="formgrid">
-                        <label htmlFor="email">Email</label>
-                        <br />
-                        <input
-                            type="text"
-                            id="email"
-                            name="email"
-                            rows="4"
-                            cols="50"
-                            onChange={handleFieldChange}
-                            required
-                            className="form-control"
-                            value={profile.email}
-                        />
-                    </div>
-
-                    <div className="formgrid">
-                        <label htmlFor="email">Profile Photo URL</label>
-                        <br />
-                        <input
-                            type="text"
-                            id="profilePic"
-                            name="profilePic"
-                            rows="4"
-                            cols="50"
-                            onChange={handleFieldChange}
-                            required
-                            className="form-control"
-                            value={profile.profilePic}
-                        />
-                    </div>
-
-                    <div className="formgrid">
-                        <label htmlFor="email">About Me</label>
-                        <br />
-                        <textarea
-                            id="aboutMe"
-                            name="aboutMe"
-                            rows="4"
-                            cols="50"
-                            onChange={handleFieldChange}
-                            required
-                            className="form-control"
-                            value={profile.aboutMe}
-                        ></textarea>
-                    </div>
-
-                    <div className="formgrid">
-                        <label htmlFor="likes">Likes</label>
-                        <br />
-                        <input
-                            type="text"
-                            id="likes"
-                            name="likes"
-                            rows="4"
-                            cols="50"
-                            onChange={handleFieldChange}
-                            required
-                            className="form-control"
-                            value={profile.likes}
-                        />
-                    </div>
-
-                    <div className="formgrid">
-                        <label htmlFor="email">Dislikes</label>
-                        <br />
-                        <input
-                            type="text"
-                            id="dislikes"
                             name="dislikes"
-                            rows="4"
-                            cols="50"
-                            onChange={handleFieldChange}
-                            required
                             className="form-control"
-                            value={profile.dislikes}
+                            defaultValue={user.dislikes}
+                            required
+                            autoFocus
+                            onChange={handleFieldChange}
+                            id="dislikes"
                         />
                     </div>
-
                     <div className="alignRight">
                         <button
                             type="button"
                             disabled={isLoading}
-                            onClick={updateExistingProfile}
+                            onClick={updateExistingUser}
                             className="btn btn-primary"
                         >
                             Submit

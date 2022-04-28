@@ -11,15 +11,22 @@ export const getAllUsers = () => {
     )
 }
 
-export const updateProfile = (editedProfile) => {
+export const updateProfile = (editedUser) => {
     return fetch(
-        `http://localhost:8088/users/${editedProfile.id}`,
+        `http://localhost:8088/users/${editedUser.id}`,
         {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(editedProfile),
+            body: JSON.stringify(editedUser),
         }
     ).then((data) => data.json())
+}
+
+export const getLoggedInUserById = () => {
+    const currentUserId = JSON.parse(sessionStorage.getItem("sol_user")).id
+    return fetch(`http://localhost:8088/users/${currentUserId}`).then((res) =>
+        res.json()
+    )
 }

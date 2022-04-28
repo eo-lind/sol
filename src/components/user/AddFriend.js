@@ -10,6 +10,8 @@ export const FriendForm = () => {
 
     const navigate = useNavigate()
 
+
+
     // fetches logged in users friends and sets them as alreadyFriends
     const getFriendList = () => {
         getFriendsByCurrentUserId(
@@ -23,23 +25,37 @@ export const FriendForm = () => {
         getFriendList()
     }, [])
 
-    // fetches all users, filters out logged in user by id, then filters out alreadyFriends, and sets users as all users who aren't logged in user or already on logged in user's friends list
+    
     const getUsers = () => {
+        // gets all users, filters out logged in user, returns all users except logged in user
         getAllUsers().then((usersFromApi) => {
-            const applicableUsers = usersFromApi.filter((i) => {
+            const applicableUsers = usersFromApi.filter((anyUser) => {
                 return (
-                    i.id !== JSON.parse(sessionStorage.getItem("sol_user")).id
+                    anyUser.id !== JSON.parse(sessionStorage.getItem("sol_user")).id
                 )
             })
+             return applicableUsers
 
-            const fullFilterList = applicableUsers.filter((i) => {
-                return alreadyFriends.filter((x) => {
-                    return x.userId !== i.id
-                })
-            })
-            setUsers(fullFilterList)
+        }).then((applicableUsers) => {
+            // creates empty array, loops through all non logged in users, then loops through all users who are already on the friends list - if a user object from the list of all non-logged in users has an id that doesn't match any users on the alreadyFriends objects, the non-loggged in user object is pushed into sorted arrays; state of "users" is declared as the user objects in the sortedArray
+            const sortedArray = []
+            for (let i = 0; i < applicableUsers.length; i++) {
+                const applicableUserObj = applicableUsers[i];
+                for (let n = 0; n < alreadyFriends.length; n++) {
+                    const friendObj = alreadyFriends[n];
+                    if (friendObj.userId !== applicableUserObj.id) {
+                        sortedArray.push(applicableUserObj)
+                    }
+                }
+            }
+            setUsers(sortedArray)
         })
     }
+
+
+useEffect(() => {
+    getFriendList()
+}, [])
     
     const handleClickSaveFriend = (friendId) => {
         const friendObj = {
@@ -47,7 +63,7 @@ export const FriendForm = () => {
             currentUserId: JSON.parse(sessionStorage.getItem("sol_user"))
                 .id,
         }
-        addFriend(friendObj).then(getUsers())
+        addFriend(friendObj).then(() => navigate("/friends/add"))
     }
 
     
@@ -69,9 +85,9 @@ export const FriendForm = () => {
                     My Friends
                 </button>
             </section>
-            <section className="searchInput">
+            {/* <section className="searchInput">
                 <input type="text" placeholder="Search for a User"></input>
-            </section>
+            </section> */}
             <div className="container-cards">
                 {users.map((user) => {
                     return (

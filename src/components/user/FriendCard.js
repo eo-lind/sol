@@ -1,3 +1,5 @@
+import "./User.css"
+
 export const FriendCard = ({ friend, handleDeleteFriend }) => {
     return (
         <>
@@ -5,11 +7,13 @@ export const FriendCard = ({ friend, handleDeleteFriend }) => {
                 <div className="user__image-container">
                     <img
                         className="user__photo"
-                        alt="a photo of name"
+                        alt="a photo of a robot"
                         src={friend.user.profilePic}
                     />
                 </div>
-                <h3 className="user__name">{friend.user.name}</h3>
+   
+                    <h3 className="user__name">{friend.user.name}</h3>
+
                 <div className="user__about">
                     <strong>About me:</strong> {friend.user.aboutMe}
                 </div>
@@ -19,12 +23,14 @@ export const FriendCard = ({ friend, handleDeleteFriend }) => {
                 <div className="user__dislikes">
                     <strong>Dislikes:</strong> {friend.user.dislikes}
                 </div>
-                <button
-                    type="button"
-                    onClick={() => handleDeleteFriend(friend.id)}
-                >
-                    Unfriend
-                </button>
+                <div className="user__button-container">
+                    <button
+                        type="button"
+                        onClick={() => handleDeleteFriend(friend.id)}
+                    >
+                        Unfriend
+                    </button>
+                </div>
             </section>
         </>
     )

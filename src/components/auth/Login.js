@@ -32,7 +32,12 @@ export const Login = ({setAuthUser}) => {
         <main className="container--login">
             <dialog className="dialog dialog--auth" ref={existDialog}>
                 <div>User does not exist</div>
-                <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
+                <button
+                    className="button--close"
+                    onClick={(e) => existDialog.current.close()}
+                >
+                    Close
+                </button>
             </dialog>
 
             <section>
@@ -40,15 +45,21 @@ export const Login = ({setAuthUser}) => {
                     <h1>SOL</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input ref={email} type="email"
+                        <div className="login-item">
+                            <label htmlFor="inputEmail"> Email address </label>
+                        </div>
+                        <div className="login-item">
+                        <input
+                            ref={email}
+                            type="email"
                             id="email"
                             className="form-control"
                             placeholder="Email address"
-                            required autoFocus />
-                        <button type="submit">
-                            Sign in
-                        </button>
+                            required
+                            autoFocus
+                        />
+                        </div>
+                        <button type="submit">Sign in</button>
                     </fieldset>
                 </form>
             </section>

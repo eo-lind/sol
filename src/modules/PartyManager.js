@@ -42,3 +42,9 @@ export const deleteParty = (id) => {
         method: "DELETE",
     }).then((result) => result.json())
 }
+
+export const getPartiesForHome = () => {
+    return fetch(
+        `http://localhost:8088/parties?_expand=user&_expand=movie&_limit=6`
+    ).then((res) => res.json())
+}

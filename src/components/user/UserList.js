@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { getAllUsers } from "../../modules/UserManager"
+import { getAllUsers, getLoggedInUserById } from "../../modules/UserManager"
 import { UserCard } from "./UserCard"
 
 export const UserList = () => {
@@ -25,4 +25,28 @@ export const UserList = () => {
        </div>
        </>
    )
+}
+
+export const ShowLoggedInProfile = () => {
+    const [user, setUser] = useState([])
+    
+
+
+    const getLoggedInUser = () => {
+        getLoggedInUserById().then((userFromAPI) => {
+            setUser(userFromAPI)
+        })
+    }
+
+    useEffect(() => {
+        getLoggedInUser()
+    }, [])
+
+    return (
+        <>
+            <div className="container-cards">                
+                    <UserCard key={user.id} user={user} />
+            </div>
+        </>
+    )
 }

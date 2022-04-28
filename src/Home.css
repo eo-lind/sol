@@ -1,0 +1,12 @@
+.column-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.column {
+    flex-basis: 30%;
+    display: flex;
+    flex-flow: row wrap;
+}
