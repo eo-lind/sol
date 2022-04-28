@@ -1,7 +1,4 @@
-import {
-    getFriendsByCurrentUserId,
-    deleteFriend,
-} from "../../modules/FriendManager"
+import { getFriendsByCurrentUserId, deleteFriend } from "../../modules/FriendManager"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { FriendCard } from "./FriendCard"
