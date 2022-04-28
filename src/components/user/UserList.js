@@ -1,32 +1,32 @@
 import React, { useState, useEffect } from "react"
 import { getAllUsers, getLoggedInUserById } from "../../modules/UserManager"
 import { UserCard } from "./UserCard"
-import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 
-export const UserList = () => {
-    const [users, setUsers] = useState([])
+// TODO delete this section if nothing is broken
+// export const UserList = () => {
+//     const [users, setUsers] = useState([])
 
-   const getUsers = () => {
-       getAllUsers().then((usersFromAPI) => {
-           setUsers(usersFromAPI)
-       })
-   }
+//    const getUsers = () => {
+//        getAllUsers().then((usersFromAPI) => {
+//            setUsers(usersFromAPI)
+//        })
+//    }
 
-   useEffect(() => {
-       getUsers()
-   }, [])
+//    useEffect(() => {
+//        getUsers()
+//    }, [])
 
-   return (
-       <>
-       <h2>Browse Members</h2>
-       <div className="container-cards">
-           {users.map((user) => (
-               <UserCard key={user.id} user={user} />
-           ))}
-       </div>
-       </>
-   )
-}
+//    return (
+//        <>
+//        <h2>Browse Members</h2>
+//        <div className="container-cards">
+//            {users.map((user) => (
+//                <UserCard key={user.id} user={user} />
+//            ))}
+//        </div>
+//        </>
+//    )
+// }
 
 export const ShowLoggedInProfile = () => {
     const [user, setUser] = useState([])
