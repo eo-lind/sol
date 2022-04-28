@@ -11,6 +11,10 @@ export const getAllUsers = () => {
     )
 }
 
+export const getAllTheUsers = () => {
+    return fetch(`http://localhost:8088/users`).then((res) => res.json())
+}
+
 export const updateProfile = (editedUser) => {
     return fetch(
         `http://localhost:8088/users/${editedUser.id}`,
@@ -28,5 +32,12 @@ export const getLoggedInUserById = () => {
     const currentUserId = JSON.parse(sessionStorage.getItem("sol_user")).id
     return fetch(`http://localhost:8088/users/${currentUserId}`).then((res) =>
         res.json()
+    )
+}
+
+// may or may not use this and the one below it (see FriendList)
+export const findUser = (userName) => {
+    return fetch(`http://localhost:8088/users?q=${userName}`).then((response) =>
+        response.json()
     )
 }

@@ -6,7 +6,6 @@ export const UserCard = ({ user, handleClickSaveFriend }) => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
     const profileSubject = user.id
 
-      
 
     return (
         <section className="user">
@@ -49,22 +48,7 @@ export const UserCard = ({ user, handleClickSaveFriend }) => {
                         </button>
                     </>
                 )}
-                {/* TODO need to add a && condition to this about current user not having profile subjectt on their friends list */}
-                {currentUser !== profileSubject ? (
-                    <>
-                        <button
-                            type="button"
-                            className="btn btn-primary"
-                            onClick={() => {
-                                handleClickSaveFriend(user.id)
-                            }}
-                        >
-                            Add
-                        </button>
-                    </>
-                ) : (
-                    ""
-                )}
+
             </div>
         </section>
     )

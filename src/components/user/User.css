@@ -1,3 +1,20 @@
+.column-container {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+ß
+.my-friends-container {
+  max-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.all-users-container {
+width: 50%;
+display: flex;
+  flex-wrap: wrap;
+}
+
 .container-cards {
   display: flex;
   flex-wrap: wrap;

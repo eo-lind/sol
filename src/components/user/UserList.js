@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { getAllUsers, getLoggedInUserById } from "../../modules/UserManager"
 import { UserCard } from "./UserCard"
+import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 
 export const UserList = () => {
     const [users, setUsers] = useState([])
@@ -50,3 +51,6 @@ export const ShowLoggedInProfile = () => {
         </>
     )
 }
+
+
+
