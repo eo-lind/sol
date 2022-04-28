@@ -5,6 +5,17 @@ export const getFriendsByCurrentUserId = (currentUserId) => {
     ).then((response) => response.json())
 }
 
+// TODO this is the same as what's above but renamed. Delete the one above if this ends up working (will have to find where the one above is being used and rename):
+export const getMyFriends = (currentUserId) => {
+    return fetch(
+        `http://localhost:8088/friends?currentUserId=${currentUserId}&_expand=user`
+    ).then((response) => response.json())
+}
+
+
+
+
+
 // unfriends another user
 export const deleteFriend = (friendId) => {
     return fetch(`http://localhost:8088/friends/${friendId}`, {
