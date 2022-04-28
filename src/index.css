@@ -1,5 +1,8 @@
 body {
-  margin: 0;
+  background-color: #6fa9bd;
+   margin: 0;
+   box-sizing: border-box;
+  color: #0e0e25;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +10,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+main {
+  background-image: url("/public/images/SOL-set.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2em;
 }

@@ -1,11 +1,12 @@
-/* main is parent of the columns */
-main {
+.column-container {
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
 }
 
 .column {
-    width: 30%;
+    flex-basis: 30%;
     display: flex;
     flex-flow: row wrap;
 }

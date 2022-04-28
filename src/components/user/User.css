@@ -1,22 +1,12 @@
-/* TODO can probably delete the two below */
-
-/* .container-cards {
-  display: flex;
-  flex-flow: row wrap;
-} */
-
-
-/* .users {
+.container-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-} */
-
- 
-
+  justify-content: center;
+}
 .user {
   background: rgba(56, 72, 114, 0.9);
   flex-basis: 28%;
+  min-width: 300px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

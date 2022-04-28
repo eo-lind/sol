@@ -1,19 +1,13 @@
 .container-cards {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
-/* TODO can probably delete the one below */
-
-/* .movies {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
 
 .movie {
     background: rgba(56, 72, 114, 0.9);
     flex-basis: 28%;
+    min-width: 200px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
