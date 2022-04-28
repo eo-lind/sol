@@ -11,6 +11,10 @@ export const getAllUsers = () => {
     )
 }
 
+export const getAllTheUsers = () => {
+    return fetch(`http://localhost:8088/users`).then((res) => res.json())
+}
+
 export const updateProfile = (editedUser) => {
     return fetch(
         `http://localhost:8088/users/${editedUser.id}`,

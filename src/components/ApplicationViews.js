@@ -3,7 +3,6 @@ import { Route, Routes, Navigate } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Home } from "../Home"
-import { UserList } from "./user/UserList"
 import { FriendList } from "./user/FriendList"
 import { MovieList } from "./movie/MovieList"
 import { PartyList } from "./party/PartyList"
@@ -49,15 +48,6 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     element={
                         <PrivateRoute>
                             <UserEditForm />
-                        </PrivateRoute>
-                    }
-                />
-                {/* TODO Renders the user list - will probably not need this */}
-                <Route
-                    path="/users"
-                    element={
-                        <PrivateRoute>
-                            <UserList />
                         </PrivateRoute>
                     }
                 />

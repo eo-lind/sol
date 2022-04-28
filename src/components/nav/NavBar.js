@@ -50,16 +50,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                                 </Link>
                             </li>
                         )}
-                        {isAuthenticated && (
-                            <li className="navbar__item">
-                                <Link
-                                    className="navbar__link"
-                                    to="/friends/add"
-                                >
-                                    Browse Members
-                                </Link>
-                            </li>
-                        )}
+                        
                         {isAuthenticated && (
                             <li className="navbar__item">
                                 <Link className="navbar__link" to="/movies">

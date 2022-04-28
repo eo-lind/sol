@@ -56,16 +56,16 @@
 //     )
 // }
 
+
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { getAllUsers } from "../../modules/UserManager"
 import { addFriend, getMyFriends, deleteFriend } from "../../modules/FriendManager"
-import { findUser } from "../../modules/UserManager"
+import { findUser, getAllUsers } from "../../modules/UserManager"
 import { UserCard } from "./UserCard"
 import { FriendCard } from "./FriendCard"
 import "./User.css"
 
-export const FriendList = ({ getLoggedInUser }) => {
+export const FriendList = () => {
 
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
 
@@ -77,16 +77,10 @@ export const FriendList = ({ getLoggedInUser }) => {
 
     const navigate = useNavigate()
 
-    // const getUsers = () => {
-    //     return getAllUsers().then((usersFromAPI) => {
-    //         setUsers(usersFromAPI)
-    //     })
-    // }
 
     const getAllMyFriends = (userId) => {
         getMyFriends(userId).then((myFriends) => {
             setFriends(myFriends)
-            // console.log(friends)
         })
     }
 
@@ -97,17 +91,19 @@ export const FriendList = ({ getLoggedInUser }) => {
     const findUsers = (name) => {
         findUser(name).then((user) => {
             setUsers(user)
-            console.log(user)
         })
     }
 
+
+
+
+
     const handleClickSaveFriend = (id) => {
-        //*doing the same thing I did in Articles. Creating an array of friend Id's
         let friendIdArr = []
         friends.forEach((friend) => {
             friendIdArr.push(friend.userId)
         })
-        console.log(friendIdArr)
+
         const newFriend = {
             userId: id,
             currentUserId: currentUser,
@@ -122,7 +118,7 @@ export const FriendList = ({ getLoggedInUser }) => {
                 friendIdArr.find((element) => element === newFriend.userId)
         ) {
             addFriend(newFriend).then(() =>
-                addFriend(reverseFriend).then(() => navigate("/friends/"))
+                addFriend(reverseFriend).then(() => navigate("/friends"))
             )
         } else {
             window.alert(
@@ -131,8 +127,9 @@ export const FriendList = ({ getLoggedInUser }) => {
         }
     }
 
-
-    
+    // useEffect(() => {
+    //     getAllMyFriends(currentUser)
+    // }, [])
 
     const handleDeleteFriend = (id) => {
         deleteFriend(id).then(() =>
@@ -154,9 +151,6 @@ export const FriendList = ({ getLoggedInUser }) => {
         findUsers(userSearch.name)
     }
 
-    // useEffect(() => {
-    //   findUsers();
-    // }, []);
 
     return (
         <>
@@ -172,6 +166,7 @@ export const FriendList = ({ getLoggedInUser }) => {
                         Search
                     </button>
                 </div>
+
             </section>
 
             <section className="column-container">
