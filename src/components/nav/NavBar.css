@@ -40,3 +40,14 @@ li a:hover {
   background-color: rgba(56, 72, 114, 0.9);;
 }
 
+span.navbar__link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+span.navbar__link:hover {
+  background-color: rgba(56, 72, 114, 0.9);;
+}
