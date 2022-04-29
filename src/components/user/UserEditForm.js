@@ -40,7 +40,7 @@ export const UserEditForm = () => {
             id: user.id,
         }
 
-        updateProfile(editedUser).then(() => navigate("/users"))
+        updateProfile(editedUser).then(() => navigate("/friends"))
     }
 
     useEffect(() => {

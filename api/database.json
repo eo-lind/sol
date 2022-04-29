@@ -83,6 +83,12 @@
       "userId": 10,
       "review": "Master Ninja Theme Song!",
       "id": 14
+    },
+    {
+      "movieId": 16,
+      "userId": 15,
+      "review": "What is this even about???",
+      "id": 15
     }
   ],
   "parties": [
@@ -106,6 +112,13 @@
       "date": "2022-05-29T16:45:16",
       "friendId": 4,
       "id": 10
+    },
+    {
+      "userId": 15,
+      "movieId": 210,
+      "date": "2022-05-07T09:50:05",
+      "friendId": 14,
+      "id": 11
     }
   ],
   "movies": [
@@ -3214,11 +3227,6 @@
       "userId": 15,
       "currentUserId": 14,
       "id": 28
-    },
-    {
-      "userId": 3,
-      "currentUserId": 15,
-      "id": 29
     },
     {
       "userId": 15,
