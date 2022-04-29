@@ -62,9 +62,10 @@ export const PartyForm = () => {
 
         const movieId = party.movieId
         const friendId = party.friendId
+        const partyDate = party.date
 
-        if (movieId === 0 || friendId === 0) {
-            window.alert("Please select a movie and a customer")
+        if (movieId === 0 || friendId === 0 || partyDate === "") {
+            window.alert("Please select a movie, guest, and party date")
         } else {
             //invoke addParty passing party as an argument.
             //once complete, change the url and display the party list
