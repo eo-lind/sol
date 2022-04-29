@@ -22,11 +22,11 @@ h6 {
   letter-spacing: 2px;
 }
 
-p {
+/* p {
   margin-bottom: 1.5em;
   color: #d6fcff;
   color: darkslateblue;
-}
+} */
 
 strong {
   font-weight: bold;
@@ -34,6 +34,7 @@ strong {
 
 .container-cards {
 	display: flex;
+  justify-content: space-between;
 }
 
 /* --------------- end text styling --------------- */

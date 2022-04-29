@@ -78,3 +78,19 @@ button:active {
     outline: 0;
     text-decoration: none;
 }
+
+.link__not__on__card {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: rgba(69, 56, 114, 0.76);
+    border-radius: 4px;
+    margin: 0;
+    border: 1px solid #6fa9bd;
+}
+
+.link__not__on__card:hover {
+    background-color: rgba(56, 72, 114, 0.9);
+}
