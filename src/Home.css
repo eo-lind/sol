@@ -2,11 +2,12 @@
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     align-content: flex-start;
 }
 
-.column1, .column2 {
+.column1,
+.column2 {
     flex-basis: 30%;
     display: flex;
     flex-flow: row wrap;
@@ -19,4 +20,25 @@
     flex-flow: row wrap;
     align-content: flex-start;
     padding-top: 1em;
+}
+
+.column3__component-container {
+    margin-bottom: 1em;
+}
+
+.link__not__on__card {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: rgba(69, 56, 114, 0.76);
+    border-radius: 4px;
+    margin: 0;
+    border: 1px solid #6fa9bd;
+    max-width: 40%;
+}
+
+.link__not__on__card:hover {
+    background-color: rgba(56, 72, 114, 0.9);
 }

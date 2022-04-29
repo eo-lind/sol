@@ -89,6 +89,12 @@
       "userId": 15,
       "review": "What is this even about???",
       "id": 15
+    },
+    {
+      "movieId": 210,
+      "userId": 15,
+      "review": "This has nothing to do with the first movie.",
+      "id": 16
     }
   ],
   "parties": [
@@ -140,6 +146,20 @@
       "date": "2022-05-08T11:52",
       "friendId": 11,
       "id": 15
+    },
+    {
+      "userId": 15,
+      "movieId": 105,
+      "date": "2022-04-30T14:20:16",
+      "friendId": 6,
+      "id": 16
+    },
+    {
+      "userId": 15,
+      "movieId": 163,
+      "date": "2022-04-30T15:26:03",
+      "friendId": 11,
+      "id": 17
     }
   ],
   "movies": [

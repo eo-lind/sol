@@ -82,7 +82,7 @@ export const PartyListForHome = () => {
                     />
                 ))}
             </div>
-            <Link className="navbar__link" to="/parties">
+            <Link className="link__not__on__card" to="/parties">
                     More Watch Parties
             </Link>
         </>

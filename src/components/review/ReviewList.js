@@ -80,7 +80,7 @@ export const ReviewListForHome = () => {
                     />
                 ))}
             </div>
-            <Link className="navbar__link" to="/reviews">
+            <Link className="link__not__on__card" to="/reviews">
                 More Movie Reviews
             </Link>
         </>
