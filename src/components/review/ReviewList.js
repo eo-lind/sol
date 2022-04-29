@@ -81,7 +81,7 @@ export const ReviewListForHome = () => {
                 ))}
             </div>
             <Link className="navbar__link" to="/reviews">
-                All Movie Reviews
+                More Movie Reviews
             </Link>
         </>
     )

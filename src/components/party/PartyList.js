@@ -83,7 +83,7 @@ export const PartyListForHome = () => {
                 ))}
             </div>
             <Link className="navbar__link" to="/parties">
-                    All Watch Parties
+                    More Watch Parties
             </Link>
         </>
     )
