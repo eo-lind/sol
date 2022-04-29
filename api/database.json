@@ -133,6 +133,13 @@
       "date": "2022-05-28T11:10:13",
       "friendId": 8,
       "id": 14
+    },
+    {
+      "userId": 15,
+      "movieId": 37,
+      "date": "2022-05-08T11:52",
+      "friendId": 11,
+      "id": 15
     }
   ],
   "movies": [
