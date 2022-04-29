@@ -108,7 +108,7 @@ export const FriendList = () => {
 
             <main className="column-container">
                 <section className="my-friends-container">
-                    <div className="column-header-friends">
+                    <div className="column-header">
                         <h2>My Friends</h2>
                     </div>
                     <div className="container-cards">
@@ -126,6 +126,9 @@ export const FriendList = () => {
 
                 <section className="all-users-container">
                     <div className="container-cards">
+                        <div className="column-header">
+                            <h2>All Users</h2>
+                        </div>
                         {users.length > 0
                             ? users.map((user) => (
                                   <UserCard

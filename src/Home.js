@@ -7,9 +7,9 @@ import "./Home.css"
 export const Home = () => (
     <>
       <section className="column-container">
-          <div className="column"><PartyListForHome /></div>
-          <div className="column"><ReviewListForHome /></div>
-          <div className="column"><ShowLoggedInProfile /></div>
+          <div className="column1"><PartyListForHome /></div>
+          <div className="column2"><ReviewListForHome /></div>
+          <div className="column3"><ShowLoggedInProfile /></div>
       </section>
     </>
 )
