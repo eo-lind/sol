@@ -1,6 +1,7 @@
 .full-nav-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .nav-right {
@@ -16,7 +17,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgba(69, 56, 114, 0.76);
+    border-radius: 4px;
   /* position: fixed; */
   width: 100%;
 }
@@ -34,8 +36,7 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
+  background-color: rgba(56, 72, 114, 0.9);;
 }
 

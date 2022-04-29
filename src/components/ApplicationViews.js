@@ -34,7 +34,14 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     element={<Login setAuthUser={setAuthUser} />}
                 />
                 <Route exact path="/register" element={<Register />} />
-                <Route path="/" element={<Home />} />
+                <Route
+                    path="/"
+                    element={
+                        <PrivateRoute>
+                            <Home />
+                        </PrivateRoute>
+                    }
+                />
                 <Route
                     path="friends/add"
                     element={
@@ -53,7 +60,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                 />
 
                 {/* TODO create a route that just goes to logged in user profile (will need to be added to user edit form) */}
-               
+
                 <Route
                     path="/friends"
                     element={

@@ -87,6 +87,20 @@
   ],
   "parties": [
     {
+      "id": 1,
+      "movieId": 108,
+      "date": "2022-04-28T10:28:18",
+      "friendId": "1",
+      "userId": 12
+    },
+    {
+      "userId": 2,
+      "movieId": 2,
+      "date": "2022-04-30T09:46:30",
+      "friendId": 1,
+      "id": 6
+    },
+    {
       "userId": 2,
       "movieId": 82,
       "date": "2022-05-05T14:51:53",
@@ -106,6 +120,13 @@
       "date": "2022-05-29T16:45:16",
       "friendId": 4,
       "id": 10
+    },
+    {
+      "userId": 6,
+      "movieId": 65,
+      "date": "2022-06-27T16:45:47",
+      "friendId": 5,
+      "id": 11
     }
   ],
   "movies": [
@@ -3096,6 +3117,11 @@
   ],
   "friends": [
     {
+      "userId": 1,
+      "currentUserId": 6,
+      "id": 1
+    },
+    {
       "userId": 6,
       "currentUserId": 1,
       "id": 2
@@ -3104,6 +3130,11 @@
       "userId": 6,
       "currentUserId": 2,
       "id": 4
+    },
+    {
+      "userId": 2,
+      "currentUserId": 6,
+      "id": 5
     },
     {
       "userId": 6,
@@ -3154,76 +3185,6 @@
       "userId": 6,
       "currentUserId": 4,
       "id": 16
-    },
-    {
-      "userId": 13,
-      "currentUserId": 6,
-      "id": 17
-    },
-    {
-      "userId": 6,
-      "currentUserId": 13,
-      "id": 18
-    },
-    {
-      "userId": 11,
-      "currentUserId": 6,
-      "id": 19
-    },
-    {
-      "userId": 6,
-      "currentUserId": 11,
-      "id": 20
-    },
-    {
-      "userId": 5,
-      "currentUserId": 15,
-      "id": 21
-    },
-    {
-      "userId": 15,
-      "currentUserId": 5,
-      "id": 22
-    },
-    {
-      "userId": 8,
-      "currentUserId": 15,
-      "id": 23
-    },
-    {
-      "userId": 15,
-      "currentUserId": 8,
-      "id": 24
-    },
-    {
-      "userId": 11,
-      "currentUserId": 15,
-      "id": 25
-    },
-    {
-      "userId": 15,
-      "currentUserId": 11,
-      "id": 26
-    },
-    {
-      "userId": 14,
-      "currentUserId": 15,
-      "id": 27
-    },
-    {
-      "userId": 15,
-      "currentUserId": 14,
-      "id": 28
-    },
-    {
-      "userId": 3,
-      "currentUserId": 15,
-      "id": 29
-    },
-    {
-      "userId": 15,
-      "currentUserId": 3,
-      "id": 30
     }
   ]
 }
