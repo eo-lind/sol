@@ -3,8 +3,6 @@ import { Link } from "react-router-dom"
 import { getUserById } from "../../modules/UserManager"
 import "./Party.css"
 
-// this is a child of Sol component
-
 // ternary statement insures that edit/delete buttons will only display if logged in user is host of the party
 
 export const PartyCard = ({ party, handleDeleteParty }) => {
@@ -39,7 +37,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
                  <strong>Host:</strong> {party.user?.name}
              </div>
              <div className="party__date">
-                 <strong>When:</strong> {party.date}
+                 <strong>When:</strong> {new Date(party.date).toDateString()} at {new Date(party.date).toLocaleTimeString()}
              </div>
              <div className="party__guests">
                  <strong>Guests:</strong> {guest.name}
