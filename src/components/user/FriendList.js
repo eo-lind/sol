@@ -73,7 +73,7 @@ export const FriendList = () => {
     const handleDeleteFriend = (id) => {
         deleteFriend(id).then(() =>
             getMyFriends(() => {
-                setFriends()
+                setFriends().then(() => navigate("/friends"))
             })
         )
     }

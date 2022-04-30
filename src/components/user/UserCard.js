@@ -6,7 +6,6 @@ export const UserCard = ({ user, handleClickSaveFriend }) => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
     const profileSubject = user.id
 
-
     return (
         <section className="user">
             <div className="user__image-container">
@@ -16,18 +15,10 @@ export const UserCard = ({ user, handleClickSaveFriend }) => {
                     src={user.profilePic}
                 />
             </div>
-            
-                <h3 className="user__name">{user.name}</h3>
-
-            <div className="user__about">
-                <strong>About me:</strong> {user.aboutMe}
-            </div>
-            <div className="user__likes">
-                <strong>Likes:</strong> {user.likes}
-            </div>
-            <div className="user__dislikes">
-                <strong>Dislikes:</strong> {user.dislikes}
-            </div>
+            <h3 className="user__name">{user.name}</h3>
+            <Link to={`/users/${user.id}`}>
+                <button>Details</button>
+            </Link>
             <div className="user__button-container">
                 {currentUser === profileSubject ? (
                     <>
@@ -48,7 +39,6 @@ export const UserCard = ({ user, handleClickSaveFriend }) => {
                         </button>
                     </>
                 )}
-
             </div>
         </section>
     )

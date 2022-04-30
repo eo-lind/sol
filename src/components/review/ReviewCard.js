@@ -1,56 +1,10 @@
-import React, { useState, useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import { getMyFriends, addFriend } from "../../modules/FriendManager"
+import React from "react"
+import { Link } from "react-router-dom"
 import "./Review.css"
 
 export const ReviewCard = ({ review, handleDeleteReview }) => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
     const reviewAuthor = review.userId
-
-    // ! for the add friend button, which currently doesn't work
-    // // get friends to check against review author
-    // const [friends, setFriends] = useState([])
-    // const navigate = useNavigate()
-    // const getAllMyFriends = (userId) => {
-    //     getMyFriends(userId).then((myFriends) => {
-    //         setFriends(myFriends)
-    //     })
-    // }
-
-    // useEffect(() => {
-    //     getAllMyFriends(currentUser)
-    // }, [])
-
-    // // add review author as friend
-    // const handleAddReviewerAsFriend = (id) => {
-        
-    //     let friendIdArr = []
-    //     friends.forEach((friend) => {
-    //         friendIdArr.push(friend.userId)
-    //     })
-
-    //     const newFriend = {
-    //         userId: id,
-    //         currentUserId: currentUser,
-    //     }
-    //     const reverseFriend = {
-    //         userId: newFriend.currentUserId,
-    //         currentUserId: newFriend.userId,
-    //     }
-    //     if (
-    //         newFriend.userId !== newFriend.currentUserId &&
-    //         newFriend.userId !==
-    //             friendIdArr.find((element) => element === newFriend.userId)
-    //     ) {
-    //         addFriend(newFriend).then(() =>
-    //             addFriend(reverseFriend).then(() => navigate("/friends"))
-    //         )
-    //     } else {
-    //         window.alert(
-    //             "Cannot add friend. You have tried to add yourself or an existing friend."
-    //         )
-    //     }
-    // }
 
     return (
         <section className="review">
@@ -65,18 +19,9 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
                 <strong>Review of:</strong> {review.movie.title}
             </h3>
             <div className="review__author">
-                <strong>Reviewed by:</strong> {review.user.name}
+                <strong>Reviewed by: </strong>
+                <Link to={`/users/${review.user.id}`}>{review.user.name}</Link>
             </div>
-            {/*  ! This doesn't work: */}
-            {/* <div className="review__add-friend">
-                <button
-                    type="button"
-                    id="friend-btn"
-                    onClick={handleAddReviewerAsFriend}
-                >
-                    Add Friend
-                </button>
-            </div> */}
             <div className="review__body">
                 <strong>Review:</strong> {review.review}
             </div>
