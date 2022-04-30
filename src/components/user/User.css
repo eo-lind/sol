@@ -31,21 +31,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-.user {
-    background: rgba(56, 72, 114, 0.9);
-    flex-basis: 28%;
-    min-width: 250px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    margin-right: 1em;
-    margin-bottom: 1em;
-    padding: 1em;
-    border: 1px solid #6fa9bd;
-    border-radius: 4px;
-    font-size: small;
-    color: #ffffff;
-}
 
 .user__image-container {
     width: 100%;

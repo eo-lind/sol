@@ -59,7 +59,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
     }
 
     return (
-        <section className="party">
+        <section className="card">
             <div className="party__image-container">
                 <img
                     className="party__image"

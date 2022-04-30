@@ -7,7 +7,7 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
     const reviewAuthor = review.userId
 
     return (
-        <section className="review">
+        <section className="card">
             <div className="review__image-container">
                 <img
                     className="review__image"

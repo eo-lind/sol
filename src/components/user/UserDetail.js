@@ -91,7 +91,7 @@ useEffect(() => {
     const profileSubject = user.id
 
     return (
-        <section className="user">
+        <section className="card">
             <div className="user__image-container">
                 <img
                     className="user__photo"

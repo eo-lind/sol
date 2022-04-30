@@ -4,21 +4,6 @@
     justify-content: center;
 }
 
-.review {
-    background: rgba(56, 72, 114, 0.9);
-    flex-basis: 38%;
-    min-width: 300px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid #6fa9bd;
-    border-radius: 4px;
-    font-size: small;
-    color: #ffffff;
-}
-
 .review__image-container {
     width: 100%;
 }
