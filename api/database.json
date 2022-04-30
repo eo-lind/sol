@@ -3125,6 +3125,15 @@
       "aboutMe": "Hyperdyne Systems model 341-B. I'm a technician for the USCMC aboard the USS Sulaco. Trust me.",
       "likes": "Knives, the Three Laws of Robotics, being treated like a human",
       "dislikes": "Xenomorph Queens"
+    },
+    {
+      "email": "dalek@gmail.com",
+      "name": "Dalek",
+      "profilePic": "/images/dalek.png",
+      "aboutMe": "EXTERMINATE!",
+      "likes": "EXTERMINATE!",
+      "dislikes": "EXTERMINATE!",
+      "id": 16
     }
   ],
   "friends": [
@@ -3267,6 +3276,36 @@
       "userId": 15,
       "currentUserId": 1,
       "id": 36
+    },
+    {
+      "userId": 4,
+      "currentUserId": 16,
+      "id": 37
+    },
+    {
+      "userId": 16,
+      "currentUserId": 4,
+      "id": 38
+    },
+    {
+      "userId": 7,
+      "currentUserId": 16,
+      "id": 39
+    },
+    {
+      "userId": 16,
+      "currentUserId": 7,
+      "id": 40
+    },
+    {
+      "userId": 13,
+      "currentUserId": 16,
+      "id": 41
+    },
+    {
+      "userId": 16,
+      "currentUserId": 13,
+      "id": 42
     }
   ]
 }
