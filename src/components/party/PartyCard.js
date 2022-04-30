@@ -67,7 +67,10 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
                     src={party.movie.image}
                 />
             </div>
-            <h3 className="party__movie">{party.movie.title}</h3>
+            <Link to={`/movies/${party.movie.id}`}>
+                <h3 className="party__movie">{party.movie.title}</h3>
+            </Link>
+
             <div className="party__host">
                 <strong>Host:</strong>{" "}
                 <Link to={`/users/${party.user?.id}`}>{party.user?.name}</Link>

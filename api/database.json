@@ -3296,16 +3296,6 @@
       "userId": 16,
       "currentUserId": 7,
       "id": 40
-    },
-    {
-      "userId": 13,
-      "currentUserId": 16,
-      "id": 41
-    },
-    {
-      "userId": 16,
-      "currentUserId": 13,
-      "id": 42
     }
   ]
 }
