@@ -2,14 +2,13 @@
 
 /* --------------- begin text styling --------------- */
 body,
-button,
 input,
 select,
 textarea {
-  color: #404040;
-  /* font-family: "Comfortaa", Arial, sans-serif; */
-  font-size: 14px;
-  line-height: 1.5;
+    color: #404040;
+    /* font-family: "Comfortaa", Arial, sans-serif; */
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 h1,
@@ -18,23 +17,62 @@ h3,
 h4,
 h5,
 h6 {
-  /* font-family: "Patua One", serif; */
-  letter-spacing: 2px;
+    /* font-family: "Patua One", serif; */
+    letter-spacing: 2px;
 }
 
-/* p {
-  margin-bottom: 1.5em;
-  color: #d6fcff;
-  color: darkslateblue;
-} */
-
 strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .container-cards {
-	display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* --------------- end text styling --------------- */
+
+/* --------------- begin button styling --------------- */
+button {
+    align-items: center;
+    background-color: #6fa9bd;
+    border: 2px solid #0e0e25;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px;
+    color: #0e0e25;
+    cursor: pointer;
+    display: flex;
+    min-height: 2em;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 1em;
+}
+
+button:active {
+    background-color: #7e6c8a;
+    outline: 0;
+    text-decoration: none;
+}
+
+.link__not__on__card {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: rgba(69, 56, 114, 0.76);
+    border-radius: 4px;
+    margin: 0;
+    border: 1px solid #6fa9bd;
+}
+
+.link__not__on__card:hover {
+    background-color: rgba(56, 72, 114, 0.9);
+}
+/* --------------- end button styling --------------- */
