@@ -7,14 +7,7 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
     const reviewAuthor = review.userId
 
     return (
-        <section className="review">
-            <div className="review__image-container">
-                <img
-                    className="review__image"
-                    alt="image of the film"
-                    src={review.movie.image}
-                />
-            </div>
+        <section className="card">
             <h3 className="review__title">
                 <strong>Review of:</strong> {review.movie.title}
             </h3>

@@ -62,7 +62,7 @@ h3 {
     justify-content: flex-start;
 }
 
-button {
+/* button {
     align-items: center;
     background-color: #6fa9bd;
     border: 2px solid #0e0e25;
@@ -87,4 +87,4 @@ button:active {
     background-color: #7e6c8a;
     outline: 0;
     text-decoration: none;
-}
+} */

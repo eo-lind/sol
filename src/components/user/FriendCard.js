@@ -3,7 +3,7 @@ import "./User.css"
 export const FriendCard = ({ friend, handleDeleteFriend }) => {
     return (
         <>
-            <section className="user">
+            <section className="card">
                 <div className="user__image-container">
                     <img
                         className="user__photo"
