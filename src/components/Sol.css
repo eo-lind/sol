@@ -68,7 +68,7 @@ button:active {
     box-shadow: none;
 }
 
-.link__not__on__card {
+.link__not__on__card, .link__not__on__card:visited {
     display: block;
     color: white;
     text-align: center;
@@ -78,10 +78,15 @@ button:active {
     border-radius: 4px;
     margin: 0;
     border: 1px solid #6fa9bd;
+    box-shadow: 2px 2px #6fa9bd;
 }
 
 .link__not__on__card:hover {
     background-color: rgba(56, 72, 114, 0.9);
+}
+
+.link__not__on__card:active {
+  box-shadow: none;
 }
 /* --------------- end button styling --------------- */
 
