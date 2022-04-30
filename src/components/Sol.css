@@ -93,4 +93,10 @@ button:active {
     font-size: small;
     color: #ffffff;
 }
+
+.card a:link, .card a:visited, .card a:hover, .card a:active {
+  color: #95e3fd;
+  text-decoration: none;
+}
+
 /* --------------- end card styling --------------- */
