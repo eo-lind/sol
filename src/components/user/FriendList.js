@@ -92,20 +92,6 @@ export const FriendList = () => {
 
     return (
         <>
-            <section className="user-search">
-                <div className="search_bar">
-                    <label htmlFor="search_bar">Find friends</label>
-                    <input type="text" id="name" onChange={controlInput} />
-                    <button
-                        type="button"
-                        id="search_btn"
-                        onClick={handleSearch}
-                    >
-                        Search
-                    </button>
-                </div>
-            </section>
-
             <main className="column-container">
                 <section className="my-friends-container">
                     <div className="column-header-friends">
@@ -125,6 +111,24 @@ export const FriendList = () => {
                 </section>
 
                 <section className="all-users-container">
+                    <section className="user-search">
+                        <div className="search_bar">
+                            <label htmlFor="search_bar">Find people</label>
+                            <br />
+                            <input
+                                type="text"
+                                id="name"
+                                onChange={controlInput}
+                            />
+                            <button
+                                type="button"
+                                id="search_btn"
+                                onClick={handleSearch}
+                            >
+                                Search
+                            </button>
+                        </div>
+                    </section>
                     <div className="container-cards">
                         {users.length > 0
                             ? users.map((user) => (
