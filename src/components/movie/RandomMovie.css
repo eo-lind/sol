@@ -2,19 +2,6 @@
     display: flex;
     flex-flow: row wrap;
 }
-.movie {
-    background: rgba(56, 72, 114, 0.9);
-    flex-basis: 28%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid #6fa9bd;
-    border-radius: 4px;
-    font-size: small;
-    color: #ffffff;
-}
 
 .movie__image-container {
     width: 100%;
@@ -30,6 +17,7 @@ h3 {
     margin-bottom: 0.5em;
     font-weight: bold;
 }
+
 .movie__plot,
 .movie__rating {
     padding-bottom: 1em;
