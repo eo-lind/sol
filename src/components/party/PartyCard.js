@@ -4,7 +4,6 @@ import { getUserById } from "../../modules/UserManager"
 import "./Party.css"
 
 export const PartyCard = ({ party, handleDeleteParty }) => {
-    
     const guestId = party.friendId
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
     const partyHost = party.userId
@@ -16,7 +15,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
             setGuest(singleGuest)
         })
     }
-    
+
     useEffect(() => {
         getGuests()
     }, [])
@@ -24,23 +23,21 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
     const isEventExpired = () => {
         if (new Date(party.date) < new Date()) {
             return true
-        } else
-        return false
+        } else return false
     }
 
-
-// this determines what/if buttons will be displayed on the card (if current user is party host and event has not expired, they get "Edit and "Delete" -- if it has expired, they get "Delete"; if current user is not party host, they get no buttons)
+    // this determines what/if buttons will be displayed on the card (if current user is party host and event has not expired, they get "Edit and "Delete" -- if it has expired, they get "Delete"; if current user is not party host, they get no buttons)
     const generateButtons = () => {
         if (currentUser === partyHost && isEventExpired()) {
             return (
-            <>
-                <button
-                    type="button"
-                    onClick={() => handleDeleteParty(party.id)}
-                >
-                    Delete
-                </button>
-            </>
+                <>
+                    <button
+                        type="button"
+                        onClick={() => handleDeleteParty(party.id)}
+                    >
+                        Delete
+                    </button>
+                </>
             )
         } else if (currentUser === partyHost && !isEventExpired()) {
             return (
@@ -61,36 +58,37 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
         }
     }
 
-     return (
-         <section className="party">
-             <div className="party__image-container">
-                 <img
-                     className="party__image"
-                     alt="image of the film"
-                     src={party.movie.image}
-                 />
-             </div>
-             <h3 className="party__movie">{party.movie.title}</h3>
-             <div className="party__host">
-                 <strong>Host:</strong>{" "}
-                 <Link to={`/users/${party.user?.id}`}>{party.user?.name}</Link>
-             </div>
-             <div className="party__date">
-                 <strong>When:</strong>{" "}
-                 {isEventExpired() ? (
-                     <>This party has already occurred.</>
-                 ) : (
-                     <>
-                         {new Date(party.date).toDateString()} at{" "}
-                         {new Date(party.date).toLocaleTimeString()}
-                     </>
-                 )}
-             </div>
-             <div className="party__guests">
-                 <strong>Guests:</strong> {guest.name}
-             </div>
+    return (
+        <section className="party">
+            <div className="party__image-container">
+                <img
+                    className="party__image"
+                    alt="image of the film"
+                    src={party.movie.image}
+                />
+            </div>
+            <h3 className="party__movie">{party.movie.title}</h3>
+            <div className="party__host">
+                <strong>Host:</strong>{" "}
+                <Link to={`/users/${party.user?.id}`}>{party.user?.name}</Link>
+            </div>
+            <div className="party__date">
+                <strong>When:</strong>{" "}
+                {isEventExpired() ? (
+                    <>This party has already occurred.</>
+                ) : (
+                    <>
+                        {new Date(party.date).toDateString()} at{" "}
+                        {new Date(party.date).toLocaleTimeString()}
+                    </>
+                )}
+            </div>
+            <div className="party__guests">
+                <strong>Guests:</strong>{" "}
+                <Link to={`/users/${guest.id}`}>{guest.name}</Link>
+            </div>
 
-             <div className="party__button-container">{generateButtons()}</div>
-         </section>
-     )
+            <div className="party__button-container">{generateButtons()}</div>
+        </section>
+    )
 }
