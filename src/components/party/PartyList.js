@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom"
-import { getAllParties, deleteParty, getPartiesForHome } from "../../modules/PartyManager"
+import {
+    getAllParties,
+    deleteParty,
+    getPartiesForHome,
+} from "../../modules/PartyManager"
 import { PartyCard } from "./PartyCard"
 
 export const PartyList = () => {
@@ -18,34 +22,29 @@ export const PartyList = () => {
         getParties()
     }, [])
 
-    
     const handleDeleteParty = (id) => {
         deleteParty(id).then(() => getAllParties().then(setParties))
     }
 
-
-
     return (
         <>
-            <section className="section-content">
-                <button
-                    type="button"
-                    className="btn"
-                    onClick={() => {
-                        navigate("/parties/create")
-                    }}
-                >
-                    Plan a Watch Party
-                </button>
-            </section>
             <h2>Watch Parties</h2>
+            <button
+                type="button"
+                className="link__not__on__card"
+                onClick={() => {
+                    navigate("/parties/create")
+                }}
+            >
+                Plan a Watch Party
+            </button>
             <div className="container-cards">
                 {parties.map((party) => (
                     <PartyCard
                         key={party.id}
                         party={party}
                         handleDeleteParty={handleDeleteParty}
-                                            />
+                    />
                 ))}
             </div>
         </>
@@ -83,7 +82,7 @@ export const PartyListForHome = () => {
                 ))}
             </div>
             <Link className="link__not__on__card" to="/parties">
-                    More Watch Parties
+                More Watch Parties
             </Link>
         </>
     )

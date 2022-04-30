@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom"
-import { getAllReviews, deleteReview, getReviewsForHome } from "../../modules/ReviewManager"
+import {
+    getAllReviews,
+    deleteReview,
+    getReviewsForHome,
+} from "../../modules/ReviewManager"
 import { ReviewCard } from "./ReviewCard"
 
 export const ReviewList = () => {
@@ -24,18 +28,16 @@ export const ReviewList = () => {
 
     return (
         <>
-            <section className="section-content">
-                <button
-                    type="button"
-                    className="btn"
-                    onClick={() => {
-                        navigate("/reviews/create")
-                    }}
-                >
-                    Add Review
-                </button>
-            </section>
             <h2>Movie Reviews</h2>
+            <button
+                type="button"
+                className="link__not__on__card"
+                onClick={() => {
+                    navigate("/reviews/create")
+                }}
+            >
+                Add Review
+            </button>
             <div className="container-cards">
                 {reviews.map((review) => (
                     <ReviewCard
@@ -48,7 +50,6 @@ export const ReviewList = () => {
         </>
     )
 }
-
 
 export const ReviewListForHome = () => {
     const [reviews, setReviews] = useState([])
