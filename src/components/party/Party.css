@@ -13,6 +13,10 @@ h3 {
     font-weight: bold;
 }
 
+.party__movie {
+    color: #95e3fd;
+}
+
 .party__host,
 .party__date,
 .party__guests {
