@@ -8,13 +8,6 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
 
     return (
         <section className="card">
-            <div className="review__image-container">
-                <img
-                    className="review__image"
-                    alt="image of the film"
-                    src={review.movie.image}
-                />
-            </div>
             <h3 className="review__title">
                 <strong>Review of:</strong> {review.movie.title}
             </h3>
