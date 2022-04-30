@@ -14,6 +14,7 @@ import { PartyEditForm } from "./party/PartyEditForm"
 import { FriendForm } from "./user/AddFriend"
 import { UserEditForm } from "./user/UserEditForm"
 import { UserDetail } from "./user/UserDetail"
+import { MovieDetail } from "./movie/MovieDetail"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
     const PrivateRoute = ({ children }) => {
@@ -123,6 +124,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     }
                 />
                 <Route path="/movies" element={<MovieList />} />
+                <Route path="/movies/:movieId" element={<MovieDetail />} />
             </Routes>
         </>
     )
