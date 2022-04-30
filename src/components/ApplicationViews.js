@@ -13,9 +13,9 @@ import { PartyForm } from "./party/PartyForm"
 import { PartyEditForm } from "./party/PartyEditForm"
 import { FriendForm } from "./user/AddFriend"
 import { UserEditForm } from "./user/UserEditForm"
+import { UserDetail } from "./user/UserDetail"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
-
     const PrivateRoute = ({ children }) => {
         return isAuthenticated ? children : <Navigate to="/login" />
     }
@@ -51,6 +51,14 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     }
                 />
                 <Route
+                    path="/users/:userId"
+                    element={
+                        <PrivateRoute>
+                            <UserDetail />
+                        </PrivateRoute>
+                    }
+                />
+                <Route
                     path="/users/:userId/edit"
                     element={
                         <PrivateRoute>
@@ -58,9 +66,6 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                         </PrivateRoute>
                     }
                 />
-
-                {/* TODO create a route that just goes to logged in user profile (will need to be added to user edit form) */}
-
                 <Route
                     path="/friends"
                     element={

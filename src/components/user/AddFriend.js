@@ -63,7 +63,7 @@ useEffect(() => {
             currentUserId: JSON.parse(sessionStorage.getItem("sol_user"))
                 .id,
         }
-        addFriend(friendObj).then(() => navigate("/friends/add"))
+        addFriend(friendObj).then(() => navigate("/friends"))
     }
 
     
