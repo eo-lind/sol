@@ -72,7 +72,8 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
              </div>
              <h3 className="party__movie">{party.movie.title}</h3>
              <div className="party__host">
-                 <strong>Host:</strong> {party.user?.name}
+                 <strong>Host:</strong>{" "}
+                 <Link to={`/users/${party.user?.id}`}>{party.user?.name}</Link>
              </div>
              <div className="party__date">
                  <strong>When:</strong>{" "}
@@ -80,7 +81,8 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
                      <>This party has already occurred.</>
                  ) : (
                      <>
-                     {new Date(party.date).toDateString()} at {new Date(party.date).toLocaleTimeString()}
+                         {new Date(party.date).toDateString()} at{" "}
+                         {new Date(party.date).toLocaleTimeString()}
                      </>
                  )}
              </div>
@@ -88,9 +90,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
                  <strong>Guests:</strong> {guest.name}
              </div>
 
-             <div className="party__button-container">
-                 {generateButtons()}
-             </div>
+             <div className="party__button-container">{generateButtons()}</div>
          </section>
      )
 }
