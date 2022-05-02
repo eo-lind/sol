@@ -57,7 +57,7 @@ export const FriendList = () => {
                 friendIdArr.find((element) => element === newFriend.userId)
         ) {
             addFriend(newFriend).then(() =>
-                addFriend(reverseFriend).then(() => getAllMyFriends(currentUser).then((myFriends) => {
+                addFriend(reverseFriend).then(() => getMyFriends(currentUser).then((myFriends) => {
                     setFriends(myFriends)
                 }))
             )
