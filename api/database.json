@@ -97,50 +97,7 @@
       "id": 16
     }
   ],
-  "parties": [
-    {
-      "userId": 2,
-      "movieId": 82,
-      "date": "2022-05-05T14:51:53",
-      "friendId": 4,
-      "id": 8
-    },
-    {
-      "userId": 6,
-      "movieId": 17,
-      "date": "2022-09-09T16:44:44",
-      "friendId": 15,
-      "id": 9
-    },
-    {
-      "userId": 6,
-      "movieId": 30,
-      "date": "2022-05-29T16:45:16",
-      "friendId": 4,
-      "id": 10
-    },
-    {
-      "userId": 15,
-      "movieId": 210,
-      "date": "2022-05-07T09:50:05",
-      "friendId": 14,
-      "id": 11
-    },
-    {
-      "userId": 15,
-      "movieId": 21,
-      "date": "2022-05-28T11:10:13",
-      "friendId": 8,
-      "id": 14
-    },
-    {
-      "userId": 15,
-      "movieId": 105,
-      "date": "2022-04-30T14:20:16",
-      "friendId": 6,
-      "id": 16
-    }
-  ],
+  "parties": [],
   "movies": [
     {
       "id": 1,
@@ -3138,164 +3095,14 @@
   ],
   "friends": [
     {
-      "userId": 6,
-      "currentUserId": 1,
-      "id": 2
-    },
-    {
-      "userId": 6,
-      "currentUserId": 2,
-      "id": 4
-    },
-    {
-      "userId": 6,
-      "currentUserId": 2,
-      "id": 6
-    },
-    {
-      "userId": 5,
-      "currentUserId": 6,
-      "id": 7
-    },
-    {
-      "userId": 6,
-      "currentUserId": 5,
-      "id": 8
-    },
-    {
-      "userId": 15,
-      "currentUserId": 6,
-      "id": 9
-    },
-    {
-      "userId": 6,
+      "userId": 1,
       "currentUserId": 15,
-      "id": 10
-    },
-    {
-      "userId": 6,
-      "currentUserId": 3,
-      "id": 12
-    },
-    {
-      "userId": 3,
-      "currentUserId": 6,
-      "id": 13
-    },
-    {
-      "userId": 6,
-      "currentUserId": 3,
-      "id": 14
-    },
-    {
-      "userId": 4,
-      "currentUserId": 6,
-      "id": 15
-    },
-    {
-      "userId": 6,
-      "currentUserId": 4,
-      "id": 16
-    },
-    {
-      "userId": 13,
-      "currentUserId": 6,
-      "id": 17
-    },
-    {
-      "userId": 6,
-      "currentUserId": 13,
-      "id": 18
-    },
-    {
-      "userId": 11,
-      "currentUserId": 6,
-      "id": 19
-    },
-    {
-      "userId": 6,
-      "currentUserId": 11,
-      "id": 20
-    },
-    {
-      "userId": 5,
-      "currentUserId": 15,
-      "id": 21
-    },
-    {
-      "userId": 15,
-      "currentUserId": 5,
-      "id": 22
-    },
-    {
-      "userId": 8,
-      "currentUserId": 15,
-      "id": 23
-    },
-    {
-      "userId": 15,
-      "currentUserId": 8,
-      "id": 24
-    },
-    {
-      "userId": 11,
-      "currentUserId": 15,
-      "id": 25
-    },
-    {
-      "userId": 15,
-      "currentUserId": 11,
-      "id": 26
-    },
-    {
-      "userId": 14,
-      "currentUserId": 15,
-      "id": 27
-    },
-    {
-      "userId": 15,
-      "currentUserId": 14,
-      "id": 28
-    },
-    {
-      "userId": 15,
-      "currentUserId": 3,
-      "id": 30
-    },
-    {
-      "userId": 15,
-      "currentUserId": 12,
-      "id": 32
-    },
-    {
-      "userId": 15,
-      "currentUserId": 4,
-      "id": 34
+      "id": 1
     },
     {
       "userId": 15,
       "currentUserId": 1,
-      "id": 36
-    },
-    {
-      "userId": 4,
-      "currentUserId": 16,
-      "id": 37
-    },
-    {
-      "userId": 16,
-      "currentUserId": 4,
-      "id": 38
-    },
-    {
-      "userId": 7,
-      "currentUserId": 16,
-      "id": 39
-    },
-    {
-      "userId": 16,
-      "currentUserId": 7,
-      "id": 40
+      "id": 2
     }
   ]
 }
