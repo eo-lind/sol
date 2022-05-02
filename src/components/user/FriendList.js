@@ -74,9 +74,7 @@ export const FriendList = () => {
 
     const handleDeleteFriend = (id) => {
         deleteFriend(id).then(() =>
-            getMyFriends(() => {
-                setFriends().then(() => navigate("/friends"))
-            })
+            getMyFriends(currentUser).then((myFriends) => {setFriends(myFriends)})
         )
     }
 

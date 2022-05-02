@@ -3143,19 +3143,9 @@
       "id": 8
     },
     {
-      "userId": 4,
-      "currentUserId": 15,
-      "id": 9
-    },
-    {
       "userId": 15,
       "currentUserId": 4,
       "id": 10
-    },
-    {
-      "userId": 7,
-      "currentUserId": 15,
-      "id": 11
     },
     {
       "userId": 15,
