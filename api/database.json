@@ -104,20 +104,6 @@
       "date": "2022-05-02T08:56:14",
       "friendId": 1,
       "id": 1
-    },
-    {
-      "userId": 15,
-      "movieId": 27,
-      "date": "2022-05-03T08:59:44",
-      "friendId": 11,
-      "id": 2
-    },
-    {
-      "userId": 15,
-      "movieId": 23,
-      "date": "2022-05-31T09:00:08",
-      "friendId": 14,
-      "id": 3
     }
   ],
   "movies": [
@@ -3155,6 +3141,36 @@
       "userId": 15,
       "currentUserId": 14,
       "id": 8
+    },
+    {
+      "userId": 4,
+      "currentUserId": 15,
+      "id": 9
+    },
+    {
+      "userId": 15,
+      "currentUserId": 4,
+      "id": 10
+    },
+    {
+      "userId": 7,
+      "currentUserId": 15,
+      "id": 11
+    },
+    {
+      "userId": 15,
+      "currentUserId": 7,
+      "id": 12
+    },
+    {
+      "userId": 8,
+      "currentUserId": 15,
+      "id": 13
+    },
+    {
+      "userId": 15,
+      "currentUserId": 8,
+      "id": 14
     }
   ]
 }

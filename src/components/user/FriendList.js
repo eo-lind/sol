@@ -57,7 +57,9 @@ export const FriendList = () => {
                 friendIdArr.find((element) => element === newFriend.userId)
         ) {
             addFriend(newFriend).then(() =>
-                addFriend(reverseFriend).then(() => navigate("/friends"))
+                addFriend(reverseFriend).then(() => getMyFriends(currentUser).then((myFriends) => {
+                    setFriends(myFriends)
+                }))
             )
         } else {
             window.alert(
@@ -82,7 +84,6 @@ export const FriendList = () => {
         const searchedUser = { ...userSearch }
 
         searchedUser[event.target.id] = event.target.value
-        console.log("event", searchedUser)
         foundUser(searchedUser)
     }
 
