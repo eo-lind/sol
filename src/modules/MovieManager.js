@@ -5,7 +5,9 @@ export const getMovieById = (movieId) => {
 }
 
 export const getAllMovies = () => {
-    return fetch(`http://localhost:8088/movies`).then((res) => res.json())
+    return fetch(`http://localhost:8088/movies?_sort=title`).then((res) =>
+        res.json()
+    )
 }
 
 export const getRandomId = () => {
