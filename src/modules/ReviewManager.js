@@ -1,3 +1,4 @@
+// fetches all reviews to display in the ReviewList and sorts them from oldest to newest based on the review object's ID number
 export const getAllReviews = () => {
     return fetch(
         `http://localhost:8088/reviews?_sort=id&_order=desc&_expand=user&_expand=movie`
@@ -39,8 +40,16 @@ export const deleteReview = (id) => {
     }).then((result) => result.json())
 }
 
+// fetches a limited number of reviews to display in the Home view and sorts them from oldest to newest based on the review object's ID number
 export const getReviewsForHome = () => {
     return fetch(
         `http://localhost:8088/reviews?_sort=id&_order=desc&_expand=user&_expand=movie&_limit=5`
     ).then((res) => res.json())
+}
+
+// fetches reviews authored by current user, then sorts them from oldest to newest based on the review object's ID number
+export const getReviewsByCurrentUserId = (currentUserId) => {
+    return fetch(
+        `http://localhost:8088/reviews?userId=${currentUserId}&_sort=id&_order=desc&_expand=user&_expand=movie`
+    ).then((response) => response.json())
 }
