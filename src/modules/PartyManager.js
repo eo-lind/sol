@@ -44,3 +44,10 @@ export const getPartiesForHome = () => {
         `http://localhost:8088/parties?_sort=date&_expand=user&_expand=movie&_limit=6`
     ).then((res) => res.json())
 }
+
+// fetches parties hosted by current user, then sorts them from oldest to newest based on the review object's ID number
+export const getPartiesHostedByCurrentUser = (currentUserId) => {
+    return fetch(
+        `http://localhost:8088/parties?userId=${currentUserId}&_sort=date&_expand=user&_expand=movie`
+    ).then((response) => response.json())
+}
