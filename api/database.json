@@ -97,7 +97,29 @@
       "id": 16
     }
   ],
-  "parties": [],
+  "parties": [
+    {
+      "userId": 15,
+      "movieId": 9,
+      "date": "2022-05-02T08:56:14",
+      "friendId": 1,
+      "id": 1
+    },
+    {
+      "userId": 15,
+      "movieId": 27,
+      "date": "2022-05-03T08:59:44",
+      "friendId": 11,
+      "id": 2
+    },
+    {
+      "userId": 15,
+      "movieId": 23,
+      "date": "2022-05-31T09:00:08",
+      "friendId": 14,
+      "id": 3
+    }
+  ],
   "movies": [
     {
       "id": 1,
@@ -3113,6 +3135,26 @@
       "userId": 15,
       "currentUserId": 2,
       "id": 4
+    },
+    {
+      "userId": 11,
+      "currentUserId": 15,
+      "id": 5
+    },
+    {
+      "userId": 15,
+      "currentUserId": 11,
+      "id": 6
+    },
+    {
+      "userId": 14,
+      "currentUserId": 15,
+      "id": 7
+    },
+    {
+      "userId": 15,
+      "currentUserId": 14,
+      "id": 8
     }
   ]
 }

@@ -17,3 +17,9 @@ export const getRandomId = () => {
             return randomMovie.id
         })
 }
+
+export const findMovie = (movieTitle) => {
+    return fetch(`http://localhost:8088/movies?q=${movieTitle}`).then(
+        (response) => response.json()
+    )
+}

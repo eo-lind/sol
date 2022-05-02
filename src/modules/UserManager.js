@@ -35,7 +35,6 @@ export const getLoggedInUserById = () => {
     )
 }
 
-// may or may not use this and the one below it (see FriendList)
 export const findUser = (userName) => {
     return fetch(`http://localhost:8088/users?q=${userName}`).then((response) =>
         response.json()
