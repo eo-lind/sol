@@ -16,11 +16,13 @@ import { UserEditForm } from "./user/UserEditForm"
 import { UserDetail } from "./user/UserDetail"
 import { MovieDetail } from "./movie/MovieDetail"
 
+// Private route checks the if isAuthenticated is true in child components child components - if not, user will be re-routed to login view; if isAuthenticated is true, user will have access to private routes
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
     const PrivateRoute = ({ children }) => {
         return isAuthenticated ? children : <Navigate to="/login" />
     }
 
+    // checks session storage to find authorized user so long as there is one
     const setAuthUser = (user) => {
         sessionStorage.setItem("sol_user", JSON.stringify(user))
         setIsAuthenticated(sessionStorage.getItem("sol_user") !== null)

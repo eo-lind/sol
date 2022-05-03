@@ -10,6 +10,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
 
     const [guest, setGuest] = useState([])
 
+    // gets guests by user id (based on the guest id in the party object) so their names can be displayed on the party card
     const getGuests = () => {
         getUserById(guestId).then((singleGuest) => {
             setGuest(singleGuest)
@@ -20,6 +21,7 @@ export const PartyCard = ({ party, handleDeleteParty }) => {
         getGuests()
     }, [])
 
+    // determines whether or not party date is in the past and returns true or false
     const isEventExpired = () => {
         if (new Date(party.date) < new Date()) {
             return true

@@ -1,8 +1,6 @@
 import React from "react"
 import "./Movie.css"
 
-// this is a child of Sol component
-
 export const MovieCard = ({ movie }) => {
     return (
         <section className="card">

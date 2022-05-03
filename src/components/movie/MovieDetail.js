@@ -6,8 +6,10 @@ import { useParams } from "react-router-dom"
 export const MovieDetail = () => {
     const [movie, setMovie] = useState([])
 
+    // returns an object of key/value pairs of URL parameters
     const { movieId } = useParams()
 
+    // takes the movieId parameter, and uses it to get the movie with that id from the db, and then set it as state for movie
     useEffect(() => {
         getMovieById(movieId).then((movie) => {
             setMovie(movie)

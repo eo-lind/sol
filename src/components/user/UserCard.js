@@ -20,6 +20,7 @@ export const UserCard = ({ user, handleClickSaveFriend }) => {
                 <button>Details</button>
             </Link>
             <div className="user__button-container">
+                {/* will only display Edit button if the current user is owner of the profile - if not, it will display the Add button */}
                 {currentUser === profileSubject ? (
                     <>
                         <Link to={`/users/${user.id}/edit`}>

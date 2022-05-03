@@ -5,7 +5,7 @@ import {
     deleteParty,
     getPartiesForHome,
     getPartiesHostedByCurrentUser,
-    getPartiesAttendedByCurrentUser
+    getPartiesAttendedByCurrentUser,
 } from "../../modules/PartyManager"
 import { PartyCard } from "./PartyCard"
 
@@ -15,24 +15,26 @@ export const PartyList = () => {
 
     const navigate = useNavigate()
 
+    // fetches all parties from the db and sets them as state for parties
     const getParties = () => {
         getAllParties().then((partiesFromAPI) => {
             setParties(partiesFromAPI)
         })
     }
 
-    
-
+    // deletes a single party from db by its id
     const handleDeleteParty = (id) => {
         deleteParty(id).then(() => getAllParties().then(setParties))
     }
 
+    // fetches all parties from the db where current user is host and sets them as state for parties
     const getPartiesHostedByMe = () => {
         getPartiesHostedByCurrentUser(currentUser).then((partiesFromAPI) => {
             setParties(partiesFromAPI)
         })
     }
 
+    // fetches all parties from the db where current user is guest and sets them as state for parties
     const getPartiesAttendedByMe = () => {
         getPartiesAttendedByCurrentUser(currentUser).then((partiesFromAPI) => {
             setParties(partiesFromAPI)
@@ -86,6 +88,7 @@ export const PartyList = () => {
     )
 }
 
+// this component is similar to the one above, but it's just for displaying a limited number of parties on the Home view with an option to navigate to the PartyList view to see all parties
 export const PartyListForHome = () => {
     const [parties, setParties] = useState([])
 

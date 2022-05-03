@@ -4,11 +4,10 @@ import { getAllMovies } from "../../modules/MovieManager"
 import { addReview } from "../../modules/ReviewManager"
 import "./ReviewForm.css"
 
-// TODO change the initial default state of the userID (ln 13) back to 0 when login is working
-
 export const ReviewForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
 
+    // sets initial default state of review
     const [review, setReview] = useState({
         movieId: 0,
         userId: currentUser,
@@ -22,6 +21,7 @@ export const ReviewForm = () => {
 
     const navigate = useNavigate()
 
+    // sets state of review to connect review object's properties to input fields
     const handleControlledInputChange = (event) => {
         const newReview = { ...review }
         let selectedVal = event.target.value
@@ -36,12 +36,10 @@ export const ReviewForm = () => {
 
     useEffect(() => {
         //load movie data and update state
-        getAllMovies()
-        .then(movies => {
+        getAllMovies().then((movies) => {
             setMovies(movies)
         })
     }, [])
-
 
     const handleClickSaveReview = (event) => {
         event.preventDefault()
@@ -61,7 +59,8 @@ export const ReviewForm = () => {
             <h2 className="reviewForm__title">New Review</h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="movie">Select a movie:</label><br />
+                    <label htmlFor="movie">Select a movie:</label>
+                    <br />
                     <select
                         value={review.movieId}
                         name="movieId"
@@ -79,7 +78,8 @@ export const ReviewForm = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="review">Your review:</label><br />
+                    <label htmlFor="review">Your review:</label>
+                    <br />
                     <textarea
                         id="review"
                         name="review"
@@ -89,16 +89,15 @@ export const ReviewForm = () => {
                         required
                         className="form-control"
                         value={review.name}
-                    >
-                    </textarea>
+                    ></textarea>
                 </div>
-            <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleClickSaveReview}
-            >
-                Save Review
-            </button>
+                <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={handleClickSaveReview}
+                >
+                    Save Review
+                </button>
             </fieldset>
         </form>
     )

@@ -6,16 +6,19 @@ import "./ReviewForm.css"
 export const ReviewEditForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
 
+    // sets initial default state of review
     const [review, setReview] = useState({
         movieId: 0,
         review: "",
-        userId: currentUser
+        userId: currentUser,
     })
+
     const [isLoading, setIsLoading] = useState(false)
 
     const { reviewId } = useParams()
     const navigate = useNavigate()
 
+    // sets state of review to connect review object's properties to input fields
     const handleFieldChange = (evt) => {
         const stateToChange = { ...review }
         stateToChange[evt.target.id] = evt.target.value
@@ -33,6 +36,7 @@ export const ReviewEditForm = () => {
             userId: review.userId,
         }
 
+        // adds the new review values to the db and takes user back to ReviewList
         updateReview(editedReview).then(() => navigate("/reviews"))
     }
 
@@ -48,8 +52,9 @@ export const ReviewEditForm = () => {
             <form>
                 <fieldset>
                     <div className="formgrid">
-                        <label htmlFor="review"> 
-                            Your review of <strong>{review.movie?.title}</strong>:
+                        <label htmlFor="review">
+                            Your review of{" "}
+                            <strong>{review.movie?.title}</strong>:
                         </label>
                         <br />
 

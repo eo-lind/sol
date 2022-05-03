@@ -11,10 +11,12 @@ export const MovieList = () => {
         })
     }
 
+    // sets state of movie search as a key/value pair (intially the value is an empty string)
     const [movieSearch, foundMovie] = useState({
         title: "",
     })
 
+    // fetches movie by searched title and sets that movie object as the state of movie
     const searchForMovie = (title) => {
         findMovie(title).then((movie) => {
             setMovies(movie)
@@ -42,7 +44,7 @@ export const MovieList = () => {
 
             <section className="movie-search">
                 <div className="search_bar">
-                    <label htmlFor="search_bar">Find a movie</label>
+                    <label htmlFor="search_bar">Find a Movie</label>
                     <br />
                     <input type="text" id="title" onChange={controlInput} />
                     <button

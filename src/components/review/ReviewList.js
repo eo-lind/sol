@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom"
-import { getAllReviews, deleteReview, getReviewsForHome, getReviewsByCurrentUserId } from "../../modules/ReviewManager"
+import {
+    getAllReviews,
+    deleteReview,
+    getReviewsForHome,
+    getReviewsByCurrentUserId,
+} from "../../modules/ReviewManager"
 import { ReviewCard } from "./ReviewCard"
 
 export const ReviewList = () => {
@@ -9,6 +14,7 @@ export const ReviewList = () => {
 
     const navigate = useNavigate()
 
+    // fetches all reviews from the db and sets them as state for reviews
     const getReviews = () => {
         getAllReviews().then((reviewsFromAPI) => {
             setReviews(reviewsFromAPI)
@@ -19,10 +25,12 @@ export const ReviewList = () => {
         getReviews()
     }, [])
 
+    // deletes a single review from db by its id
     const handleDeleteReview = (id) => {
         deleteReview(id).then(() => getAllReviews().then(setReviews))
     }
 
+    // fetches all reviews from the db where current user is author and sets them as state for reviews
     const getMyReviews = () => {
         getReviewsByCurrentUserId(currentUser).then((reviewsFromAPI) => {
             setReviews(reviewsFromAPI)

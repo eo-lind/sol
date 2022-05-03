@@ -9,8 +9,10 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
     return (
         <section className="card">
             <h3 className="review__title">
-                <strong>Review:</strong> <Link to={`/movies/${review.movie.id}`}
-                >{review.movie.title}</Link>
+                <strong>Review:</strong>{" "}
+                <Link to={`/movies/${review.movie.id}`}>
+                    {review.movie.title}
+                </Link>
             </h3>
             <div className="review__author">
                 <strong>Reviewed by: </strong>

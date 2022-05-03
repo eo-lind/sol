@@ -12,10 +12,6 @@ export const getMyFriends = (currentUserId) => {
     ).then((response) => response.json())
 }
 
-
-
-
-
 // unfriends another user
 export const deleteFriend = (friendId) => {
     return fetch(`http://localhost:8088/friends/${friendId}`, {
@@ -24,7 +20,6 @@ export const deleteFriend = (friendId) => {
 }
 
 // adds a new friend (userId) to logged in user's (currentUserId) friend list
-
 export const addFriend = (newFriend) => {
     return fetch("http://localhost:8088/friends", {
         method: "POST",
@@ -34,4 +29,3 @@ export const addFriend = (newFriend) => {
         body: JSON.stringify(newFriend),
     }).then((response) => response.json())
 }
-
