@@ -11,8 +11,8 @@ export const FriendCard = ({ friend, handleDeleteFriend }) => {
                         src={friend.user.profilePic}
                     />
                 </div>
-   
-                    <h3 className="user__name">{friend.user.name}</h3>
+
+                <h3 className="user__name">{friend.user.name}</h3>
 
                 <div className="user__about">
                     <strong>About me:</strong> {friend.user.aboutMe}

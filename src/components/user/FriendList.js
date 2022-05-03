@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
 import {
     addFriend,
     getMyFriends,
     deleteFriend,
 } from "../../modules/FriendManager"
-import { findUser, getAllUsers } from "../../modules/UserManager"
+import { findUser } from "../../modules/UserManager"
 import { UserCard } from "./UserCard"
 import { FriendCard } from "./FriendCard"
 import "./User.css"
@@ -15,11 +14,10 @@ export const FriendList = () => {
 
     const [users, setUsers] = useState([])
     const [friends, setFriends] = useState([])
+    // sets state of user search as a key/value pair (intially the value is an empty string)
     const [userSearch, foundUser] = useState({
         name: "",
     })
-
-    const navigate = useNavigate()
 
     const getAllMyFriends = (userId) => {
         getMyFriends(userId).then((myFriends) => {
@@ -31,6 +29,7 @@ export const FriendList = () => {
         getAllMyFriends(currentUser)
     }, [])
 
+    // fetches user by searched name and sets that user object as the state of user
     const findUsers = (name) => {
         findUser(name).then((user) => {
             setUsers(user)
@@ -38,43 +37,52 @@ export const FriendList = () => {
     }
 
     const handleClickSaveFriend = (id) => {
-        let friendIdArr = []
+        let alreadyFriendsIdArr = []
+
+        // takes user ids from every friend object and puts them into alreadyFriendsIdArr
         friends.forEach((friend) => {
-            friendIdArr.push(friend.userId)
+            alreadyFriendsIdArr.push(friend.userId)
         })
 
+        // newFriend contains the key value pairs that will be added as a new friend of the logged in user in the db
         const newFriend = {
             userId: id,
             currentUserId: currentUser,
         }
+
+        // reverse friend takes the ids from the above object and swaps them to create a mirror object, meaning that the logged in user also gets added as a friend on the newFriend's friend list
         const reverseFriend = {
             userId: newFriend.currentUserId,
             currentUserId: newFriend.userId,
         }
+
+        // condition states that if the newFriend's userId is not equal to current users's id and the newFriend's user ID does not exist in the alreadyFriendsIdArray, the new friend will be added to the current user's friend list and vice versa; if both conditions are not met, user will be presented with a popup telling them they tried to add an existing friend
         if (
             newFriend.userId !== newFriend.currentUserId &&
             newFriend.userId !==
-                friendIdArr.find((element) => element === newFriend.userId)
+                alreadyFriendsIdArr.find(
+                    (element) => element === newFriend.userId
+                )
         ) {
             addFriend(newFriend).then(() =>
-                addFriend(reverseFriend).then(() => getMyFriends(currentUser).then((myFriends) => {
-                    setFriends(myFriends)
-                }))
+                addFriend(reverseFriend).then(() =>
+                    getMyFriends(currentUser).then((myFriends) => {
+                        setFriends(myFriends)
+                    })
+                )
             )
         } else {
             window.alert(
-                "Cannot add friend. You have tried to add yourself or an existing friend."
+                "Cannot add friend. You have tried to add an existing friend."
             )
         }
     }
 
-    // useEffect(() => {
-    //     getAllMyFriends(currentUser)
-    // }, [])
-
     const handleDeleteFriend = (id) => {
         deleteFriend(id).then(() =>
-            getMyFriends(currentUser).then((myFriends) => {setFriends(myFriends)})
+            getMyFriends(currentUser).then((myFriends) => {
+                setFriends(myFriends)
+            })
         )
     }
 
