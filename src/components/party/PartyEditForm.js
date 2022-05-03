@@ -45,7 +45,7 @@ export const PartyEditForm = () => {
             friendId: party.friendId,
         }
 
-        // adds the new party values to the db and takes user back to PartiesList
+        // adds the new party values to the db and takes user back to PartyList
         updateParty(editedParty).then(() => navigate("/parties"))
     }
 
