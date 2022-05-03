@@ -5,13 +5,10 @@ import { getAllMovies } from "../../modules/MovieManager"
 import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 import "./PartyForm.css"
 
-
-// TODO eventualy the guest selector will need to just load users friends and not all users
-
 export const PartyForm = () => {
-
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
 
+    // sets initial default state of party
     const [party, setParty] = useState({
         userId: currentUser,
         movieId: 0,
@@ -24,13 +21,13 @@ export const PartyForm = () => {
     // sets a variable for the current date to use as a minimum in the form's date/time picker so user can't choose a previous date
     const dateInputMin = new Date().toISOString().split(".")[0]
 
-
     // gets all of the movies and friends to populate their respective input fields
     const [friends, setFriends] = useState([])
     const [movies, setMovies] = useState([])
 
     const navigate = useNavigate()
 
+    // sets state of party to connect party object's properties to input fields
     const handleControlledInputChange = (event) => {
         const newParty = { ...party }
         let selectedVal = event.target.value
@@ -41,14 +38,14 @@ export const PartyForm = () => {
         setParty(newParty)
     }
 
-    // loads movie data and updates state
+    // loads movie data for party and updates state
     useEffect(() => {
         getAllMovies().then((movies) => {
             setMovies(movies)
         })
     }, [])
 
-    // loads friend data and updates state
+    // loads friend data for party and updates state
     useEffect(() => {
         getFriendsByCurrentUserId(
             JSON.parse(sessionStorage.getItem("sol_user")).id
@@ -64,11 +61,12 @@ export const PartyForm = () => {
         const friendId = party.friendId
         const partyDate = party.date
 
+        // checks to make sure movies, guests, and date have been selected before saving party to db - if any or all haven't been selected, user is presented with a popup reminding them to do so
         if (movieId === 0 || friendId === 0 || partyDate === "") {
             window.alert("Please select a movie, guest, and party date")
         } else {
-            //invoke addParty passing party as an argument.
-            //once complete, change the url and display the party list
+            //invokes addParty passing party as an argument.
+            //once complete, changes the url and display the party list
             addParty(party).then(() => navigate("/parties"))
         }
     }
@@ -127,13 +125,13 @@ export const PartyForm = () => {
                         value={party.date}
                     />
                 </div>
-                    <button
-                        type="button"
-                        className="btn btn-primary"
-                        onClick={handleClickSaveParty}
-                    >
-                        Save Party
-                    </button>
+                <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={handleClickSaveParty}
+                >
+                    Save Party
+                </button>
             </fieldset>
         </form>
     )

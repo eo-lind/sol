@@ -6,13 +6,14 @@ import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
 import "./PartyForm.css"
 
 export const PartyEditForm = () => {
-
+    // sets initial default state of party
     const [party, setParty] = useState({
         movieId: 0,
         date: "",
         userId: 0,
         friendId: 0,
     })
+
     const [isLoading, setIsLoading] = useState(false)
 
     // sets a variable for the current date to use as a minimum in the form's date/time picker so user can't choose a previous date
@@ -25,6 +26,7 @@ export const PartyEditForm = () => {
     const { partyId } = useParams()
     const navigate = useNavigate()
 
+    // sets state of party to connect party object's properties to input fields
     const handleFieldChange = (evt) => {
         const stateToChange = { ...party }
         stateToChange[evt.target.id] = evt.target.value
@@ -43,6 +45,7 @@ export const PartyEditForm = () => {
             friendId: party.friendId,
         }
 
+        // adds the new party values to the db and takes user back to PartiesList
         updateParty(editedParty).then(() => navigate("/parties"))
     }
 
@@ -53,14 +56,14 @@ export const PartyEditForm = () => {
         })
     }, [])
 
-    // loads movie data and updates state
+    // loads movie data for party and updates state
     useEffect(() => {
         getAllMovies().then((movies) => {
             setMovies(movies)
         })
     }, [])
 
-    // loads friend data and updates state
+    // loads friend data for party and updates state
     useEffect(() => {
         getFriendsByCurrentUserId(
             JSON.parse(sessionStorage.getItem("sol_user")).id
