@@ -4,10 +4,13 @@ import {
     getAllParties,
     deleteParty,
     getPartiesForHome,
+    getPartiesHostedByCurrentUser,
+    getPartiesAttendedByCurrentUser
 } from "../../modules/PartyManager"
 import { PartyCard } from "./PartyCard"
 
 export const PartyList = () => {
+    const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
     const [parties, setParties] = useState([])
 
     const navigate = useNavigate()
@@ -18,13 +21,27 @@ export const PartyList = () => {
         })
     }
 
-    useEffect(() => {
-        getParties()
-    }, [])
+    
 
     const handleDeleteParty = (id) => {
         deleteParty(id).then(() => getAllParties().then(setParties))
     }
+
+    const getPartiesHostedByMe = () => {
+        getPartiesHostedByCurrentUser(currentUser).then((partiesFromAPI) => {
+            setParties(partiesFromAPI)
+        })
+    }
+
+    const getPartiesAttendedByMe = () => {
+        getPartiesAttendedByCurrentUser(currentUser).then((partiesFromAPI) => {
+            setParties(partiesFromAPI)
+        })
+    }
+
+    useEffect(() => {
+        getParties()
+    }, [])
 
     return (
         <>
@@ -37,6 +54,24 @@ export const PartyList = () => {
                 }}
             >
                 Plan a Watch Party
+            </button>
+            <button
+                type="button"
+                className="link__not__on__card"
+                onClick={() => {
+                    getPartiesHostedByMe()
+                }}
+            >
+                Parties I'm Hosting
+            </button>
+            <button
+                type="button"
+                className="link__not__on__card"
+                onClick={() => {
+                    getPartiesAttendedByMe()
+                }}
+            >
+                Parties I'm Attending
             </button>
             <div className="container-cards">
                 {parties.map((party) => (
