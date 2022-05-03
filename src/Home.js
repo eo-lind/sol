@@ -9,10 +9,13 @@ import "./Home.css"
 export const Home = () => {
     const [randomMovieId, setRandomMovieId] = useState(0)
 
+    // gets a random movie id and sets it as the state for randomMovieId
     const refreshRandomMovie = () => {
         getRandomId().then(setRandomMovieId)
     }
 
+    // TODO is this comment correct?
+    // after Home component renders, this effect will give it the ability to get another random movie id and set it as the state of randomMovieId if called
     useEffect(() => {
         refreshRandomMovie()
     }, [])
