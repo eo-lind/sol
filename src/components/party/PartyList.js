@@ -4,7 +4,8 @@ import {
     getAllParties,
     deleteParty,
     getPartiesForHome,
-    getPartiesHostedByCurrentUser
+    getPartiesHostedByCurrentUser,
+    getPartiesAttendedByCurrentUser
 } from "../../modules/PartyManager"
 import { PartyCard } from "./PartyCard"
 
@@ -28,6 +29,12 @@ export const PartyList = () => {
 
     const getPartiesHostedByMe = () => {
         getPartiesHostedByCurrentUser(currentUser).then((partiesFromAPI) => {
+            setParties(partiesFromAPI)
+        })
+    }
+
+    const getPartiesAttendedByMe = () => {
+        getPartiesAttendedByCurrentUser(currentUser).then((partiesFromAPI) => {
             setParties(partiesFromAPI)
         })
     }
@@ -56,6 +63,15 @@ export const PartyList = () => {
                 }}
             >
                 Parties I'm Hosting
+            </button>
+            <button
+                type="button"
+                className="link__not__on__card"
+                onClick={() => {
+                    getPartiesAttendedByMe()
+                }}
+            >
+                Parties I'm Attending
             </button>
             <div className="container-cards">
                 {parties.map((party) => (
