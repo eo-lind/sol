@@ -34,7 +34,8 @@ strong {
 /* --------------- end text styling --------------- */
 
 /* --------------- begin button styling --------------- */
-button, button:visited {
+button,
+button:visited {
     align-items: center;
     background-color: #6fa9bd;
     border: 2px solid #0e0e25;
@@ -53,6 +54,7 @@ button, button:visited {
     -webkit-user-select: none;
     touch-action: manipulation;
     margin-right: 1em;
+    margin-top: 1em;
 }
 
 button:hover {
@@ -68,7 +70,8 @@ button:active {
     box-shadow: none;
 }
 
-.link__not__on__card, .link__not__on__card:visited {
+.link__not__on__card,
+.link__not__on__card:visited {
     display: block;
     color: white;
     text-align: center;
@@ -86,7 +89,7 @@ button:active {
 }
 
 .link__not__on__card:active {
-  box-shadow: none;
+    box-shadow: none;
 }
 /* --------------- end button styling --------------- */
 
@@ -106,9 +109,47 @@ button:active {
     color: #ffffff;
 }
 
-.card a:link, .card a:visited, .card a:hover, .card a:active {
-  color: #95e3fd;
-  text-decoration: none;
+.card a:link,
+.card a:visited,
+.card a:hover,
+.card a:active {
+    color: #95e3fd;
+    text-decoration: none;
 }
 
 /* --------------- end card styling --------------- */
+
+/* --------------- begin form styling --------------- */
+
+/* form container */
+fieldset {
+    background: rgba(56, 72, 114, 0.9);
+    flex-basis: 28%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #6fa9bd;
+    border-radius: 4px;
+    font-size: small;
+    color: #ffffff;
+}
+
+/* input element */
+.form-control {
+    width: 20rem;
+    border-radius: 4px;
+    border: 1px solid #6fa9bd;
+    height: 2rem;
+    margin-bottom: 1em;
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #95e3fd;
+}
+
+#aboutMe,
+#review {
+    height: 6em;
+}
+
+/* --------------- end form styling --------------- */

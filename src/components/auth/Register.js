@@ -89,7 +89,7 @@ export const Register = ({setAuthUser}) => {
                         placeholder="Email address"
                         required
                     />
-                    <label htmlFor="inputProfilePic">Profile photo</label>
+                    <label htmlFor="inputProfilePic">Profile Photo</label>
                     <input
                         ref={profilePic}
                         type="text"

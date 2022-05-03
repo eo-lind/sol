@@ -55,8 +55,6 @@ export const UserEditForm = () => {
             <form>
                 <fieldset>
                     <div className="form-section">
-                        <label htmlFor="review">About me</label>
-                        <br />
                         <div className="form-section">
                             <label htmlFor="name">Name</label>
                             <input
@@ -84,7 +82,7 @@ export const UserEditForm = () => {
                         </div>
                         <div className="form-section">
                             <label htmlFor="inputProfilePic">
-                                Profile photo
+                                Profile Photo
                             </label>
                             <input
                                 type="text"
