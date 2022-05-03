@@ -51,7 +51,7 @@ export const ReviewEditForm = () => {
         <>
             <form>
                 <fieldset>
-                    <div className="formgrid">
+                    <div>
                         <label htmlFor="review">
                             Your review of{" "}
                             <strong>{review.movie?.title}</strong>:
