@@ -1,3 +1,4 @@
+// fetches all party objects
 export const getAllParties = () => {
     return fetch(
         `http://localhost:8088/parties?_sort=date&_expand=user&_expand=movie`
@@ -14,12 +15,14 @@ export const addParty = (newParty) => {
     }).then((response) => response.json())
 }
 
+// fetches a single party object by id
 export const getPartyById = (partyId) => {
     return fetch(`http://localhost:8088/parties/${partyId}?_expand=movie`).then(
         (res) => res.json()
     )
 }
 
+// updates a party object by ID
 export const updateParty = (editedParty) => {
     return fetch(
         `http://localhost:8088/parties/${editedParty.id}?_expand=movie`,
@@ -33,6 +36,7 @@ export const updateParty = (editedParty) => {
     ).then((data) => data.json())
 }
 
+// deletes a party object by ID
 export const deleteParty = (id) => {
     return fetch(`http://localhost:8088/parties/${id}`, {
         method: "DELETE",

@@ -5,6 +5,7 @@ export const getAllReviews = () => {
     ).then((res) => res.json())
 }
 
+// adds a new review to the db
 export const addReview = (newReview) => {
     return fetch(`http://localhost:8088/reviews`, {
         method: "POST",
@@ -15,12 +16,14 @@ export const addReview = (newReview) => {
     }).then((response) => response.json())
 }
 
+// fetches a single review object by id
 export const getReviewById = (reviewId) => {
     return fetch(
         `http://localhost:8088/reviews/${reviewId}?_expand=movie`
     ).then((res) => res.json())
 }
 
+// updates a review object by ID
 export const updateReview = (editedReview) => {
     return fetch(
         `http://localhost:8088/reviews/${editedReview.id}?_expand=movie`,
@@ -34,6 +37,7 @@ export const updateReview = (editedReview) => {
     ).then((data) => data.json())
 }
 
+// deletes a review object by ID
 export const deleteReview = (id) => {
     return fetch(`http://localhost:8088/reviews/${id}`, {
         method: "DELETE",
