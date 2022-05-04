@@ -14,7 +14,7 @@ This instance of the app was built with inspiration from Mystery Science Theater
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here) -->
 
 ## Run Locally
-
+<!-- !JSON server installation vs deployment -->
 Clone the project
 
 ```bash
