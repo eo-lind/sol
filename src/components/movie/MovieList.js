@@ -40,22 +40,24 @@ export const MovieList = () => {
 
     return (
         <>
-            <h2>Browse Movies</h2>
+            <div className="listview-header">
+                <h2>Browse Movies</h2>
 
-            <section className="movie-search">
-                <div className="search_bar">
-                    <label htmlFor="search_bar">Find a Movie</label>
-                    <br />
-                    <input type="text" id="title" onChange={controlInput} />
-                    <button
-                        type="button"
-                        id="search_btn"
-                        onClick={handleSearch}
-                    >
-                        Search
-                    </button>
-                </div>
-            </section>
+                <section className="movie-search">
+                    <div className="search_bar">
+                        <label htmlFor="search_bar">Find a Movie</label>
+                        <br />
+                        <input type="text" id="title" onChange={controlInput} />
+                        <button
+                            type="button"
+                            id="search_btn"
+                            onClick={handleSearch}
+                        >
+                            Search
+                        </button>
+                    </div>
+                </section>
+            </div>
 
             <div className="container-cards">
                 {movies.map((movie) => (

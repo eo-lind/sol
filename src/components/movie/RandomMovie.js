@@ -12,7 +12,7 @@ export const RandomMovie = ({ movieId }) => {
     }, [movieId])
 
     return (
-        <div className="movie-spotlight">
+        <div className="card">
             <div className="movie__image-container">
                 <img
                     className="movie__photo"

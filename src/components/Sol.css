@@ -96,7 +96,7 @@ button:active {
 /* --------------- begin card styling --------------- */
 .card {
     background: rgba(56, 72, 114, 0.9);
-    flex-basis: 28%;
+    flex-basis: 25%;
     min-width: 300px;
     box-sizing: border-box;
     display: flex;

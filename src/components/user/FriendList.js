@@ -101,7 +101,7 @@ export const FriendList = () => {
         <>
             <main className="column-container">
                 <section className="my-friends-container">
-                    <div className="column-header-friends">
+                    <div className="listview-header">
                         <h2>My Friends</h2>
                     </div>
                     <div className="container-cards">

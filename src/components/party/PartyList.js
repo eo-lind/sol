@@ -47,34 +47,36 @@ export const PartyList = () => {
 
     return (
         <>
-            <h2>Watch Parties</h2>
-            <button
-                type="button"
-                className="link__not__on__card"
-                onClick={() => {
-                    navigate("/parties/create")
-                }}
-            >
-                Plan a Watch Party
-            </button>
-            <button
-                type="button"
-                className="link__not__on__card"
-                onClick={() => {
-                    getPartiesHostedByMe()
-                }}
-            >
-                Parties I'm Hosting
-            </button>
-            <button
-                type="button"
-                className="link__not__on__card"
-                onClick={() => {
-                    getPartiesAttendedByMe()
-                }}
-            >
-                Parties I'm Attending
-            </button>
+            <div className="listview-header">
+                <h2>Watch Parties</h2>
+                <button
+                    type="button"
+                    className="link__not__on__card"
+                    onClick={() => {
+                        navigate("/parties/create")
+                    }}
+                >
+                    Plan a Watch Party
+                </button>
+                <button
+                    type="button"
+                    className="link__not__on__card"
+                    onClick={() => {
+                        getPartiesHostedByMe()
+                    }}
+                >
+                    Parties I'm Hosting
+                </button>
+                <button
+                    type="button"
+                    className="link__not__on__card"
+                    onClick={() => {
+                        getPartiesAttendedByMe()
+                    }}
+                >
+                    Parties I'm Attending
+                </button>
+            </div>
             <div className="container-cards">
                 {parties.map((party) => (
                     <PartyCard
@@ -118,9 +120,13 @@ export const PartyListForHome = () => {
                         handleDeleteParty={handleDeleteParty}
                     />
                 ))}
-            <Link className="link__not__on__card" id="more-parties" to="/parties">
-                More Watch Parties
-            </Link>
+                <Link
+                    className="link__not__on__card"
+                    id="more-parties"
+                    to="/parties"
+                >
+                    More Watch Parties
+                </Link>
             </div>
         </>
     )

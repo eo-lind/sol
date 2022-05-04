@@ -26,3 +26,7 @@ h3 {
 .movie__mst3k {
     font-size: x-small;
 }
+
+#random-movie-button {
+    margin-left: 1em;
+}
