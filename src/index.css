@@ -8,15 +8,12 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-    background-image: url("/public/images/SOL-set.png");
+     background-image: url("/public/images/SOL-set.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 2em;
+}
+
+main {
+  padding-bottom: 10rem;
 }

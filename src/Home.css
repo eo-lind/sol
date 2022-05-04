@@ -8,18 +8,18 @@
 
 .column1,
 .column2 {
-    flex-basis: 30%;
+    flex-basis: 25%;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
 }
 
 .column3 {
-    flex-basis: 30%;
+    flex-basis: 25%;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    padding-top: 1em;
+    margin-right: 1em;
 }
 
 .column3__component-container {

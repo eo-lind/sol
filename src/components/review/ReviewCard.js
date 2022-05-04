@@ -22,7 +22,7 @@ export const ReviewCard = ({ review, handleDeleteReview }) => {
                 <strong>Review:</strong> {review.review}
             </div>
             <div className="review__rating">
-                <strong>imDb rating:</strong> {review.movie.imDbRating}
+                <strong>IMDb rating:</strong> {review.movie.imDbRating}
             </div>
             <div className="review__mst3k">
                 <strong>Summary:</strong> {review.movie.plot}

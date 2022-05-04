@@ -14,7 +14,6 @@ export const Home = () => {
         getRandomId().then(setRandomMovieId)
     }
 
-    // TODO is this comment correct?
     // after Home component renders, this effect will give it the ability to get another random movie id and set it as the state of randomMovieId if called
     useEffect(() => {
         refreshRandomMovie()
@@ -34,12 +33,13 @@ export const Home = () => {
                         {randomMovieId && (
                             <RandomMovie movieId={randomMovieId} />
                         )}
-                        <div
+                        <button
                             className="link__not__on__card"
+                            id="random-movie-button"
                             onClick={refreshRandomMovie}
                         >
                             Random Movie &#x27f3;
-                        </div>
+                        </button>
                     </div>
                     <div className="column3__component-container">
                         <ShowLoggedInProfile />

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { NavBar } from "./nav/NavBar"
+import { Footer } from "./footer/Footer"
 import { ApplicationViews } from "./ApplicationViews"
 import "./Sol.css"
 
@@ -30,6 +31,7 @@ export const Sol = () => {
                 isAuthenticated={isAuthenticated}
                 setIsAuthenticated={setIsAuthenticated}
             />
+            <Footer />
         </>
     )
 }
