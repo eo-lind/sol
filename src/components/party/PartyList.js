@@ -118,10 +118,10 @@ export const PartyListForHome = () => {
                         handleDeleteParty={handleDeleteParty}
                     />
                 ))}
-            </div>
-            <Link className="link__not__on__card" to="/parties">
+            <Link className="link__not__on__card" id="more-parties" to="/parties">
                 More Watch Parties
             </Link>
+            </div>
         </>
     )
 }

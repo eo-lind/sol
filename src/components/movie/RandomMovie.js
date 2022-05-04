@@ -23,7 +23,7 @@ export const RandomMovie = ({ movieId }) => {
             <h3 className="movie__title">{movie.title}</h3>
             <div className="movie__plot">{movie.plot}</div>
             <div className="movie__rating">
-                <strong>imDb rating:</strong> {movie.imDbRating}
+                <strong>IMDb rating:</strong> {movie.imDbRating}
             </div>
             <div className="movie__mst3k">
                 This version aired on {movie.seriesTitle} as episode{" "}

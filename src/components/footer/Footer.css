@@ -7,3 +7,20 @@
     bottom: 0;
     width: 100%;
 }
+
+.footer-text {
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    padding-left: 1em;
+    color: #ffffff;
+    font-size: smaller;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #95e3fd;
+    text-decoration: none;
+}
