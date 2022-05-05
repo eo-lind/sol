@@ -23,12 +23,17 @@ export const Home = () => {
         <>
             <section className="column-container">
                 <div className="column1">
+                    <h2 className="home--column-headers">Watch Parties</h2>
                     <PartyListForHome />
                 </div>
                 <div className="column2">
+                    <h2 className="home--column-headers">Movie Reviews</h2>
                     <ReviewListForHome />
                 </div>
                 <div className="column3">
+                    <h2 className="home--column-headers">
+                        Random Movie Generator
+                    </h2>
                     <div className="column3__component-container">
                         {randomMovieId && (
                             <RandomMovie movieId={randomMovieId} />

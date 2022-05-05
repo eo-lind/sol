@@ -1,5 +1,3 @@
-/* TODO can probably delete stuff at bottom */
-
 .container--login {
     display: flex;
     flex-direction: column;
@@ -18,93 +16,20 @@ fieldset {
     margin-bottom: 1em;
 }
 
-.link--register {
-    text-align: center;
-}
-
-/* .h1, h1 {
-    font-size: 2.5rem;
-} */
-
-
-/* .form--login {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
-} */
-
-/* .form--login > fieldset > input[type="email"],
-.form--login > fieldset > input[type="password"] {
-    width: 25em;
-} */
-
-/* .label--login {
-    width: 8rem;
-    display: inline-block;
-} */
-
-/* .form-control {
-    display: block;
-    width: 94%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #6fa9bd;
-    border: 1px solid #6fa9bd;
-    border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-} */
-
-/* .container--login {
-    text-align: center;
-} */
-
-/* .form--login {
-    min-height: 25rem;
-    min-width: 45rem;
-    background: rgba(56, 72, 114, 0.9);
-    margin: 1em;
-    padding: 1em;
-    color: #ffffff;
-    border-radius: 4px;
-} */
-
-/* .button--close {
-    position: relative;
-    bottom: -2rem;
-} */
-
-/* .dialog {
+/* this is the popup when someone tries to login with an email address not in the db */
+.dialog {
     min-width: 15rem;
     min-height: 5rem;
-} */
+}
 
-/* button {
-    align-items: center;
-    background-color: #6fa9bd;
-    border: 2px solid #0e0e25;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 3px 3px;
-    color: #0e0e25;
-    cursor: pointer;
-    display: flex;
-    min-height: 2em;
-    padding: 0 25px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    margin-right: 1em;
-} */
+#register-link {
+    max-width: 10em;
+}
 
-/* button:active {
-    background-color: #7e6c8a;
-    outline: 0;
-    text-decoration: none;
-} */
+.login--content, .login--header-text {
+margin: 1em;
+}
+
+.link--register {
+    margin: 2em;
+}
