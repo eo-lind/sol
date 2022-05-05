@@ -87,7 +87,7 @@ export const UserDetail = () => {
     const profileSubject = user.id
 
     return (
-        <section className="card">
+        <section className="user-detail__card">
             <div className="user__image-container">
                 <img
                     className="user__photo"

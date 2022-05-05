@@ -24,4 +24,13 @@
 
 .column3__component-container {
     margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.current-user-header {
+    padding-left: 0.5em;
+}
+
+.home--column-headers {
+    padding-left: 1.5em;
 }

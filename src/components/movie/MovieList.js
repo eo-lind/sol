@@ -45,9 +45,8 @@ export const MovieList = () => {
 
                 <section className="movie-search">
                     <div className="search_bar">
-                        <label htmlFor="search_bar">Find a Movie</label>
-                        <br />
-                        <input type="text" id="title" onChange={controlInput} />
+                        <label htmlFor="search_bar"><h3>Find a Movie</h3></label>
+                        <input type="text" id="title" className="search-field" placeholder="Search for a movie" onChange={controlInput} />
                         <button
                             type="button"
                             id="search_btn"

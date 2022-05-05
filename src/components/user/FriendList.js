@@ -120,11 +120,11 @@ export const FriendList = () => {
                 <section className="all-users-container">
                     <section className="user-search">
                         <div className="search_bar">
-                            <label htmlFor="search_bar">Find people</label>
-                            <br />
+                            <label htmlFor="search_bar"><h3>Find people</h3></label>
                             <input
                                 type="text"
                                 id="name"
+                                className="search-field"
                                 onChange={controlInput}
                             />
                             <button

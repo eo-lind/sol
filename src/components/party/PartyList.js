@@ -49,33 +49,35 @@ export const PartyList = () => {
         <>
             <div className="listview-header">
                 <h2>Watch Parties</h2>
-                <button
-                    type="button"
-                    className="link__not__on__card"
-                    onClick={() => {
-                        navigate("/parties/create")
-                    }}
-                >
-                    Plan a Watch Party
-                </button>
-                <button
-                    type="button"
-                    className="link__not__on__card"
-                    onClick={() => {
-                        getPartiesHostedByMe()
-                    }}
-                >
-                    Parties I'm Hosting
-                </button>
-                <button
-                    type="button"
-                    className="link__not__on__card"
-                    onClick={() => {
-                        getPartiesAttendedByMe()
-                    }}
-                >
-                    Parties I'm Attending
-                </button>
+                <div className="header-button-box">
+                    <button
+                        type="button"
+                        className="link__not__on__card"
+                        onClick={() => {
+                            navigate("/parties/create")
+                        }}
+                    >
+                        Plan a Watch Party
+                    </button>
+                    <button
+                        type="button"
+                        className="link__not__on__card"
+                        onClick={() => {
+                            getPartiesHostedByMe()
+                        }}
+                    >
+                        Parties I'm Hosting
+                    </button>
+                    <button
+                        type="button"
+                        className="link__not__on__card"
+                        onClick={() => {
+                            getPartiesAttendedByMe()
+                        }}
+                    >
+                        Parties I'm Attending
+                    </button>
+                </div>
             </div>
             <div className="container-cards">
                 {parties.map((party) => (

@@ -19,6 +19,7 @@ export const ShowLoggedInProfile = () => {
     return (
         <>
             <div className="container-cards">
+                <h2 className="current-user-header">Your Profile</h2>
                 <UserCard key={user.id} user={user} />
             </div>
         </>
