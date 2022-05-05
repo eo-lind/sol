@@ -50,7 +50,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                                 </Link>
                             </li>
                         )}
-                        
+
                         {isAuthenticated && (
                             <li className="navbar__item">
                                 <Link className="navbar__link" to="/movies">
@@ -59,17 +59,14 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                             </li>
                         )}
                         {isAuthenticated ? (
-                            
                             <li className="navbar__item">
                                 <span
                                     className="navbar__link"
                                     onClick={handleLogout}
                                 >
-                                    
                                     Logout
                                 </span>
                             </li>
-                            
                         ) : (
                             <li className="navbar__item">
                                 <Link className="navbar__link" to="/login">
