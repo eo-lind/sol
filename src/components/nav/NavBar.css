@@ -3,10 +3,12 @@
     flex-direction: row;
     align-items: center;
     margin: 1em;
+    width: 100%;
 }
 
 .nav-right {
-    margin-left: 1em;
+    margin: 0 2em 0 1em;
+    width: 100%;
 }
 
 .logo {
