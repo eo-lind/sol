@@ -89,85 +89,137 @@
       "userId": 15,
       "review": "This movie SUCKS!",
       "id": 17
+    },
+    {
+      "movieId": 169,
+      "userId": 1,
+      "review": "No, Hugo, noooooooo!",
+      "id": 18
+    },
+    {
+      "movieId": 191,
+      "userId": 2,
+      "review": "Sarcasm?",
+      "id": 19
+    },
+    {
+      "movieId": 182,
+      "userId": 4,
+      "review": "Sarah Connor?",
+      "id": 20
+    },
+    {
+      "movieId": 214,
+      "userId": 5,
+      "review": "A TRIUMPH OF THE HUMAN SPIRIT!",
+      "id": 21
     }
   ],
   "parties": [
     {
-      "userId": 7,
+      "userId": 1,
+      "movieId": 112,
+      "date": "2022-05-06T14:35:57",
+      "friendId": 3,
+      "id": 2
+    },
+    {
+      "userId": 1,
       "movieId": 211,
-      "date": "2022-05-28T15:44:04",
-      "friendId": 15,
+      "date": "2022-05-22T14:36:19",
+      "friendId": 7,
       "id": 3
     },
     {
-      "userId": 13,
-      "movieId": 219,
-      "date": "2022-05-29T13:15:47",
-      "friendId": 7,
+      "userId": 1,
+      "movieId": 39,
+      "date": "2022-05-24T14:36:40",
+      "friendId": 8,
       "id": 4
     },
     {
-      "userId": 13,
-      "movieId": 128,
-      "date": "2022-05-28T13:16:37",
-      "friendId": 16,
-      "id": 6
+      "userId": 2,
+      "movieId": 124,
+      "date": "2022-05-07T14:40:25",
+      "friendId": 6,
+      "id": 5
     },
     {
-      "userId": 10,
-      "movieId": 203,
-      "date": "2022-05-18T15:15:11",
-      "friendId": 3,
-      "id": 7
-    },
-    {
-      "userId": 10,
-      "movieId": 102,
-      "date": "2022-05-28T15:17:47",
-      "friendId": 5,
+      "userId": 3,
+      "movieId": 67,
+      "date": "2022-05-23T14:45:13",
+      "friendId": 1,
       "id": 8
     },
     {
-      "userId": 10,
-      "movieId": 192,
-      "date": "2022-05-03T15:18:21",
-      "friendId": 6,
+      "userId": 3,
+      "movieId": 18,
+      "date": "2022-05-14T14:45:45",
+      "friendId": 8,
       "id": 9
     },
     {
-      "userId": 10,
-      "movieId": 112,
-      "date": "2022-07-23T15:18:43",
-      "friendId": 8,
+      "userId": 3,
+      "movieId": 111,
+      "date": "2022-06-15T14:46:05",
+      "friendId": 5,
       "id": 10
     },
     {
-      "userId": 10,
-      "movieId": 33,
-      "date": "2022-07-23T15:19:22",
-      "friendId": 12,
-      "id": 12
-    },
-    {
-      "userId": 10,
-      "movieId": 69,
-      "date": "2023-01-24T15:19:48",
-      "friendId": 14,
-      "id": 13
-    },
-    {
-      "userId": 10,
-      "movieId": 57,
-      "date": "2022-05-31T15:20:10",
-      "friendId": 15,
+      "userId": 4,
+      "movieId": 17,
+      "date": "2022-05-14T14:53",
+      "friendId": 7,
       "id": 14
     },
     {
-      "userId": 15,
-      "movieId": 211,
-      "date": "2022-05-20T10:16:31",
-      "friendId": 2,
+      "userId": 4,
+      "movieId": 128,
+      "date": "2022-07-30T14:53:15",
+      "friendId": 13,
       "id": 15
+    },
+    {
+      "userId": 4,
+      "movieId": 127,
+      "date": "2022-08-25T14:53:31",
+      "friendId": 16,
+      "id": 16
+    },
+    {
+      "userId": 5,
+      "movieId": 77,
+      "date": "2022-06-04T14:55:31",
+      "friendId": 6,
+      "id": 17
+    },
+    {
+      "userId": 5,
+      "movieId": 125,
+      "date": "2022-05-11T14:55:46",
+      "friendId": 3,
+      "id": 18
+    },
+    {
+      "userId": 6,
+      "movieId": 107,
+      "date": "2022-05-29T14:58:37",
+      "friendId": 5,
+      "id": 21
+    },
+    {
+      "userId": 7,
+      "movieId": 140,
+      "date": "2022-05-28T15:04:45",
+      "friendId": 13,
+      "id": 22
+    },
+    {
+      "userId": 7,
+      "movieId": 203,
+      "date": "2022-07-15T15:05",
+      "friendId": 1,
+      "id": 23
     }
   ],
   "movies": [
@@ -3166,27 +3218,7 @@
     }
   ],
   "friends": [
-    {
-      "userId": 1,
-      "currentUserId": 15,
-      "id": 1
-    },
-    {
-      "userId": 15,
-      "currentUserId": 1,
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "currentUserId": 15,
-      "id": 3
-    },
-    {
-      "userId": 15,
-      "currentUserId": 2,
-      "id": 4
-    },
-    {
+       {
       "userId": 11,
       "currentUserId": 15,
       "id": 5
@@ -3206,27 +3238,7 @@
       "currentUserId": 14,
       "id": 8
     },
-    {
-      "userId": 15,
-      "currentUserId": 4,
-      "id": 10
-    },
-    {
-      "userId": 15,
-      "currentUserId": 7,
-      "id": 12
-    },
-    {
-      "userId": 8,
-      "currentUserId": 15,
-      "id": 13
-    },
-    {
-      "userId": 15,
-      "currentUserId": 8,
-      "id": 14
-    },
-    {
+     {
       "userId": 16,
       "currentUserId": 13,
       "id": 15
@@ -3255,21 +3267,6 @@
       "userId": 13,
       "currentUserId": 7,
       "id": 20
-    },
-    {
-      "userId": 15,
-      "currentUserId": 7,
-      "id": 22
-    },
-    {
-      "userId": 3,
-      "currentUserId": 10,
-      "id": 23
-    },
-    {
-      "userId": 10,
-      "currentUserId": 3,
-      "id": 24
     },
     {
       "userId": 5,
@@ -3332,24 +3329,204 @@
       "id": 36
     },
     {
-      "userId": 15,
-      "currentUserId": 10,
-      "id": 37
+      "userId": 2,
+      "currentUserId": 1,
+      "id": 42
     },
     {
-      "userId": 15,
-      "currentUserId": 4,
-      "id": 39
+      "userId": 1,
+      "currentUserId": 2,
+      "id": 43
+    },
+    {
+      "userId": 3,
+      "currentUserId": 1,
+      "id": 44
+    },
+    {
+      "userId": 1,
+      "currentUserId": 3,
+      "id": 45
+    },
+    {
+      "userId": 7,
+      "currentUserId": 1,
+      "id": 46
+    },
+    {
+      "userId": 1,
+      "currentUserId": 7,
+      "id": 47
+    },
+    {
+      "userId": 8,
+      "currentUserId": 1,
+      "id": 48
+    },
+    {
+      "userId": 1,
+      "currentUserId": 8,
+      "id": 49
+    },
+    {
+      "userId": 9,
+      "currentUserId": 1,
+      "id": 50
+    },
+    {
+      "userId": 1,
+      "currentUserId": 9,
+      "id": 51
+    },
+    {
+      "userId": 3,
+      "currentUserId": 2,
+      "id": 52
+    },
+    {
+      "userId": 2,
+      "currentUserId": 3,
+      "id": 53
+    },
+    {
+      "userId": 6,
+      "currentUserId": 2,
+      "id": 54
+    },
+    {
+      "userId": 2,
+      "currentUserId": 6,
+      "id": 55
+    },
+    {
+      "userId": 8,
+      "currentUserId": 2,
+      "id": 56
+    },
+    {
+      "userId": 2,
+      "currentUserId": 8,
+      "id": 57
+    },
+    {
+      "userId": 10,
+      "currentUserId": 2,
+      "id": 58
+    },
+    {
+      "userId": 2,
+      "currentUserId": 10,
+      "id": 59
+    },
+    {
+      "userId": 11,
+      "currentUserId": 2,
+      "id": 60
+    },
+    {
+      "userId": 2,
+      "currentUserId": 11,
+      "id": 61
+    },
+    {
+      "userId": 14,
+      "currentUserId": 2,
+      "id": 62
+    },
+    {
+      "userId": 2,
+      "currentUserId": 14,
+      "id": 63
+    },
+    {
+      "userId": 8,
+      "currentUserId": 3,
+      "id": 64
+    },
+    {
+      "userId": 3,
+      "currentUserId": 8,
+      "id": 65
     },
     {
       "userId": 5,
-      "currentUserId": 15,
-      "id": 40
+      "currentUserId": 3,
+      "id": 66
     },
     {
-      "userId": 15,
+      "userId": 3,
       "currentUserId": 5,
-      "id": 41
+      "id": 67
+    },
+    {
+      "userId": 10,
+      "currentUserId": 3,
+      "id": 68
+    },
+    {
+      "userId": 3,
+      "currentUserId": 10,
+      "id": 69
+    },
+    {
+      "userId": 11,
+      "currentUserId": 3,
+      "id": 70
+    },
+    {
+      "userId": 3,
+      "currentUserId": 11,
+      "id": 71
+    },
+    {
+      "userId": 12,
+      "currentUserId": 3,
+      "id": 72
+    },
+    {
+      "userId": 3,
+      "currentUserId": 12,
+      "id": 73
+    },
+    {
+      "userId": 7,
+      "currentUserId": 4,
+      "id": 74
+    },
+    {
+      "userId": 4,
+      "currentUserId": 7,
+      "id": 75
+    },
+    {
+      "userId": 13,
+      "currentUserId": 4,
+      "id": 76
+    },
+    {
+      "userId": 4,
+      "currentUserId": 13,
+      "id": 77
+    },
+    {
+      "userId": 16,
+      "currentUserId": 4,
+      "id": 78
+    },
+    {
+      "userId": 4,
+      "currentUserId": 16,
+      "id": 79
+    },
+    {
+      "userId": 6,
+      "currentUserId": 5,
+      "id": 80
+    },
+    {
+      "userId": 5,
+      "currentUserId": 6,
+      "id": 81
     }
   ]
 }
