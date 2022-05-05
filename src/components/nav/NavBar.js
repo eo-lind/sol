@@ -68,11 +68,11 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                                 </span>
                             </li>
                         ) : (
-                            <li className="navbar__item">
+                            <div className="navbar__item" id="logout-link">
                                 <Link className="navbar__link" to="/login">
                                     Login
                                 </Link>
-                            </li>
+                            </div>
                         )}
                     </ul>
                 </div>
