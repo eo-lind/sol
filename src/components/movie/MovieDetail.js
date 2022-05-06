@@ -17,7 +17,7 @@ export const MovieDetail = () => {
     }, [movieId])
 
     return (
-        <section className="card">
+        <section className="movie-detail__card">
             <div className="movie__image-container">
                 <img
                     className="movie__photo"

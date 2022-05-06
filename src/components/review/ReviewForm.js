@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllMovies } from "../../modules/MovieManager"
 import { addReview } from "../../modules/ReviewManager"
-import "./ReviewForm.css"
 
 export const ReviewForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
@@ -56,8 +55,10 @@ export const ReviewForm = () => {
 
     return (
         <form className="reviewForm">
-            <h2 className="reviewForm__title">New Review</h2>
-            <fieldset>
+            <div className="listview-header">
+                <h2 className="reviewForm__title">New Review</h2>
+            </div>
+            <fieldset className="review-form__fieldset">
                 <div className="form-group">
                     <label htmlFor="movie">Select a movie:</label>
                     <br />

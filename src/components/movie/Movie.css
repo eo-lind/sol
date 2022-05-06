@@ -18,7 +18,8 @@
     font-size: small;
     color: #ffffff;
 }
-.movie, .movie-spotlight {
+.movie,
+.movie-spotlight {
     background: rgba(56, 72, 114, 0.9);
     flex-basis: 28%;
     min-width: 200px;
@@ -62,29 +63,17 @@ h3 {
     justify-content: flex-start;
 }
 
-/* button {
-    align-items: center;
-    background-color: #6fa9bd;
-    border: 2px solid #0e0e25;
-    border-radius: 8px;
+.movie-detail__card {
+    background: rgba(56, 72, 114, 0.9);
+    max-width: 300px;
+    min-width: 150px;
     box-sizing: border-box;
-    box-shadow: 3px 3px;
-    color: #0e0e25;
-    cursor: pointer;
     display: flex;
-    min-height: 2em;
-    padding: 0 25px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    margin-right: 1em;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #6fa9bd;
+    border-radius: 4px;
+    font-size: small;
+    color: #ffffff;
 }
-
-button:active {
-    background-color: #7e6c8a;
-    outline: 0;
-    text-decoration: none;
-} */

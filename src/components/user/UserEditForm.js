@@ -56,7 +56,8 @@ export const UserEditForm = () => {
                 <fieldset>
                     <div className="form-section">
                         <div className="form-section">
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Name:</label>
+                            <br />
                             <input
                                 type="text"
                                 name="name"
@@ -69,7 +70,8 @@ export const UserEditForm = () => {
                             />
                         </div>
                         <div className="form-section">
-                            <label htmlFor="inputEmail">Email address</label>
+                            <label htmlFor="inputEmail">Email address:</label>
+                            <br />
                             <input
                                 type="email"
                                 name="email"
@@ -82,8 +84,9 @@ export const UserEditForm = () => {
                         </div>
                         <div className="form-section">
                             <label htmlFor="inputProfilePic">
-                                Profile Photo
+                                Profile Photo:
                             </label>
+                            <br />
                             <input
                                 type="text"
                                 name="profilePic"
@@ -95,7 +98,8 @@ export const UserEditForm = () => {
                             />
                         </div>
                         <div className="form-section">
-                            <label htmlFor="inputAboutMe">About Me</label>
+                            <label htmlFor="inputAboutMe">About Me:</label>
+                            <br />
                             <textarea
                                 id="aboutMe"
                                 name="aboutMe"
@@ -108,7 +112,8 @@ export const UserEditForm = () => {
                             ></textarea>
                         </div>
                         <div className="form-section">
-                            <label htmlFor="likes">Likes</label>
+                            <label htmlFor="likes">Likes:</label>
+                            <br />
                             <input
                                 type="text"
                                 name="likes"
@@ -121,7 +126,8 @@ export const UserEditForm = () => {
                             />
                         </div>
                         <div className="form-section"></div>
-                        <label htmlFor="dislikes">Dislikes</label>
+                        <label htmlFor="dislikes">Dislikes:</label>
+                        <br />
                         <input
                             type="text"
                             name="dislikes"

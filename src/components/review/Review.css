@@ -28,6 +28,10 @@ h3 {
     justify-content: flex-start;
 }
 
-#more-reviews {
+#more-reviews  {
     margin-left: 1em;
+}
+
+.review-form__fieldset {
+    margin-left: 2em;
 }
