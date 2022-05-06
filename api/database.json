@@ -113,50 +113,39 @@
       "userId": 5,
       "review": "A TRIUMPH OF THE HUMAN SPIRIT!",
       "id": 21
+    },
+    {
+      "movieId": 199,
+      "userId": 8,
+      "review": "Disappointed this wasn't that Simone Signoret film!",
+      "id": 22
+    },
+    {
+      "movieId": 135,
+      "userId": 9,
+      "review": "😍 😍 😍 😍",
+      "id": 23
+    },
+    {
+      "movieId": 90,
+      "userId": 11,
+      "review": "BEEP BOOP",
+      "id": 24
+    },
+    {
+      "movieId": 55,
+      "userId": 16,
+      "review": "EXTERMINATE!!! 💥",
+      "id": 25
     }
   ],
   "parties": [
-    {
-      "userId": 1,
-      "movieId": 112,
-      "date": "2022-05-06T14:35:57",
-      "friendId": 3,
-      "id": 2
-    },
     {
       "userId": 1,
       "movieId": 211,
       "date": "2022-05-22T14:36:19",
       "friendId": 7,
       "id": 3
-    },
-    {
-      "userId": 1,
-      "movieId": 39,
-      "date": "2022-05-24T14:36:40",
-      "friendId": 8,
-      "id": 4
-    },
-    {
-      "userId": 2,
-      "movieId": 124,
-      "date": "2022-05-07T14:40:25",
-      "friendId": 6,
-      "id": 5
-    },
-    {
-      "userId": 3,
-      "movieId": 67,
-      "date": "2022-05-23T14:45:13",
-      "friendId": 1,
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "movieId": 18,
-      "date": "2022-05-14T14:45:45",
-      "friendId": 8,
-      "id": 9
     },
     {
       "userId": 3,
@@ -174,31 +163,10 @@
     },
     {
       "userId": 4,
-      "movieId": 128,
-      "date": "2022-07-30T14:53:15",
-      "friendId": 13,
-      "id": 15
-    },
-    {
-      "userId": 4,
       "movieId": 127,
       "date": "2022-08-25T14:53:31",
       "friendId": 16,
       "id": 16
-    },
-    {
-      "userId": 5,
-      "movieId": 77,
-      "date": "2022-06-04T14:55:31",
-      "friendId": 6,
-      "id": 17
-    },
-    {
-      "userId": 5,
-      "movieId": 125,
-      "date": "2022-05-11T14:55:46",
-      "friendId": 3,
-      "id": 18
     },
     {
       "userId": 6,
@@ -208,18 +176,74 @@
       "id": 21
     },
     {
-      "userId": 7,
-      "movieId": 140,
-      "date": "2022-05-28T15:04:45",
-      "friendId": 13,
-      "id": 22
+      "userId": 13,
+      "movieId": 138,
+      "date": "2022-05-30T15:36:08",
+      "friendId": 7,
+      "id": 26
     },
     {
-      "userId": 7,
-      "movieId": 203,
-      "date": "2022-07-15T15:05",
-      "friendId": 1,
-      "id": 23
+      "userId": 13,
+      "movieId": 103,
+      "date": "2022-06-15T15:36:24",
+      "friendId": 16,
+      "id": 27
+    },
+    {
+      "userId": 14,
+      "movieId": 81,
+      "date": "2022-08-05T15:37:39",
+      "friendId": 10,
+      "id": 28
+    },
+    {
+      "userId": 14,
+      "movieId": 134,
+      "date": "2022-07-19T15:37:55",
+      "friendId": 2,
+      "id": 29
+    },
+    {
+      "userId": 16,
+      "movieId": 128,
+      "date": "2022-05-05T15:40:49",
+      "friendId": 13,
+      "id": 30
+    },
+    {
+      "userId": 16,
+      "movieId": 140,
+      "date": "2022-07-28T15:41:12",
+      "friendId": 4,
+      "id": 31
+    },
+    {
+      "userId": 15,
+      "movieId": 112,
+      "date": "2022-06-29T15:46:07",
+      "friendId": 14,
+      "id": 32
+    },
+    {
+      "userId": 15,
+      "movieId": 102,
+      "date": "2022-05-28T15:46:31",
+      "friendId": 11,
+      "id": 33
+    },
+    {
+      "userId": 15,
+      "movieId": 98,
+      "date": "2022-06-20T15:46:44",
+      "friendId": 3,
+      "id": 34
+    },
+    {
+      "userId": 1,
+      "movieId": 215,
+      "date": "2022-05-14T15:50:16",
+      "friendId": 7,
+      "id": 35
     }
   ],
   "movies": [
@@ -3218,15 +3242,10 @@
     }
   ],
   "friends": [
-       {
+    {
       "userId": 11,
       "currentUserId": 15,
       "id": 5
-    },
-    {
-      "userId": 15,
-      "currentUserId": 11,
-      "id": 6
     },
     {
       "userId": 14,
@@ -3234,11 +3253,6 @@
       "id": 7
     },
     {
-      "userId": 15,
-      "currentUserId": 14,
-      "id": 8
-    },
-     {
       "userId": 16,
       "currentUserId": 13,
       "id": 15
@@ -3527,6 +3541,36 @@
       "userId": 5,
       "currentUserId": 6,
       "id": 81
+    },
+    {
+      "userId": 12,
+      "currentUserId": 11,
+      "id": 82
+    },
+    {
+      "userId": 11,
+      "currentUserId": 12,
+      "id": 83
+    },
+    {
+      "userId": 3,
+      "currentUserId": 15,
+      "id": 84
+    },
+    {
+      "userId": 15,
+      "currentUserId": 3,
+      "id": 85
+    },
+    {
+      "userId": 4,
+      "currentUserId": 1,
+      "id": 86
+    },
+    {
+      "userId": 1,
+      "currentUserId": 4,
+      "id": 87
     }
   ]
 }
