@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom"
 import { updateParty, getPartyById } from "../../modules/PartyManager"
 import { getAllMovies } from "../../modules/MovieManager"
 import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
-import "./PartyForm.css"
 
 export const PartyEditForm = () => {
     // sets initial default state of party
@@ -75,7 +74,7 @@ export const PartyEditForm = () => {
     return (
         <>
             <form>
-                <fieldset>
+                <fieldset className="party-form__fieldset">
                     <div className="form-group">
                         <label htmlFor="movie">Select a movie:</label>
                         <br />

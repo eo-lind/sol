@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"
 import { addParty } from "../../modules/PartyManager"
 import { getAllMovies } from "../../modules/MovieManager"
 import { getFriendsByCurrentUserId } from "../../modules/FriendManager"
-import "./PartyForm.css"
 
 export const PartyForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
@@ -73,8 +72,10 @@ export const PartyForm = () => {
 
     return (
         <form className="partyForm">
-            <h2 className="partyForm__title">New Watch Party</h2>
-            <fieldset>
+            <div className="listview-header">
+                <h2 className="partyForm__title">New Watch Party</h2>
+            </div>
+            <fieldset className="party-form__fieldset">
                 <div className="form-group">
                     <label htmlFor="movie">Select a movie:</label>
                     <br />

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { updateReview, getReviewById } from "../../modules/ReviewManager"
-import "./ReviewForm.css"
 
 export const ReviewEditForm = () => {
     const currentUser = JSON.parse(sessionStorage.getItem("sol_user")).id
@@ -50,7 +49,7 @@ export const ReviewEditForm = () => {
     return (
         <>
             <form>
-                <fieldset>
+                <fieldset className="review-form__fieldset">
                     <div>
                         <label htmlFor="review">
                             Your review of{" "}
