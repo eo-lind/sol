@@ -113,6 +113,12 @@
       "userId": 5,
       "review": "A TRIUMPH OF THE HUMAN SPIRIT!",
       "id": 21
+    },
+    {
+      "movieId": 78,
+      "userId": 1,
+      "review": "This sucks",
+      "id": 22
     }
   ],
   "parties": [
@@ -129,34 +135,6 @@
       "date": "2022-05-24T14:36:40",
       "friendId": 8,
       "id": 4
-    },
-    {
-      "userId": 2,
-      "movieId": 124,
-      "date": "2022-05-07T14:40:25",
-      "friendId": 6,
-      "id": 5
-    },
-    {
-      "userId": 3,
-      "movieId": 18,
-      "date": "2022-05-14T14:45:45",
-      "friendId": 8,
-      "id": 9
-    },
-    {
-      "userId": 3,
-      "movieId": 111,
-      "date": "2022-06-15T14:46:05",
-      "friendId": 5,
-      "id": 10
-    },
-    {
-      "userId": 4,
-      "movieId": 17,
-      "date": "2022-05-14T14:53",
-      "friendId": 7,
-      "id": 14
     },
     {
       "userId": 4,
@@ -181,17 +159,38 @@
     },
     {
       "userId": 1,
-      "movieId": 184,
-      "date": "2022-05-06T08:24:29",
-      "friendId": 7,
-      "id": 22
+      "movieId": 180,
+      "date": "2022-05-21T12:17:15",
+      "friendId": 8,
+      "id": 23
     },
     {
-      "userId": 7,
-      "movieId": 9,
-      "date": "2022-05-07T20:23:16",
+      "userId": 4,
+      "movieId": 33,
+      "date": "2022-05-28T10:17:11",
+      "friendId": 16,
+      "id": 24
+    },
+    {
+      "userId": 3,
+      "movieId": 51,
+      "date": "2022-06-25T10:18:36",
+      "friendId": 5,
+      "id": 25
+    },
+    {
+      "userId": 2,
+      "movieId": 102,
+      "date": "2022-05-27T10:20:45",
       "friendId": 1,
-      "id": 23
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "movieId": 214,
+      "date": "2022-05-17T09:00",
+      "friendId": 8,
+      "id": 27
     }
   ],
   "movies": [
