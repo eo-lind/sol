@@ -9,12 +9,17 @@ After spending a significant amount of time away from friends and family during 
 
 This instance of the app was built with inspiration from Mystery Science Theater 3000, so the dummy movie data is actually MST3K episodes, though a real-world version of the app could be built with an IMDB-type API.
 
-<!-- ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here) -->
 
-## Run Locally
-<!-- !JSON server installation vs deployment -->
+![App Screenshot](/public/images/SOL-screenshot.png "SOL in action")
+
+## Installation & Deployment Instructions
+Install JSON Server 
+
+```bash
+npm install -g json-server
+```
+
 Clone the project
 
 ```bash
@@ -38,9 +43,20 @@ Start the server
 ```bash
   npm run start
 ```
-<!-- ## ERD & WIREFRAMES
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here) -->
+Start JSON Server
+
+```bash
+json-server -p 8088 -w database.json
+```
+
+## ERD
+
+![ERD Screenshot](/public/images/SOL-ERD-screenshot.png "SOL ERD")
+
+## Wireframe
+
+![Wireframe Screenshot](/public/images/SOL-wireframe-screenshot.png "SOL wireframe")
 
 ## Tech Stack
 
