@@ -113,12 +113,6 @@
       "userId": 5,
       "review": "A TRIUMPH OF THE HUMAN SPIRIT!",
       "id": 21
-    },
-    {
-      "movieId": 78,
-      "userId": 1,
-      "review": "This sucks",
-      "id": 22
     }
   ],
   "parties": [
@@ -177,13 +171,6 @@
       "date": "2022-06-25T10:18:36",
       "friendId": 5,
       "id": 25
-    },
-    {
-      "userId": 2,
-      "movieId": 102,
-      "date": "2022-05-27T10:20:45",
-      "friendId": 1,
-      "id": 26
     },
     {
       "userId": 1,
