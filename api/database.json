@@ -178,6 +178,13 @@
       "date": "2022-05-17T09:00",
       "friendId": 8,
       "id": 27
+    },
+    {
+      "userId": 2,
+      "movieId": 96,
+      "date": "2022-05-19T14:37:35",
+      "friendId": 1,
+      "id": 28
     }
   ],
   "movies": [
